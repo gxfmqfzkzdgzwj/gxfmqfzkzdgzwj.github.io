@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo,markdown," />
+  <meta name="keywords" content="vue," />
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="HEXO介绍Hexo 是一款基于Node.js、快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。详情请参考https://hexo.io/zh-cn/docs/index.html 安装安装hexo特别简单。在安装之前确保你的电脑上已经安装以下应用程序  Node.js  Git   如果你的电脑上已经安装了上述程序">
-<meta name="keywords" content="hexo,markdown">
+<meta name="description" content="VUE介绍Vue.js（读音 /vjuː/，类似于 view 的读音）是一套构建用户界面(user interface)的渐进式框架。与其他重量级框架不同的是，Vue 从根本上采用最小成本、渐进增量(incrementally adoptable)的设计。Vue 的核心库只专注于视图层，并且很容易与其他第三方库或现有项目集成。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue">
+<meta name="keywords" content="vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HEXO 个人博客搭建">
+<meta property="og:title" content="VUE框架学习之SPA">
 <meta property="og:url" content="http://yoursite.com/2017/11/09/Vue/index.html">
 <meta property="og:site_name" content="Fancy&#39;s Blog">
-<meta property="og:description" content="HEXO介绍Hexo 是一款基于Node.js、快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。详情请参考https://hexo.io/zh-cn/docs/index.html 安装安装hexo特别简单。在安装之前确保你的电脑上已经安装以下应用程序  Node.js  Git   如果你的电脑上已经安装了上述程序">
+<meta property="og:description" content="VUE介绍Vue.js（读音 /vjuː/，类似于 view 的读音）是一套构建用户界面(user interface)的渐进式框架。与其他重量级框架不同的是，Vue 从根本上采用最小成本、渐进增量(incrementally adoptable)的设计。Vue 的核心库只专注于视图层，并且很容易与其他第三方库或现有项目集成。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-12T14:33:39.715Z">
+<meta property="og:updated_time" content="2017-11-15T15:18:16.396Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HEXO 个人博客搭建">
-<meta name="twitter:description" content="HEXO介绍Hexo 是一款基于Node.js、快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。详情请参考https://hexo.io/zh-cn/docs/index.html 安装安装hexo特别简单。在安装之前确保你的电脑上已经安装以下应用程序  Node.js  Git   如果你的电脑上已经安装了上述程序">
+<meta name="twitter:title" content="VUE框架学习之SPA">
+<meta name="twitter:description" content="VUE介绍Vue.js（读音 /vjuː/，类似于 view 的读音）是一套构建用户界面(user interface)的渐进式框架。与其他重量级框架不同的是，Vue 从根本上采用最小成本、渐进增量(incrementally adoptable)的设计。Vue 的核心库只专注于视图层，并且很容易与其他第三方库或现有项目集成。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue">
 
 
 
@@ -140,7 +140,7 @@
 
 
 
-  <title>HEXO 个人博客搭建 | Fancy's Blog</title>
+  <title>VUE框架学习之SPA | Fancy's Blog</title>
   
 
 
@@ -300,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HEXO 个人博客搭建</h1>
+          <h1 class="post-title" itemprop="name headline">VUE框架学习之SPA</h1>
         
 
         <div class="post-meta">
@@ -350,23 +350,25 @@
       
 
       
-        <h1 id="HEXO介绍"><a href="#HEXO介绍" class="headerlink" title="HEXO介绍"></a>HEXO介绍</h1><p>Hexo 是一款基于Node.js、快速、简洁且高效的博客框架。<br>Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。详情请参考<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/index.html</a></p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装hexo特别简单。在安装之前确保你的电脑上已经安装以下应用程序</p>
-<ul>
-<li>Node.js </li>
-<li>Git </li>
-</ul>
-<p>如果你的电脑上已经安装了上述程序，接下来直接使用npm即可完成安装。<br><code>npm install -g hexo-cli</code></p>
-<h1 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h1><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。<br>方法一：例如我是新建了一个blog文件夹在F盘下。直接右键鼠标，选择<code>git bash here</code>进入命令行即可。然后执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
-<p>方法二：folder 可以是某个盘符下的任意文件夹，也可以是不存在的文件夹，在命令行运行后直接在当前目录下建立folder 文件夹。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
-<p>新建完成后，指定文件夹目录如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure></p>
-<p>接下来，我们的博客基本搭建完成了！当时，这仅仅是本地的。此时我们执行<code>hexo g</code>既可以生成静态页面，然后执行 <code>hexo s</code>,访问<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>即可看到你的博客。</p>
-<h1 id="部署博客到github"><a href="#部署博客到github" class="headerlink" title="部署博客到github"></a>部署博客到github</h1><p>1.注册账号<br>2.创建一个仓库<br>注：Github Pages的Repository名字是特定的，假如你Github账号是XXX，那么你的Github Pages Repository名字就是XXX.github.io。</p>
-<h1 id="主题篇，这里我们选用next主题"><a href="#主题篇，这里我们选用next主题" class="headerlink" title="主题篇，这里我们选用next主题"></a>主题篇，这里我们选用next主题</h1><p>推荐一篇博客写的特别好。<br><a href="http://blog.csdn.net/zuoziji416/article/details/53204478" target="_blank" rel="external">http://blog.csdn.net/zuoziji416/article/details/53204478</a><br>可能还会遇到的问题：</p>
-<ol>
-<li>hexo中的英文出现乱码，变成德文<br>解决办法：将_config.yml里的language改为zh-Hans</li>
-<li>hexo博客的next主题在github上显示不出页面内容，只有框架，别的主题正常，本地显示也正常。<br>解决办法：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></li>
-</ol>
+        <h1 id="VUE介绍"><a href="#VUE介绍" class="headerlink" title="VUE介绍"></a>VUE介绍</h1><p>Vue.js（读音 /vjuː/，类似于 view 的读音）是一套构建用户界面(user interface)的渐进式框架。与其他重量级框架不同的是，Vue 从根本上采用最小成本、渐进增量(incrementally adoptable)的设计。Vue 的核心库只专注于视图层，并且很容易与其他第三方库或现有项目集成。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue 也完全能够为复杂的单页应用程序提供有力驱动。</p>
+<h1 id="实践步伐"><a href="#实践步伐" class="headerlink" title="实践步伐"></a>实践步伐</h1><p>由于自己原生js功底很弱，所以对于框架的学习也有点畏惧，迟迟不肯行动。今天试着用VUE实现了一个单页面应用，单页面应用的基本元素：页面路由，通过某种方式，如 URL hash 来说明表明当前所在的页面，并拥有从一个页面跳转到另外一个页面的入口。模块化很强，减少了普通页面切换的时间，很方便，也很迅速。</p>
+<p>实现一个简单的单页面应用可以通过vue-cli及其模板构造出一个大致的页面。也就是<br><code>$ npm install -g vue-cli
+$ vue init webpack-simple my-project
+$ cd my-project
+$ npm install
+$ npm run dev</code><br>其中：<br><code>npm run dev: Webpack + vue-loader with proper config for source maps &amp; hot-reload.(在电脑的8080端口可以查看界面)
+npm run build: build with HTML/CSS/JS minification. (有个dist文件夹，文件夹内部全是编译过的文件，也就是打包出来的文件，通过index.html可以直接显示界面)</code><br>各文件夹大概内容以及其作用如下：<br>build文件夹内一般是一些config文件。<br>src文件夹里是我们用到的，内部文件可用的大概有以下几个：<br>APP.vue是整体界面描述，里面包含有很多组件及路由。<br>router文件夹里index.js存放着对应的路径及其组件声明。<br>main.js指明入口文件。<br>components里一般放置组件的.vue文件。</p>
+<h1 id="基本语句"><a href="#基本语句" class="headerlink" title="基本语句"></a>基本语句</h1><p><code>&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;</code><br>表示目标路由的链接。当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标对象。<br><code>&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;</code><br>也就是<a href="home">Home</a><br><code>&lt;router-link v-bind:to=&quot;&#39;home&#39;&quot;&gt;Home&lt;/router-link&gt;</code><br><code>&lt;router-link :to=&quot;&#39;home&#39;&quot;&gt;Home&lt;/router-link&gt;</code></p>
+<p>对于router里index.js大致格式如下：<br> <code>{path: &#39;/&#39;, redirect: &#39;/HelloWorld&#39;},
+{path: &#39;/HelloWorld&#39;, component: HelloWorld},    
+{path: &#39;/HelloVue&#39;, component: HelloVue}</code></p>
+<p><code>export default {
+  name: &#39;HelloWorld&#39;
+}
+export default 提供了一个接口，可以通过import来进行引用。</code></p>
+<p>对于.vue模板内必须有一个最外部的div来包含其他所有东西，也只能有一个最外部div.</p>
+<h1 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h1><p>1 npm run dev时报错，很多跟格式有关的错误，比如多空格<br>解决方法：EsLint帮助我们检查Javascript编程时的语法错误,禁用Eslink.通过更改webpack的配置文件。<br>2 npm run dev页面找不到<br>解决方法：有可能是因为端口被占用。</p>
+<h1 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h1><p>VUE模板github源码: <a href="https://github.com/vuejs" target="_blank" rel="external">https://github.com/vuejs</a><br>VUE官方文档: <a href="https://vuefe.cn/v2/guide/" target="_blank" rel="external">https://vuefe.cn/v2/guide/</a><br>晓晓师姐博客: <a href="http://xxwu.tech/" target="_blank" rel="external">http://xxwu.tech/</a><br>MarkDown基本语法: <a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="external">http://www.jianshu.com/p/q81RER</a></p>
 
       
     </div>
@@ -384,9 +386,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
-          
-            <a href="/tags/markdown/" rel="tag"># markdown</a>
+            <a href="/tags/vue/" rel="tag"># vue</a>
           
         </div>
       
@@ -408,6 +408,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/25/My_state/" rel="prev" title="个人随笔">
+                个人随笔 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -484,7 +488,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -506,7 +510,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -541,7 +545,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HEXO介绍"><span class="nav-number">1.</span> <span class="nav-text">HEXO介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#建站"><span class="nav-number">3.</span> <span class="nav-text">建站</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署博客到github"><span class="nav-number">4.</span> <span class="nav-text">部署博客到github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题篇，这里我们选用next主题"><span class="nav-number">5.</span> <span class="nav-text">主题篇，这里我们选用next主题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VUE介绍"><span class="nav-number">1.</span> <span class="nav-text">VUE介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实践步伐"><span class="nav-number">2.</span> <span class="nav-text">实践步伐</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本语句"><span class="nav-number">3.</span> <span class="nav-text">基本语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#遇到的问题"><span class="nav-number">4.</span> <span class="nav-text">遇到的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文献："><span class="nav-number">5.</span> <span class="nav-text">参考文献：</span></a></li></ol></div>
             
 
           </div>
