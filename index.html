@@ -1,28 +1,19 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
+<html lang="en">
+  <head>
+    
+<meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
 
@@ -31,6 +22,26 @@
 
 
 
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="Fancy's Blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.6.0" />
+
+
+
+<link rel="canonical" href="http://yoursite.com/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.6.0" />
 
 
 
@@ -38,1039 +49,396 @@
 
 
   
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Fancy&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Fancy&#39;s Blog">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fancy&#39;s Blog">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
     }
-  };
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
 </script>
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
-
-
-
-
-
-  <title>Fancy's Blog</title>
-  
 
 
 
 
 
 
+    <title> Fancy's Blog </title>
+  </head>
 
-
-
-
-
-
-
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-   page-home 
- ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Fancy's Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Fancy's Blog</a>
   </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </div>
 
-<nav class="site-nav">
-  
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
 
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Fancy's Blog</a>
+</div>
+
+<nav class="site-navbar">
   
     <ul id="menu" class="menu">
       
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            首页
+              Home
+            
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            分类
+              Archives
+            
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            关于
+              Tags
+            
           </a>
         </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-
       
     </ul>
   
-
-  
 </nav>
 
+      </header>
 
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
+      <main id="main" class="main">
+        <div class="content-wrapper">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+  <section id="posts" class="posts">
     
       
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/12/30/DNS/">如何将域名绑定到github Pages 博客上</a>
+        
+      </h1>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/25/My_state/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FANCY">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fancy's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <div class="post-meta">
+        <span class="post-time">
+          2017-12-30
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/搭建博客/">搭建博客</a>
+            
+          </div>
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/25/My_state/" itemprop="url">个人随笔</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-25T15:25:30+08:00">
-                2017-11-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
+      </div>
+    </header>
 
     
     
-    
-    <div class="post-body" itemprop="articleBody">
 
-      
-      
-
+    <div class="post-content">
       
         
-          
-            <h1 id="心情日记"><a href="#心情日记" class="headerlink" title="心情日记"></a>心情日记</h1><p>2017年11月25日，周六，晴。</p>
-<p>每逢周末，我都要好好睡上一觉，一般情况下，不定闹钟，怎么也能睡到11点左右。今天，9点半左右就已经醒了。然后再也睡不着，寝室里很安静，大家都还睡着，索性我就在床上躺着看小说，看东野先生的岛上书店。至于自己究竟看了什么，我也不太清楚，好像迷迷糊糊的，最后就又睡着了。</p>
-<p>再次醒来，又是11点半了。新买的羽绒服到了，去东门取了个快递，试穿了一下，宽松款的，很个性。瘦小的身体塞在宽松版型的羽绒服里，有一点点的不合时宜，所以没拆吊牌，穿着新衣服去了实验室。我想，适应一下看自己是否能够接受。如若不能，可能要办理退货了吧。心里这么想着也便这么做了。</p>
-<p>由于我的墨迹，三点十分左右才到实验室。一堆任务没有做，要看的书还都没有看。我努力去强迫自己，要投入，要投入。可是却似乎无论如何都没有心情。我就在想，自己这么一个周究竟做了什么，似乎做了很多，又似乎什么也没做。</p>
-<p>异地恋提出分手，然后他跑过来找我，说了很多，逛了后海，他说从哪里开始就从哪里结束。第一次在后海他给我唱了首赵雷的歌，成都还是鼓楼我总是分不清楚，我们开玩笑说，结束了，是不是要来一首分手快乐。就这样，我们肆无忌惮的开玩笑，打闹，所有话语都像开玩笑，却又像是说事实。其实自己也不清楚，到底是玩笑话还是实话。就这么分手了，他说等你想明白了，还来找我，我还接着，谁让我上辈子欠你的。我当真了。可是电话却再也没有响起过。</p>
-<p>老师分配给的任务，做了好久，依旧没有做出来。电路板好像是有问题，然后就在实验间里做测试。测试了两天左右。解决了一些问题，还剩下很多问题。要写的代码写了一部分，还没有完事儿，估计下周又要被老师找。</p>
-<p>听了几场工作经验交流会，有所收获。印象最深的就是有一师兄说，对自己的每一行代码负责。因为发现自己好像一直不负责。成功的人都有很多共同的特点，例如有逻辑，有条理，有想法，认真负责。</p>
-<p>前端学习经常被搁置，看着遗忘着，不知道留下了什么。要做的简历依旧没做，用VUE做个简单的小项目依旧没有成型。</p>
-<p>就这么一个周过去了。Over,Over,Over.</p>
-<p>道一声加油！！却又显得底气不足。。。</p>
+        
 
-          
+        
+          <h1 id="添加-CNAME文件"><a href="#添加-CNAME文件" class="headerlink" title="添加 CNAME文件"></a>添加 CNAME文件</h1><p>登陆github账号，在 github名称.github.io仓库地下选择“Creat new file”,命名为CNAME,没有扩展名,文件内容为你的域名，不需要添加http/www等点缀。这时，在当前仓库Setting下GitHub Pages能够看到 Your site is published at <a href="http://你的域名。" target="_blank" rel="external">http://你的域名。</a></p>
+<h1 id="添加域名解析"><a href="#添加域名解析" class="headerlink" title="添加域名解析"></a>添加域名解析</h1><p>进入域名提供商的官方网站，去设置域名解析，主要添加两个CNAME记录。<br>主机名：@     类型：CNAME   对应值：github名称.github.io<br>主机名：www   类型：CNAME   对应值：github名称.github.io</p>
+<p>之后直接在当前域名下就可以看到你的blog界面</p>
+<p>看网上还有一种方法，设置两个A记录。<br>首先在电脑端    ping username.github.io   记录下当前IP地址<br>域名解析设置如下</p>
+<p>主机名：@    类型：A  对应值：ip地址<br>主机名：www  类型：A  对应值：ip地址</p>
+
         
       
     </div>
-    
-    
-    
 
     
 
     
 
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
   </article>
 
-
     
       
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/11/30/github/">github常用指令</a>
+        
+      </h1>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/09/Vue/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FANCY">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fancy's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <div class="post-meta">
+        <span class="post-time">
+          2017-11-30
+        </span>
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/09/Vue/" itemprop="url">VUE框架学习之SPA</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-09T19:53:11+08:00">
-                2017-11-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
+      </div>
+    </header>
 
     
     
-    
-    <div class="post-body" itemprop="articleBody">
 
-      
-      
-
+    <div class="post-content">
       
         
-          
-            <h1 id="VUE介绍"><a href="#VUE介绍" class="headerlink" title="VUE介绍"></a>VUE介绍</h1><p>Vue.js（读音 /vjuː/，类似于 view 的读音）是一套构建用户界面(user interface)的渐进式框架。与其他重量级框架不同的是，Vue 从根本上采用最小成本、渐进增量(incrementally adoptable)的设计。Vue 的核心库只专注于视图层，并且很容易与其他第三方库或现有项目集成。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue 也完全能够为复杂的单页应用程序提供有力驱动。</p>
-<h1 id="实践步伐"><a href="#实践步伐" class="headerlink" title="实践步伐"></a>实践步伐</h1><p>由于自己原生js功底很弱，所以对于框架的学习也有点畏惧，迟迟不肯行动。今天试着用VUE实现了一个单页面应用，单页面应用的基本元素：页面路由，通过某种方式，如 URL hash 来说明表明当前所在的页面，并拥有从一个页面跳转到另外一个页面的入口。模块化很强，减少了普通页面切换的时间，很方便，也很迅速。</p>
-<p>实现一个简单的单页面应用可以通过vue-cli及其模板构造出一个大致的页面。也就是<br><code>$ npm install -g vue-cli
-$ vue init webpack-simple my-project
-$ cd my-project
-$ npm install
-$ npm run dev</code><br>其中：<br><code>npm run dev: Webpack + vue-loader with proper config for source maps &amp; hot-reload.(在电脑的8080端口可以查看界面)
-npm run build: build with HTML/CSS/JS minification. (有个dist文件夹，文件夹内部全是编译过的文件，也就是打包出来的文件，通过index.html可以直接显示界面)</code><br>各文件夹大概内容以及其作用如下：<br>build文件夹内一般是一些config文件。<br>src文件夹里是我们用到的，内部文件可用的大概有以下几个：<br>APP.vue是整体界面描述，里面包含有很多组件及路由。<br>router文件夹里index.js存放着对应的路径及其组件声明。<br>main.js指明入口文件。<br>components里一般放置组件的.vue文件。</p>
-<h1 id="基本语句"><a href="#基本语句" class="headerlink" title="基本语句"></a>基本语句</h1><p><code>&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;</code><br>表示目标路由的链接。当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标对象。<br><code>&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;</code><br>也就是<a href="home">Home</a><br><code>&lt;router-link v-bind:to=&quot;&#39;home&#39;&quot;&gt;Home&lt;/router-link&gt;</code><br><code>&lt;router-link :to=&quot;&#39;home&#39;&quot;&gt;Home&lt;/router-link&gt;</code></p>
-<p>对于router里index.js大致格式如下：<br> <code>{path: &#39;/&#39;, redirect: &#39;/HelloWorld&#39;},
-{path: &#39;/HelloWorld&#39;, component: HelloWorld},    
-{path: &#39;/HelloVue&#39;, component: HelloVue}</code></p>
-<p><code>export default {
-  name: &#39;HelloWorld&#39;
-}
-export default 提供了一个接口，可以通过import来进行引用。</code></p>
-<p>对于.vue模板内必须有一个最外部的div来包含其他所有东西，也只能有一个最外部div.</p>
-<h1 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h1><p>1 npm run dev时报错，很多跟格式有关的错误，比如多空格<br>解决方法：EsLint帮助我们检查Javascript编程时的语法错误,禁用Eslink.通过更改webpack的配置文件。<br>2 npm run dev页面找不到<br>解决方法：有可能是因为端口被占用。</p>
-<h1 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h1><p>VUE模板github源码: <a href="https://github.com/vuejs" target="_blank" rel="external">https://github.com/vuejs</a><br>VUE官方文档: <a href="https://vuefe.cn/v2/guide/" target="_blank" rel="external">https://vuefe.cn/v2/guide/</a><br>晓晓师姐博客: <a href="http://xxwu.tech/" target="_blank" rel="external">http://xxwu.tech/</a><br>MarkDown基本语法: <a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="external">http://www.jianshu.com/p/q81RER</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/09/postName/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FANCY">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fancy's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/09/postName/" itemprop="url">HEXO 个人博客搭建</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-09T19:53:11+08:00">
-                2017-11-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
         
           
-            <h1 id="HEXO介绍"><a href="#HEXO介绍" class="headerlink" title="HEXO介绍"></a>HEXO介绍</h1><p>Hexo 是一款基于Node.js、快速、简洁且高效的博客框架。<br>Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。详情请参考<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/index.html</a></p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>安装hexo特别简单。在安装之前确保你的电脑上已经安装以下应用程序</p>
-<ul>
-<li>Node.js </li>
-<li>Git </li>
-</ul>
-<p>如果你的电脑上已经安装了上述程序，接下来直接使用npm即可完成安装。<br><code>npm install -g hexo-cli</code></p>
-<h1 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h1><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。<br>方法一：例如我是新建了一个blog文件夹在F盘下。直接右键鼠标，选择<code>git bash here</code>进入命令行即可。然后执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
-<p>方法二：folder 可以是某个盘符下的任意文件夹，也可以是不存在的文件夹，在命令行运行后直接在当前目录下建立folder 文件夹。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
-<p>新建完成后，指定文件夹目录如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure></p>
-<p>接下来，我们的博客基本搭建完成了！当时，这仅仅是本地的。此时我们执行<code>hexo g</code>既可以生成静态页面，然后执行 <code>hexo s</code>,访问<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>即可看到你的博客。</p>
-<h1 id="部署博客到github"><a href="#部署博客到github" class="headerlink" title="部署博客到github"></a>部署博客到github</h1><p>1.注册账号<br>2.创建一个仓库<br>注：Github Pages的Repository名字是特定的，假如你Github账号是XXX，那么你的Github Pages Repository名字就是XXX.github.io。</p>
-<h1 id="主题篇，这里我们选用next主题"><a href="#主题篇，这里我们选用next主题" class="headerlink" title="主题篇，这里我们选用next主题"></a>主题篇，这里我们选用next主题</h1><p>推荐一篇博客写的特别好。<br><a href="http://blog.csdn.net/zuoziji416/article/details/53204478" target="_blank" rel="external">http://blog.csdn.net/zuoziji416/article/details/53204478</a><br>可能还会遇到的问题：</p>
+        
+
+        
+          <p>首先，当你完成git安装后，将github的用户名和邮箱进行配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"John Doe"</span></span><br><span class="line">$ git config --globl user.email johndoeexample.com</span><br></pre></td></tr></table></figure></p>
+<p>如何使用github提交代码</p>
 <ol>
-<li>hexo中的英文出现乱码，变成德文<br>解决办法：将_config.yml里的language改为zh-Hans</li>
-<li>hexo博客的next主题在github上显示不出页面内容，只有框架，别的主题正常，本地显示也正常。<br>解决办法：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-          
+<li>用github建仓库</li>
+<li>进入目录(或者直接在目录下右键git bash here)</li>
+<li>git init</li>
+<li>git status</li>
+<li>git add .</li>
+<li>git status</li>
+<li>git commit -m ‘注释’</li>
+<li>git push -u 网址 master<br>注意：网址是你建立仓库时对应的网址,以http开头，.git结尾
+          <div class="read-more">
+            <a href="/2017/11/30/github/" class="read-more-link">Read more..</a>
+          </div>
         
       
     </div>
-    
-    
-    
 
     
 
     
 
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
   </article>
 
-
     
       
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/11/25/hello-world/">Hello World</a>
+        
+      </h1>
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/09/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FANCY">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fancy's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <div class="post-meta">
+        <span class="post-time">
+          2017-11-25
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/搭建博客/">搭建博客</a>
+            
+          </div>
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/09/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-09T18:43:53+08:00">
-                2017-11-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/搭建博客/" itemprop="url" rel="index">
-                    <span itemprop="name">搭建博客</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
+      </div>
+    </header>
 
     
     
-    
-    <div class="post-body" itemprop="articleBody">
 
-      
-      
-
+    <div class="post-content">
       
         
+        
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        
 
-          
+        
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+          <div class="read-more">
+            <a href="/2017/11/25/hello-world/" class="read-more-link">Read more..</a>
+          </div>
         
       
     </div>
-    
-    
-    
 
     
 
     
 
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
   </article>
-
 
     
   </section>
 
   
+  <nav class="pagination">
+    
+    
+      <a class="next" href="/page/2/">
+        <span class="next-text">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
 
 
           </div>
           
 
-
-          
-
         </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+          <a href="mailto:597785713@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
 
-      
-
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="FANCY" />
-          <p class="site-author-name" itemprop="name">FANCY</p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
   </span>
-  <span class="author" itemprop="copyrightHolder">FANCY</span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    even - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">FANCY</span>
+  </span>
 </div>
 
+      </footer>
 
-
-        
-
-        
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
       </div>
-    </footer>
+    </div>
 
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
+
+
     
 
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
 
 
 
   
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
   
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+    <script type="text/javascript" src="/js/src/even.js?v=2.6.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.6.0"></script>
 
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
+  </body>
 </html>
