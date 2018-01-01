@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Fancy&#39;s Blog">
 <meta property="og:description" content="首先，当你完成git安装后，将github的用户名和邮箱进行配置12$ git config --global user.name &quot;John Doe&quot;$ git config --globl user.email johndoeexample.com 如何使用github提交代码12345678$ 用github建仓库$ 进入目录(或者直接在目录下右键git bash here)$ git in">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-01T08:57:43.578Z">
+<meta property="og:updated_time" content="2018-01-01T09:01:18.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github常用指令">
 <meta name="twitter:description" content="首先，当你完成git安装后，将github的用户名和邮箱进行配置12$ git config --global user.name &quot;John Doe&quot;$ git config --globl user.email johndoeexample.com 如何使用github提交代码12345678$ 用github建仓库$ 进入目录(或者直接在目录下右键git bash here)$ git in">
@@ -351,9 +351,9 @@
 
       
         <p>首先，当你完成git安装后，将github的用户名和邮箱进行配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"John Doe"</span></span><br><span class="line">$ git config --globl user.email johndoeexample.com</span><br></pre></td></tr></table></figure></p>
-<p>如何使用github提交代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ 用github建仓库</span><br><span class="line">$ 进入目录(或者直接在目录下右键git bash here)</span><br><span class="line">$ git init</span><br><span class="line">$ git status</span><br><span class="line">$ git add .</span><br><span class="line">$ git status</span><br><span class="line">$ git commit -m <span class="string">'注释'</span></span><br><span class="line">$ git push -u 网址 master</span><br></pre></td></tr></table></figure></p>
+<h3 id="如何使用github提交代码"><a href="#如何使用github提交代码" class="headerlink" title="如何使用github提交代码"></a>如何使用github提交代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ 用github建仓库</span><br><span class="line">$ 进入目录(或者直接在目录下右键git bash here)</span><br><span class="line">$ git init</span><br><span class="line">$ git status</span><br><span class="line">$ git add .</span><br><span class="line">$ git status</span><br><span class="line">$ git commit -m <span class="string">'注释'</span></span><br><span class="line">$ git push -u 网址 master</span><br></pre></td></tr></table></figure>
 <p>注意：网址是你建立仓库时对应的网址,以http开头，.git结尾<br><a id="more"></a></p>
-<p>如何预览github里的demo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> text,进入到你想要上传的项目文件夹下</span><br><span class="line">$ git init</span><br><span class="line">$  创建gh-pages 分支， git checkout --orphan gh-pages</span><br><span class="line">$ 添加文件到暂存区，git add .</span><br><span class="line">$ 添加信息 git commit -m <span class="string">'This is add message'</span></span><br><span class="line">$ 添加仓库 git remote add origin git@github.com:username/project.git</span><br><span class="line">$ 部署你的项目到github，git push origin gh-pages</span><br><span class="line">$ 接下来你在当前仓库下的.io就可以看到你的项目Demo了</span><br></pre></td></tr></table></figure></p>
+<h3 id="如何预览github里的demo"><a href="#如何预览github里的demo" class="headerlink" title="如何预览github里的demo"></a>如何预览github里的demo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> text,进入到你想要上传的项目文件夹下</span><br><span class="line">$ git init</span><br><span class="line">$  创建gh-pages 分支， git checkout --orphan gh-pages</span><br><span class="line">$ 添加文件到暂存区，git add .</span><br><span class="line">$ 添加信息 git commit -m <span class="string">'This is add message'</span></span><br><span class="line">$ 添加仓库 git remote add origin git@github.com:username/project.git</span><br><span class="line">$ 部署你的项目到github，git push origin gh-pages</span><br><span class="line">$ 接下来你在当前仓库下的.io就可以看到你的项目Demo了</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -448,8 +448,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -536,6 +545,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使用github提交代码"><span class="nav-number">1.</span> <span class="nav-text">如何使用github提交代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何预览github里的demo"><span class="nav-number">2.</span> <span class="nav-text">如何预览github里的demo</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -558,7 +583,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">FANCY</span>
   <br/>
-  <span>Just  Do  It !</span>
+  <span>Just &nbsp;&nbsp;&nbsp; Do &nbsp;&nbsp;&nbsp; It !</span>
 </div>
 
 

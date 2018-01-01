@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Fancy&#39;s Blog">
 <meta property="og:description" content="VUE介绍Vue.js（读音 /vjuː/，类似于 view 的读音）是一套构建用户界面(user interface)的渐进式框架。与其他重量级框架不同的是，Vue 从根本上采用最小成本、渐进增量(incrementally adoptable)的设计。Vue 的核心库只专注于视图层，并且很容易与其他第三方库或现有项目集成。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-25T08:39:51.286Z">
+<meta property="og:updated_time" content="2018-01-01T09:09:20.984Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VUE框架学习之SPA">
 <meta name="twitter:description" content="VUE介绍Vue.js（读音 /vjuː/，类似于 view 的读音）是一套构建用户界面(user interface)的渐进式框架。与其他重量级框架不同的是，Vue 从根本上采用最小成本、渐进增量(incrementally adoptable)的设计。Vue 的核心库只专注于视图层，并且很容易与其他第三方库或现有项目集成。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue">
@@ -353,22 +353,17 @@
         <p>VUE介绍<br>Vue.js（读音 /vjuː/，类似于 view 的读音）是一套构建用户界面(user interface)的渐进式框架。与其他重量级框架不同的是，Vue 从根本上采用最小成本、渐进增量(incrementally adoptable)的设计。Vue 的核心库只专注于视图层，并且很容易与其他第三方库或现有项目集成。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue 也完全能够为复杂的单页应用程序提供有力驱动。</p>
 <p>实践步伐<br>由于自己原生js功底很弱，所以对于框架的学习也有点畏惧，迟迟不肯行动。今天试着用VUE实现了一个单页面应用，单页面应用的基本元素：页面路由，通过某种方式，如 URL hash 来说明表明当前所在的页面，并拥有从一个页面跳转到另外一个页面的入口。模块化很强，减少了普通页面切换的时间，很方便，也很迅速。</p>
 <a id="more"></a>
-<p>实现一个简单的单页面应用可以通过vue-cli及其模板构造出一个大致的页面。也就是<br><code>$ npm install -g vue-cli
-$ vue init webpack-simple my-project
-$ cd my-project
-$ npm install
-$ npm run dev</code><br>其中：<br><code>npm run dev: Webpack + vue-loader with proper config for source maps &amp; hot-reload.(在电脑的8080端口可以查看界面)
-npm run build: build with HTML/CSS/JS minification. (有个dist文件夹，文件夹内部全是编译过的文件，也就是打包出来的文件，通过index.html可以直接显示界面)</code><br>各文件夹大概内容以及其作用如下：<br>build文件夹内一般是一些config文件。<br>src文件夹里是我们用到的，内部文件可用的大概有以下几个：<br>APP.vue是整体界面描述，里面包含有很多组件及路由。<br>router文件夹里index.js存放着对应的路径及其组件声明。<br>main.js指明入口文件。<br>components里一般放置组件的.vue文件。</p>
-<p>基本语句<br><code>&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;</code><br>表示目标路由的链接。当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标对象。<br><code>&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;</code><br>也就是<a href="home">Home</a><br><code>&lt;router-link v-bind:to=&quot;&#39;home&#39;&quot;&gt;Home&lt;/router-link&gt;</code><br><code>&lt;router-link :to=&quot;&#39;home&#39;&quot;&gt;Home&lt;/router-link&gt;</code></p>
-<p>对于router里index.js大致格式如下：<br> <code>{path: &#39;/&#39;, redirect: &#39;/HelloWorld&#39;},
-{path: &#39;/HelloWorld&#39;, component: HelloWorld},    
-{path: &#39;/HelloVue&#39;, component: HelloVue}</code></p>
-<p><code>export default {
-  name: &#39;HelloWorld&#39;
-}
-export default 提供了一个接口，可以通过import来进行引用。</code></p>
+<p>实现一个简单的单页面应用可以通过vue-cli及其模板构造出一个大致的页面。也就是<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g vue-cli</span><br><span class="line">$ vue init webpack-simple my-project</span><br><span class="line">$ <span class="built_in">cd</span> my-project</span><br><span class="line">$ npm install</span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure></p>
+<p>其中：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm run dev: Webpack + vue-loader with proper config <span class="keyword">for</span> <span class="built_in">source</span> maps &amp; hot-reload.</span><br><span class="line">(在电脑的8080端口可以查看界面)</span><br><span class="line">$ npm run build: build with HTML/CSS/JS minification. </span><br><span class="line">(有个dist文件夹，文件夹内部全是编译过的文件，也就是打包出来的文件，通过index.html可以直接显示界面)</span><br></pre></td></tr></table></figure></p>
+<p>各文件夹大概内容以及其作用如下：<br>build文件夹内一般是一些config文件。<br>src文件夹里是我们用到的，内部文件可用的大概有以下几个：<br>APP.vue是整体界面描述，里面包含有很多组件及路由。<br>router文件夹里index.js存放着对应的路径及其组件声明。<br>main.js指明入口文件。<br>components里一般放置组件的.vue文件。</p>
+<p>基本语句<br><code>&lt;router-link to=&quot;home&quot;&gt;Home&lt;/router-link&gt;</code><br>表示目标路由的链接。当被点击后，内部会立刻把 to 的值传到 router.push()，所以这个值可以是一个字符串或者是描述目标对象。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link to=<span class="string">"home"</span>&gt;Home&lt;/router-link&gt;</span><br><span class="line">等价于</span><br><span class="line">&lt;a href=<span class="string">"home"</span>&gt;Home&lt;/a&gt;</span><br><span class="line">&lt;router-link v-bind:to=<span class="string">"'home'"</span>&gt;Home&lt;/router-link&gt; </span><br><span class="line">&lt;router-link :to=<span class="string">"'home'"</span>&gt;Home&lt;/router-link&gt;</span><br></pre></td></tr></table></figure></p>
+<p>对于router里index.js大致格式如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;path: <span class="string">'/'</span>, redirect: <span class="string">'/HelloWorld'</span>&#125;,</span><br><span class="line">&#123;path: <span class="string">'/HelloWorld'</span>, component: HelloWorld&#125;,	</span><br><span class="line">&#123;path: <span class="string">'/HelloVue'</span>, component: HelloVue&#125; </span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> default &#123;</span><br><span class="line">  name: <span class="string">'HelloWorld'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">export</span> default 提供了一个接口，可以通过import来进行引用。</span><br></pre></td></tr></table></figure></p>
 <p>对于.vue模板内必须有一个最外部的div来包含其他所有东西，也只能有一个最外部div.</p>
-<p>遇到的问题<br>1 npm run dev时报错，很多跟格式有关的错误，比如多空格<br>解决方法：EsLint帮助我们检查Javascript编程时的语法错误,禁用Eslink.通过更改webpack的配置文件。<br>2 npm run dev页面找不到<br>解决方法：有可能是因为端口被占用。</p>
+<p>遇到的问题</p>
+<ol>
+<li>npm run dev时报错，很多跟格式有关的错误，比如多空格<br>解决方法：EsLint帮助我们检查Javascript编程时的语法错误,禁用Eslink.通过更改webpack的配置文件。</li>
+<li>npm run dev页面找不到<br>解决方法：有可能是因为端口被占用。</li>
+</ol>
 <p>参考文献：<br>VUE模板github源码: <a href="https://github.com/vuejs" target="_blank" rel="external">https://github.com/vuejs</a><br>VUE官方文档: <a href="https://vuefe.cn/v2/guide/" target="_blank" rel="external">https://vuefe.cn/v2/guide/</a><br>晓晓师姐博客: <a href="http://xxwu.tech/" target="_blank" rel="external">http://xxwu.tech/</a><br>MarkDown基本语法: <a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="external">http://www.jianshu.com/p/q81RER</a></p>
 
       
@@ -574,7 +569,7 @@ export default 提供了一个接口，可以通过import来进行引用。</cod
   </span>
   <span class="author" itemprop="copyrightHolder">FANCY</span>
   <br/>
-  <span>Just  Do  It !</span>
+  <span>Just &nbsp;&nbsp;&nbsp; Do &nbsp;&nbsp;&nbsp; It !</span>
 </div>
 
 
