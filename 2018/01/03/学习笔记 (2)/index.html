@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="学习笔记,CSS,Canvas,Bootstrap," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Canvas学习笔记###参见自己的博客园blog canvas学习笔记（一）canvas学习笔记（二）CSS的预处理框架">
+<meta name="keywords" content="学习笔记,CSS,Canvas,Bootstrap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2017年6月7日学习笔记">
+<meta property="og:url" content="http://yoursite.com/2018/01/03/学习笔记 (2)/index.html">
+<meta property="og:site_name" content="Fancy&#39;s Blog">
+<meta property="og:description" content="Canvas学习笔记###参见自己的博客园blog canvas学习笔记（一）canvas学习笔记（二）CSS的预处理框架">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-01-03T06:02:25.814Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2017年6月7日学习笔记">
+<meta name="twitter:description" content="Canvas学习笔记###参见自己的博客园blog canvas学习笔记（一）canvas学习笔记（二）CSS的预处理框架">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/03/学习笔记 (2)/"/>
+
+
+
+
+
+  <title>2017年6月7日学习笔记 | Fancy's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Fancy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/03/学习笔记 (2)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FANCY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fancy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2017年6月7日学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-03T13:33:24+08:00">
+                2018-01-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Canvas学习笔记"><a href="#Canvas学习笔记" class="headerlink" title="Canvas学习笔记"></a>Canvas学习笔记</h2><p>###参见自己的博客园blog</p>
+<h3 id="canvas学习笔记（一）"><a href="#canvas学习笔记（一）" class="headerlink" title="canvas学习笔记（一）"></a><a href="http://www.cnblogs.com/linxiaoxi/p/7479984.html" target="_blank" rel="external">canvas学习笔记（一）</a></h3><h3 id="canvas学习笔记（二）"><a href="#canvas学习笔记（二）" class="headerlink" title="canvas学习笔记（二）"></a><a href="http://www.cnblogs.com/linxiaoxi/p/7487102.html" target="_blank" rel="external">canvas学习笔记（二）</a></h3><h2 id="CSS的预处理框架"><a href="#CSS的预处理框架" class="headerlink" title="CSS的预处理框架"></a>CSS的预处理框架</h2><a id="more"></a>
+<h3 id="Less"><a href="#Less" class="headerlink" title="Less"></a>Less</h3><ol>
+<li>安装node.js</li>
+<li>打开命令行</li>
+<li><code>npm install -g less 安装less</code></li>
+<li>进入目录 cd</li>
+<li><code>lessc styles.less</code></li>
+<li><code>lessc styles.less styles.css</code><br>这样就可以将less文件 转化为CSS文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet/less"</span> <span class="built_in">type</span>=<span class="string">"text/css"</span> href=<span class="string">"styles.less"</span> /&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src=<span class="string">"less.js"</span> <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Sass"><a href="#Sass" class="headerlink" title="Sass"></a>Sass</h3><ol>
+<li>sass基于Ruby語言開發而成，安裝sass前需要安裝Ruby</li>
+<li>安装过程中Add Ruby executables to your PATH 添加到系統環境變量</li>
+<li>安裝完成後需測試安裝有沒有成功,運行CMD輸入以下命令：ruby -v<br>//如安裝成功會打印<br>ruby 2.2.2p95 (2015-04-13 revision 50295) [i386-mingw32]<br>國内網絡的問題導緻gem源間歇性中斷因此我們需要更換gem源（使用淘寶的gem源<a href="https://ruby.taobao.org/）如下：" target="_blank" rel="external">https://ruby.taobao.org/）如下：</a></li>
+</ol>
+<ul>
+<li><p>删除原gem源<br><code>gem sources --remove https://rubygems.org/</code></p>
+</li>
+<li><p>添加國内淘寶源<br><code>gem sources -a https://ruby.taobao.org/</code></p>
+</li>
+</ul>
+<p>报错 就是使用其他的gem源：<a href="http://gems.ruby-china.org/" target="_blank" rel="external">http://gems.ruby-china.org/</a></p>
+<ul>
+<li><p>打印是否替換成功<br><code>gem sources -l</code></p>
+</li>
+<li><p>更換成功後打印如下<br><strong><em> CURRENT SOURCES </em></strong><br><a href="https://ruby.taobao.org/" target="_blank" rel="external">https://ruby.taobao.org/</a></p>
+</li>
+<li><p>安裝如下 sass 和compass(如mac安裝遇到權限問題需加 sudo gem install sass)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gem install sass</span><br><span class="line">gem install compass</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看安装是否成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sass -v</span><br><span class="line">Sass 3.x.x (Selective Steve)</span><br><span class="line"></span><br><span class="line">compass -v</span><br><span class="line">Compass 1.x.x (Polaris)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//單文件轉換命令</span><br><span class="line">sass input.scss output.css</span><br><span class="line"></span><br><span class="line">//單文件監聽命令</span><br><span class="line">sass --watch input.scss:output.css</span><br><span class="line"></span><br><span class="line">//如果你有很多的sass文件的目錄，你也可以告訴sass監聽整個目錄：</span><br><span class="line">sass --watch app/sass:public/stylesheets</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Stylus"><a href="#Stylus" class="headerlink" title="Stylus"></a>Stylus</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ol>
+<li>安装node.js</li>
+<li><code>npm install stylus -g</code></li>
+<li>生成CSS<br>建立一个stylusExample/，再在里面建立 src 目录专门存放 stylus 文件，在里面建立 example.styl 文件。然后在 stylusExample 目录下面执行下面命令<br><code>$ stylus --compress src/</code></li>
+</ol>
+<p>输出compiled src/example.css ，这个时候表示你生成成功了，带上–compress参数表示你生成压缩的CSS文件。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ stylus --css css/example.css css/out.styl CSS转换成styl </span><br><span class="line">$ stylus <span class="built_in">help</span> box-shadow CSS属性的帮助 </span><br><span class="line">$ stylus --css test.css 输出基本名一致的.styl文件</span><br></pre></td></tr></table></figure></p>
+<h2 id="leetcode总结"><a href="#leetcode总结" class="headerlink" title="leetcode总结"></a>leetcode总结</h2><h3 id="第二个-Add-Two-Numbers"><a href="#第二个-Add-Two-Numbers" class="headerlink" title="第二个 Add Two Numbers"></a>第二个 Add Two Numbers</h3><p>分情况判断</p>
+<ol>
+<li>两个节点中只要有一个为空，返回节点为另一个节点</li>
+<li>采用构造函数，构造一个新节点，传入值为 两节点值的和</li>
+<li>下一个节点 等于两节点下一个节点的和</li>
+<li>对当前节点进行判断，如果当前节点值大于9，则令当前节点值减去10</li>
+<li>对于当前节点的下一节点，值在原来的基础上加一。相当于addTwoNumbers(l.next,new ListNode(1))。即将此时当前节点的下一节点与值为1的节点相加。</li>
+<li>不断循环，不断嵌套，即可得到最后的节点。</li>
+</ol>
+<h3 id="第三个-Longest-Substring-Without-Repeating-Characters"><a href="#第三个-Longest-Substring-Without-Repeating-Characters" class="headerlink" title="第三个 Longest Substring Without Repeating Characters"></a>第三个 Longest Substring Without Repeating Characters</h3><p>算法思想：<br>第一种：</p>
+<ul>
+<li>对所有的字符串进行枚举</li>
+<li>然后对所有枚举后的字符串进行判断 是否重复</li>
+<li>这种算法时间复杂度太高</li>
+</ul>
+<p>第二种</p>
+<ul>
+<li>截取字符串（i，j）</li>
+<li>判断第j个字符是否在截取的字符串内</li>
+<li>如果存在</li>
+<li>让i=所在位置+1 </li>
+<li>继续截取</li>
+<li>不断重复</li>
+<li>最后len= Math.max(len,j-i+1);</li>
+</ul>
+<h2 id="常见前端题目解答"><a href="#常见前端题目解答" class="headerlink" title="常见前端题目解答"></a>常见前端题目解答</h2><h3 id="一-display-none和-visibility：hidden的区别"><a href="#一-display-none和-visibility：hidden的区别" class="headerlink" title="一.display:none和 visibility：hidden的区别"></a>一.display:none和 visibility：hidden的区别</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">display:none 不为被隐藏的对象保留其物理空间 visibility：hidden 为被隐藏的对象保留其物理空间</span><br><span class="line">也就是display:;当他的值变成block 的时候，它所在的结构才会被加载进来。</span><br><span class="line">而visibility就会在加载页面的同时就已经把它加载进来了，因为他的值为hidden的时候，它所占的空间还在。</span><br></pre></td></tr></table></figure>
+<h3 id="二-首先我们要明白的是，页面的显示过程分为以下几个阶段："><a href="#二-首先我们要明白的是，页面的显示过程分为以下几个阶段：" class="headerlink" title="二.首先我们要明白的是，页面的显示过程分为以下几个阶段："></a>二.首先我们要明白的是，页面的显示过程分为以下几个阶段：</h3><ol>
+<li><p>生成DOM树(包括display:none的节点)</p>
+</li>
+<li><p>在DOM树的基础上根据节点的集合属性(margin,padding,width,height等)生成render树(不包括display:none，head节点，但是包括visibility:hidden的节点)</p>
+</li>
+<li><p>在render树的基础上继续渲染颜色背景色等样式</p>
+</li>
+</ol>
+<p>reflow:当render树的一部分或者全部因为大小边距等问题发生改变而需要重建的过程，叫做回流</p>
+<p>repaint:当诸如颜色背景等不会引起页面布局变化，而只需要重新渲染的过程叫做重绘</p>
+<h3 id="三-如何通过原生js来禁用按钮"><a href="#三-如何通过原生js来禁用按钮" class="headerlink" title="三.如何通过原生js来禁用按钮"></a>三.如何通过原生js来禁用按钮</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(<span class="string">"button1"</span>).disabled = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">document.getElementById(<span class="string">"button1"</span>).setAttribute(“disabled”,”<span class="literal">true</span>”);</span><br></pre></td></tr></table></figure>
+<h3 id="四-History对象的属性和方法"><a href="#四-History对象的属性和方法" class="headerlink" title="四.History对象的属性和方法"></a>四.History对象的属性和方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">History 对象包含用户（在浏览器窗口中）访问过的 URL。</span><br><span class="line">History 对象是 window 对象的一部分，可通过 window.history 属性对其进行访问。</span><br><span class="line"></span><br><span class="line">属性	描述</span><br><span class="line">length	返回浏览器历史列表中的 URL 数量。</span><br><span class="line"></span><br><span class="line">方法	描述</span><br><span class="line">back()	加载 <span class="built_in">history</span> 列表中的前一个 URL。</span><br><span class="line">forward()	加载 <span class="built_in">history</span> 列表中的下一个 URL。</span><br><span class="line">go()	加载 <span class="built_in">history</span> 列表中的某个具体页面，而不是刷新当前页面。。</span><br><span class="line"></span><br><span class="line">下面一行代码执行的操作与单击两次后退按钮执行的操作一样：</span><br><span class="line">history.go(-2)；</span><br></pre></td></tr></table></figure>
+<h3 id="四-只有实例对象上不存在的属性和方法才会去原型上查找。"><a href="#四-只有实例对象上不存在的属性和方法才会去原型上查找。" class="headerlink" title="四.只有实例对象上不存在的属性和方法才会去原型上查找。"></a>四.只有实例对象上不存在的属性和方法才会去原型上查找。</h3><p>prototype 原型。。<br>构造原型(construtor prototypes)</p>
+<p>什么是原型？</p>
+<ul>
+<li>原型是一个对象，其他对象可以通过它实现属性继承。</li>
+</ul>
+<p>任何一个对象都可以成为原型么？</p>
+<ul>
+<li>是</li>
+</ul>
+<p>哪些对象有原型？</p>
+<ul>
+<li><p>所有的对象在默认的情况下都有一个原型，因为原型本身也是对象，所以每个原型自身又有一个原型.(只有一种例外，默认的对象原型在原型链的顶端。)</p>
+</li>
+<li><p>在javascript中，一个对象就是任何无序键值对的集合,如果它不是一个主数据类型(undefined，null，boolean，number，or string)，那它就是一个对象。</p>
+</li>
+</ul>
+<ul>
+<li><p>因为在javascript中，直接通过function申明的函数，后面定义的，会影响到之前的引用。<br>通过var申明的函数，后面定义的并不会影响前面的引用。</p>
+</li>
+<li><p>通过function定义的函数，后面定义的，照旧影响了前面的引用，但是不能改变通过var申明函数后的引用。</p>
+</li>
+<li>反而，通过var申明的函数，改变了后来通过function申明函数之后的引用。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;kbd&gt; 标签定义键盘文本。</span><br><span class="line">&lt;kbd&gt; 标签经常用在于计算机相关的文档和手册中。例如：</span><br><span class="line">键入 &lt;kbd&gt;quit&lt;/kbd&gt; 来退出程序，或者键入 &lt;kbd&gt;menu&lt;/kbd&gt; 来返回主菜单。Keyboard Input Element(键盘输入元素)</span><br></pre></td></tr></table></figure>
+<h3 id="五-absolute和relative的区别。"><a href="#五-absolute和relative的区别。" class="headerlink" title="五.absolute和relative的区别。"></a>五.absolute和relative的区别。</h3><p>定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在，<br>而定位为absolute的层脱离正常文本流，但与relative的区别是其在正常流中的位置不在存在。</p>
+<h1 id="Bootstrap-学习笔记"><a href="#Bootstrap-学习笔记" class="headerlink" title="Bootstrap 学习笔记"></a>Bootstrap 学习笔记</h1><p>###[参见自己的博客园blog]</p>
+<h3 id="Bootstrap-学习笔记-1"><a href="#Bootstrap-学习笔记-1" class="headerlink" title="Bootstrap 学习笔记"></a><a href="http://www.cnblogs.com/linxiaoxi/p/8182565.html" target="_blank" rel="external">Bootstrap 学习笔记</a></h3><h1 id="瀑布流学习笔记"><a href="#瀑布流学习笔记" class="headerlink" title="瀑布流学习笔记"></a>瀑布流学习笔记</h1><h3 id="瀑布流-等宽不等高-无线拖动。"><a href="#瀑布流-等宽不等高-无线拖动。" class="headerlink" title="瀑布流  等宽不等高 无线拖动。"></a>瀑布流  等宽不等高 无线拖动。</h3><p>瀑布流主要采用的是定位</p>
+<blockquote>
+<p>offsetWidth()获取Box的宽度。<br>document.documentElement.clientWidth<br>取整  Math.floor();<br>Math.min();可以求出一组数中最小的值<br>Math.min.apply(null,hArr)<br>window.onscroll{}<br>滚动条滚动的距离。<br>scrollTop = document.body.scrollTop||document.documentElement.scrollTop<br>获取浏览器窗口的高度<br>height = document.body.clientHeight||document.documentElement.clientHeight.<br>数据从后台来<br>JSON数据格式渲染</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+            <a href="/tags/Canvas/" rel="tag"># Canvas</a>
+          
+            <a href="/tags/Bootstrap/" rel="tag"># Bootstrap</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/02/2017年8月8日/" rel="next" title="Leetcode 刷题总结">
+                <i class="fa fa-chevron-left"></i>Prev Option
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/03/实践总结/" rel="prev" title="实践总结">
+                Next Option <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="FANCY" />
+          <p class="site-author-name" itemprop="name">FANCY</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/gxfmqfzkzdgzwj" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="597785713@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-email"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Canvas学习笔记"><span class="nav-number">1.</span> <span class="nav-text">Canvas学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#canvas学习笔记（一）"><span class="nav-number">1.1.</span> <span class="nav-text">canvas学习笔记（一）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#canvas学习笔记（二）"><span class="nav-number">1.2.</span> <span class="nav-text">canvas学习笔记（二）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS的预处理框架"><span class="nav-number">2.</span> <span class="nav-text">CSS的预处理框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Less"><span class="nav-number">2.1.</span> <span class="nav-text">Less</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sass"><span class="nav-number">2.2.</span> <span class="nav-text">Sass</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stylus"><span class="nav-number">2.3.</span> <span class="nav-text">Stylus</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">2.3.1.</span> <span class="nav-text">安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leetcode总结"><span class="nav-number">3.</span> <span class="nav-text">leetcode总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第二个-Add-Two-Numbers"><span class="nav-number">3.1.</span> <span class="nav-text">第二个 Add Two Numbers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三个-Longest-Substring-Without-Repeating-Characters"><span class="nav-number">3.2.</span> <span class="nav-text">第三个 Longest Substring Without Repeating Characters</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见前端题目解答"><span class="nav-number">4.</span> <span class="nav-text">常见前端题目解答</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-display-none和-visibility：hidden的区别"><span class="nav-number">4.1.</span> <span class="nav-text">一.display:none和 visibility：hidden的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-首先我们要明白的是，页面的显示过程分为以下几个阶段："><span class="nav-number">4.2.</span> <span class="nav-text">二.首先我们要明白的是，页面的显示过程分为以下几个阶段：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-如何通过原生js来禁用按钮"><span class="nav-number">4.3.</span> <span class="nav-text">三.如何通过原生js来禁用按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-History对象的属性和方法"><span class="nav-number">4.4.</span> <span class="nav-text">四.History对象的属性和方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-只有实例对象上不存在的属性和方法才会去原型上查找。"><span class="nav-number">4.5.</span> <span class="nav-text">四.只有实例对象上不存在的属性和方法才会去原型上查找。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五-absolute和relative的区别。"><span class="nav-number">4.6.</span> <span class="nav-text">五.absolute和relative的区别。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bootstrap-学习笔记"><span class="nav-number"></span> <span class="nav-text">Bootstrap 学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Bootstrap-学习笔记-1"><span class="nav-number">0.1.</span> <span class="nav-text">Bootstrap 学习笔记</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#瀑布流学习笔记"><span class="nav-number"></span> <span class="nav-text">瀑布流学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#瀑布流-等宽不等高-无线拖动。"><span class="nav-number">0.1.</span> <span class="nav-text">瀑布流  等宽不等高 无线拖动。</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FANCY</span>
+  <br/>
+  <span>Just &nbsp;&nbsp;&nbsp; Do &nbsp;&nbsp;&nbsp; It !</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

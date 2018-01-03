@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="学习笔记," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="2017年8月15日学习笔记js task18实现队列首先定义一个队列对象对象里包含队列现存数据以及所有的方法 JavaScript RegExp.test() 函数详解regExpObject.test( str )test()函数返回一个布尔值，用于指示在所搜索的字符串中是否存在正则表达式模式对应的匹配。">
+<meta name="keywords" content="学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="队列">
+<meta property="og:url" content="http://yoursite.com/2018/01/03/队列/index.html">
+<meta property="og:site_name" content="Fancy&#39;s Blog">
+<meta property="og:description" content="2017年8月15日学习笔记js task18实现队列首先定义一个队列对象对象里包含队列现存数据以及所有的方法 JavaScript RegExp.test() 函数详解regExpObject.test( str )test()函数返回一个布尔值，用于指示在所搜索的字符串中是否存在正则表达式模式对应的匹配。">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-01-03T05:54:08.371Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="队列">
+<meta name="twitter:description" content="2017年8月15日学习笔记js task18实现队列首先定义一个队列对象对象里包含队列现存数据以及所有的方法 JavaScript RegExp.test() 函数详解regExpObject.test( str )test()函数返回一个布尔值，用于指示在所搜索的字符串中是否存在正则表达式模式对应的匹配。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/03/队列/"/>
+
+
+
+
+
+  <title>队列 | Fancy's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Fancy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/03/队列/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FANCY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fancy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">队列</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-03T13:43:53+08:00">
+                2018-01-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/队列/" itemprop="url" rel="index">
+                    <span itemprop="name">队列</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="2017年8月15日学习笔记"><a href="#2017年8月15日学习笔记" class="headerlink" title="2017年8月15日学习笔记"></a>2017年8月15日学习笔记</h1><h3 id="js-task18"><a href="#js-task18" class="headerlink" title="js task18"></a>js task18</h3><p>实现队列<br>首先定义一个队列对象<br>对象里包含队列现存数据以及所有的方法</p>
+<p>JavaScript RegExp.test() 函数详解<br>regExpObject.test( str )<br>test()函数返回一个布尔值，用于指示在所搜索的字符串中是否存在正则表达式模式对应的匹配。<br><a id="more"></a><br>该函数属于RegExp对象(实例)<br>test()方法的返回值为Boolean类型，如果字符串中存在该正则表达式模式的匹配，就返回true，否则false。</p>
+<p>值得注意的是，每次执行test()函数都只查找最多一个匹配，如果找到就立即返回true，否则返回false。</p>
+<ol>
+<li>shift()函数</li>
+</ol>
+<p>定义</p>
+<p>该函数从从数组中删除第一项，并返回该删除项。</p>
+<p>用法示例</p>
+<p>var fruits = [“Banana”, “Orange”, “Apple”, “Mango”];<br>fruits.shift()<br>console.log(fruits);<br>结果输出：</p>
+<p>Orange,Apple,Mango<br>注：该方法会改变数组的长度</p>
+<ol>
+<li>pop()函数</li>
+</ol>
+<p>定义</p>
+<p>该函数从从数组中删除最后项，并返回该删除项。</p>
+<p>用法示例</p>
+<p>var fruits = [“Banana”, “Orange”, “Apple”, “Mango”];<br>fruits.pop()<br>console.log(fruits);<br>结果输出：</p>
+<p>Banana, Orange, Apple</p>
+<ol>
+<li>unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度。<br>unshift() 方法将把它的参数插入 arrayObject 的头部，并将已经存在的元素顺次地移到较高的下标处，以便留出空间。该方法的第一个参数将成为数组的新元素 0，如果还有第二个参数，它将成为新的元素 1，以此类推。<br>请注意，unshift() 方法不创建新的创建，而是直接修改原有的数组。</li>
+</ol>
+<ol>
+<li>要把一个或多个元素添加到数组的尾部，请使用 push() 方法。</li>
+</ol>
+<p>找了好半天的问题 最后发现 竟然是一个函数名称大小写的问题  我也是服了 呵呵呵呵<br>一万匹草泥马从我面前经过 好想骂人啊  还是自己太蠢</p>
+<ol>
+<li><p>众所周知大家都应该知道delete的用法，用来删除对象或者删除数组等，如果是删除对象除数组以外可能可以删除的比较干净，“删除的比较干净”是什么意思就是说在Js数组中<br>，如果用delete来删除可能当前被删除的数组删除不掉，而是把他赋值为空或者null了，如下面的代码所示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">var array = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>,<span class="string">"e"</span>];</span><br><span class="line">delete array[2];  // 把 c 删除了。</span><br><span class="line">alert(array.length);  // 弹出一下看看显示几？答案是肯定的应该是5个。</span><br><span class="line">这里就会有个问题了，删除了一个应该还剩下下4个才对吗，为什么我也不知道，如果你想彻底删除其中一个数组的话就看看下面代码所示：</span><br><span class="line">var array = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>,<span class="string">"e"</span>];  // 同样先声明一组数组，并且给他设置初始值。</span><br><span class="line">array.splice(2,1);  // 这里注意，最重要的代码就在这里哪。</span><br><span class="line">alert(array.length); // 弹出显示一下，哈哈 c 成功删除了。</span><br><span class="line">alert(array.join(<span class="string">","</span>)); // 为了进一步看得更清楚些，我们用 join函数合并了数组进行查看，结果为：a,b,d,e。</span><br><span class="line">上面只是删除已经知道某个数组，假如说其中有个数组是空的，我想删除其中为空的数组，那这个方法还能不能用了？我们先试试下面的代码：</span><br><span class="line">var array = [<span class="string">"a"</span>,<span class="string">""</span>,<span class="string">"c"</span>,<span class="string">""</span>,<span class="string">"e"</span>];</span><br><span class="line"><span class="keyword">for</span>(k <span class="keyword">in</span> array)</span><br><span class="line">    <span class="keyword">if</span>(array[k] == <span class="string">""</span>) array.splice(k,k+1);  // 这里注意了，第二个参数不是1了，而是k+1。</span><br><span class="line"></span><br><span class="line">splice 在Jscript.chm里的说明是：</span><br><span class="line">    从一个数组中移除一个或多个元素，如果必要，在所移除元素的位置上插入新元素，返回所移除的元素。</span><br><span class="line">参数</span><br><span class="line">arrayObj</span><br><span class="line">必选项。一个 Array 对象。</span><br><span class="line">start</span><br><span class="line">必选项。指定从数组中移除元素的开始位置，这个位置是从 0 开始计算的。</span><br><span class="line">deleteCount</span><br><span class="line">必选项。要移除的元素的个数。</span><br><span class="line">item1, item2,. . .,itemN</span><br><span class="line">必选项。要在所移除元素的位置上插入的新元素。</span><br><span class="line">说明</span><br><span class="line">splice 方法可以移除从 start 位置开始的指定个数的元素并插入新元素，从而修改 arrayObj。返回值是一个由所移除的元素组成的新 Array 对象。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>闭包函数<br>只要存在调用内部函数的可能，JavaScript就需要保留被引用的函数。而且JavaScript运行时需要跟踪引用这个内部函数的所有变量，直到最后一个变量废弃，JavaScript的垃圾收集器才能释放相应的内存空间（红色部分是理解闭包的关键）。</p>
+</li>
+</ol>
+<p>javascript闭包函数不太理解，有待进一步加强</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/03/实践总结/" rel="next" title="实践总结">
+                <i class="fa fa-chevron-left"></i>Prev Option
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/03/Jquery/" rel="prev" title="Jquery">
+                Next Option <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="FANCY" />
+          <p class="site-author-name" itemprop="name">FANCY</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/gxfmqfzkzdgzwj" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="597785713@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-email"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月15日学习笔记"><span class="nav-number">1.</span> <span class="nav-text">2017年8月15日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#js-task18"><span class="nav-number">1.0.1.</span> <span class="nav-text">js task18</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FANCY</span>
+  <br/>
+  <span>Just &nbsp;&nbsp;&nbsp; Do &nbsp;&nbsp;&nbsp; It !</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

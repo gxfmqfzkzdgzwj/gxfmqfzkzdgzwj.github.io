@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="学习笔记," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="2017年6月6日学习笔记已经深刻掌握的知识点： HTML常用的标签（div标签） CSS样式基本知识 JavaScript基本语法、窗口交互方法  基本掌握，但还有一点需要深入的知识点如下：CSS布局模型 需要深入的问题是：">
+<meta name="keywords" content="学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2017年6月6日">
+<meta property="og:url" content="http://yoursite.com/2018/01/02/2017年6月6日/index.html">
+<meta property="og:site_name" content="Fancy&#39;s Blog">
+<meta property="og:description" content="2017年6月6日学习笔记已经深刻掌握的知识点： HTML常用的标签（div标签） CSS样式基本知识 JavaScript基本语法、窗口交互方法  基本掌握，但还有一点需要深入的知识点如下：CSS布局模型 需要深入的问题是：">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-01-02T14:57:25.443Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2017年6月6日">
+<meta name="twitter:description" content="2017年6月6日学习笔记已经深刻掌握的知识点： HTML常用的标签（div标签） CSS样式基本知识 JavaScript基本语法、窗口交互方法  基本掌握，但还有一点需要深入的知识点如下：CSS布局模型 需要深入的问题是：">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/02/2017年6月6日/"/>
+
+
+
+
+
+  <title>2017年6月6日 | Fancy's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Fancy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/02/2017年6月6日/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FANCY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fancy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2017年6月6日</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-02T22:51:59+08:00">
+                2018-01-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="2017年6月6日学习笔记"><a href="#2017年6月6日学习笔记" class="headerlink" title="2017年6月6日学习笔记"></a>2017年6月6日学习笔记</h1><h3 id="已经深刻掌握的知识点："><a href="#已经深刻掌握的知识点：" class="headerlink" title="已经深刻掌握的知识点："></a>已经深刻掌握的知识点：</h3><ul>
+<li>HTML常用的标签（div标签）</li>
+<li>CSS样式基本知识</li>
+<li>JavaScript基本语法、窗口交互方法</li>
+</ul>
+<h3 id="基本掌握，但还有一点需要深入的知识点如下："><a href="#基本掌握，但还有一点需要深入的知识点如下：" class="headerlink" title="基本掌握，但还有一点需要深入的知识点如下："></a>基本掌握，但还有一点需要深入的知识点如下：</h3><p>CSS布局模型</p>
+<h3 id="需要深入的问题是："><a href="#需要深入的问题是：" class="headerlink" title="需要深入的问题是："></a>需要深入的问题是：</h3><a id="more"></a>
+<ol>
+<li>层模型</li>
+<li>Absolute与relative的组合使用</li>
+<li>float以及position属性的使用</li>
+</ol>
+<h3 id="初步掌握，还需要再次学习的知识点如下："><a href="#初步掌握，还需要再次学习的知识点如下：" class="headerlink" title="初步掌握，还需要再次学习的知识点如下："></a>初步掌握，还需要再次学习的知识点如下：</h3><ol>
+<li>CSS盒模型（border、margin等属性）</li>
+<li>javascript内置对象函数的用法</li>
+<li>HTML、CSS不同版本的区别与完善</li>
+</ol>
+<h3 id="LeetCode"><a href="#LeetCode" class="headerlink" title="LeetCode"></a>LeetCode</h3><p>leetcode 完成的任务编号为：7. Reverse Integer</p>
+<p>leetcode中遇到的问题包括：</p>
+<h3 id="数值型和字符串类型的相互转换"><a href="#数值型和字符串类型的相互转换" class="headerlink" title="数值型和字符串类型的相互转换"></a>数值型和字符串类型的相互转换</h3><p>习惯用C语言的思想去解题，对于javascript内置函数掌握不够<br>知识点补充：<br>    数值和字符串的相互转换<br>     a.要把一个数字转换为字符串，只要给它添加一个空的字符串即可：<br>     代码如下:<br>     var n = 100;<br>     var n_as_string = n + “”;<br>    b. 要让数字更加显式地转换为字符串,可以使用String()函数:<br>    代码如下:</p>
+<pre><code>var string_value = String(number); 
+c.使用toString()方法:
+string_value = number.toString(); 
+代码如下：
+var n = 17; 
+binary_string = n.toString(2); // Evaluates to &quot;10001&quot; 
+octal_string = &quot;0&quot; + n.toString(8); // Evaluates to &quot;021&quot; 
+hex_string = &quot;0x&quot; + n.toString(16); // Evaluates to &quot;0x11&quot; 
+d.此外toString() 方法可把数组转换为字符串，并返回结果。
+代码如下：
+var arr = new Array(3)
+arr[0] = &quot;George&quot;
+arr[1] = &quot;John&quot;
+arr[2] = &quot;Thomas&quot;
+document.write(arr.toString())
+输出：George,John,Thomas
+valueOf() 方法可以字符串返回数字。字符串的输出通常等于该数字。
+强制类型转换
+   Boolean(value)——把给定的值转换成Boolean型； 
+   Number(value)——把给定的值转换成数字（可以是整数或浮点数）； 
+   String(value)——把给定的值转换成字符串。
+toString() 方法可把一个逻辑值转换为字符串，并返回结果。
+split()    把字符串分割为字符串数组。
+reverse()翻转数组的顺序。
+join() 把数组的所有元素放入一个字符串 未指定分割符时，默认以逗号隔开。
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/02/note/" rel="next" title="日志">
+                <i class="fa fa-chevron-left"></i>Prev Option
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/02/2017年6月7日/" rel="prev" title="2017年6月7日">
+                Next Option <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="FANCY" />
+          <p class="site-author-name" itemprop="name">FANCY</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/gxfmqfzkzdgzwj" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="597785713@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-email"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年6月6日学习笔记"><span class="nav-number">1.</span> <span class="nav-text">2017年6月6日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#已经深刻掌握的知识点："><span class="nav-number">1.0.1.</span> <span class="nav-text">已经深刻掌握的知识点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本掌握，但还有一点需要深入的知识点如下："><span class="nav-number">1.0.2.</span> <span class="nav-text">基本掌握，但还有一点需要深入的知识点如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需要深入的问题是："><span class="nav-number">1.0.3.</span> <span class="nav-text">需要深入的问题是：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初步掌握，还需要再次学习的知识点如下："><span class="nav-number">1.0.4.</span> <span class="nav-text">初步掌握，还需要再次学习的知识点如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LeetCode"><span class="nav-number">1.0.5.</span> <span class="nav-text">LeetCode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数值型和字符串类型的相互转换"><span class="nav-number">1.0.6.</span> <span class="nav-text">数值型和字符串类型的相互转换</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FANCY</span>
+  <br/>
+  <span>Just &nbsp;&nbsp;&nbsp; Do &nbsp;&nbsp;&nbsp; It !</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

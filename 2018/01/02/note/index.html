@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="学习笔记," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="2017年6月6日学习笔记已经深刻掌握的知识点： HTML常用的标签（div标签） CSS样式基本知识 JavaScript基本语法、窗口交互方法  基本掌握，但还有一点需要深入的知识点如下：CSS布局模型 需要深入的问题是： 层模型 Absolute与relative的组合使用 float以及position属性的使用">
+<meta name="keywords" content="学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日志">
+<meta property="og:url" content="http://yoursite.com/2018/01/02/note/index.html">
+<meta property="og:site_name" content="Fancy&#39;s Blog">
+<meta property="og:description" content="2017年6月6日学习笔记已经深刻掌握的知识点： HTML常用的标签（div标签） CSS样式基本知识 JavaScript基本语法、窗口交互方法  基本掌握，但还有一点需要深入的知识点如下：CSS布局模型 需要深入的问题是： 层模型 Absolute与relative的组合使用 float以及position属性的使用">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-01-02T15:17:08.645Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="日志">
+<meta name="twitter:description" content="2017年6月6日学习笔记已经深刻掌握的知识点： HTML常用的标签（div标签） CSS样式基本知识 JavaScript基本语法、窗口交互方法  基本掌握，但还有一点需要深入的知识点如下：CSS布局模型 需要深入的问题是： 层模型 Absolute与relative的组合使用 float以及position属性的使用">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/02/note/"/>
+
+
+
+
+
+  <title>日志 | Fancy's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Fancy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/02/note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FANCY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fancy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">日志</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-02T19:53:11+08:00">
+                2018-01-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="2017年6月6日学习笔记"><a href="#2017年6月6日学习笔记" class="headerlink" title="2017年6月6日学习笔记"></a>2017年6月6日学习笔记</h1><h3 id="已经深刻掌握的知识点："><a href="#已经深刻掌握的知识点：" class="headerlink" title="已经深刻掌握的知识点："></a>已经深刻掌握的知识点：</h3><ul>
+<li>HTML常用的标签（div标签）</li>
+<li>CSS样式基本知识</li>
+<li>JavaScript基本语法、窗口交互方法</li>
+</ul>
+<h3 id="基本掌握，但还有一点需要深入的知识点如下："><a href="#基本掌握，但还有一点需要深入的知识点如下：" class="headerlink" title="基本掌握，但还有一点需要深入的知识点如下："></a>基本掌握，但还有一点需要深入的知识点如下：</h3><p>CSS布局模型</p>
+<h3 id="需要深入的问题是："><a href="#需要深入的问题是：" class="headerlink" title="需要深入的问题是："></a>需要深入的问题是：</h3><ol>
+<li>层模型</li>
+<li>Absolute与relative的组合使用</li>
+<li><p>float以及position属性的使用</p>
+<a id="more"></a>
+<h3 id="初步掌握，还需要再次学习的知识点如下："><a href="#初步掌握，还需要再次学习的知识点如下：" class="headerlink" title="初步掌握，还需要再次学习的知识点如下："></a>初步掌握，还需要再次学习的知识点如下：</h3></li>
+<li><p>CSS盒模型（border、margin等属性）</p>
+</li>
+<li>javascript内置对象函数的用法</li>
+<li>HTML、CSS不同版本的区别与完善</li>
+</ol>
+<h3 id="LeetCode"><a href="#LeetCode" class="headerlink" title="LeetCode"></a>LeetCode</h3><p>leetcode 完成的任务编号为：7. Reverse Integer</p>
+<p>leetcode中遇到的问题包括：</p>
+<h3 id="数值型和字符串类型的相互转换"><a href="#数值型和字符串类型的相互转换" class="headerlink" title="数值型和字符串类型的相互转换"></a>数值型和字符串类型的相互转换</h3><p>习惯用C语言的思想去解题，对于javascript内置函数掌握不够<br>知识点补充：<br>    数值和字符串的相互转换<br>     a.要把一个数字转换为字符串，只要给它添加一个空的字符串即可：<br>     代码如下:<br>     var n = 100;<br>     var n_as_string = n + “”;<br>    b. 要让数字更加显式地转换为字符串,可以使用String()函数:<br>    代码如下:</p>
+<pre><code>var string_value = String(number); 
+c.使用toString()方法:
+string_value = number.toString(); 
+代码如下：
+var n = 17; 
+binary_string = n.toString(2); // Evaluates to &quot;10001&quot; 
+octal_string = &quot;0&quot; + n.toString(8); // Evaluates to &quot;021&quot; 
+hex_string = &quot;0x&quot; + n.toString(16); // Evaluates to &quot;0x11&quot; 
+d.此外toString() 方法可把数组转换为字符串，并返回结果。
+代码如下：
+var arr = new Array(3)
+arr[0] = &quot;George&quot;
+arr[1] = &quot;John&quot;
+arr[2] = &quot;Thomas&quot;
+document.write(arr.toString())
+输出：George,John,Thomas
+valueOf() 方法可以字符串返回数字。字符串的输出通常等于该数字。
+强制类型转换
+   Boolean(value)——把给定的值转换成Boolean型； 
+   Number(value)——把给定的值转换成数字（可以是整数或浮点数）； 
+   String(value)——把给定的值转换成字符串。
+toString() 方法可把一个逻辑值转换为字符串，并返回结果。
+split()    把字符串分割为字符串数组。
+reverse()翻转数组的顺序。
+join() 把数组的所有元素放入一个字符串 未指定分割符时，默认以逗号隔开。
+</code></pre><h1 id="2017年6月7日学习笔记"><a href="#2017年6月7日学习笔记" class="headerlink" title="2017年6月7日学习笔记"></a>2017年6月7日学习笔记</h1><h3 id="已经深刻掌握的知识点：-1"><a href="#已经深刻掌握的知识点：-1" class="headerlink" title="已经深刻掌握的知识点："></a>已经深刻掌握的知识点：</h3><ol>
+<li>在CSS2.1中，&amp;不是一个有效字符<br>CSS基本语法以及可能出现的不合法表示<br>代码如下：<br>h3, h4 &amp; h5 {color: red }<br>因为&amp;不合法，所以CSS会忽略此行代码</li>
+<li>@用法<br>当@后跟未知关键词时会出错，例如：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">	@three-dee&#123;</span><br><span class="line"> 	 @background-lighting &#123;</span><br><span class="line">  	      azimuth: 30deg;</span><br><span class="line"> 	 	  elevation: 190deg;</span><br><span class="line">  	&#125;</span><br><span class="line">	 h1&#123;color: red &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>因为@three-dee不是CSS 2.1的一部分，所以忽略代码。</p>
+<ol>
+<li>百分比<br>百分比一般与另一个属性相关联。每个可以用百分比表示的属性一般都定义了是哪个其他属性的百分比。<br>p { font-size: 10px }<br>p { line-height: 120% }  /<em> 120% of ‘font-size’ 12px</em>/</li>
+</ol>
+<h3 id="基本掌握，但还有一点需要深入的知识点如下：-1"><a href="#基本掌握，但还有一点需要深入的知识点如下：-1" class="headerlink" title="基本掌握，但还有一点需要深入的知识点如下："></a>基本掌握，但还有一点需要深入的知识点如下：</h3><p>长度单元有两种形式：相对型和绝对型。相对长度单位指定相对于另一个长度属性的长度，例如ex和em<br>em:与字体的font-size相关<br>ex：以给定字体的小写字母x的高度为基准<br>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line"> 	font-size: 12px;</span><br><span class="line"> 	text-indent: 3em;  /* i.e., 36px */</span><br><span class="line">&#125;</span><br><span class="line">   h1 &#123; font-size: 15px &#125;</span><br></pre></td></tr></table></figure></p>
+<p>子元素不会继承为其父对象指定的相对值; 它们继承了计算值，所以计算出来的h1的text-indent是36px，而不是45px；<br>需要深入的问题是：</p>
+<p>绝对长度的计算以及绝对长度与运行设备之间的联系（没看懂）</p>
+<h3 id="初步掌握，还需要再次学习的知识点如下：-1"><a href="#初步掌握，还需要再次学习的知识点如下：-1" class="headerlink" title="初步掌握，还需要再次学习的知识点如下："></a>初步掌握，还需要再次学习的知识点如下：</h3><p>URI的格式<br>常见格式代码如下：（由引号括起来）<br>body { background: url(“<a href="http://www.example.com/pinkish.png" target="_blank" rel="external">http://www.example.com/pinkish.png</a>“) }<br>不含有引号，含有特殊空白，反斜杠转义。。。。</p>
+<h3 id="LeetCode-1"><a href="#LeetCode-1" class="headerlink" title="LeetCode"></a>LeetCode</h3><p>leetcode 完成的任务编号为：1. Two Sum  </p>
+<p>做到一半的任务编号：9.Palindrome Number</p>
+<p>leetcode中遇到的问题包括：</p>
+<p>1.思想上出现偏差：采用两个for循环，增加算法冗余度。巧法是判断目标数与数组中的各个数相减，判断差值是否存在数组中<br>2.第9题在题目7的基础上，将数值转换为字符串，再将字符串转换回数组进行对比，增加额外空间有待完善。</p>
+<h1 id="2017年6月8日学习笔记"><a href="#2017年6月8日学习笔记" class="headerlink" title="2017年6月8日学习笔记"></a>2017年6月8日学习笔记</h1><h3 id="已经掌握的知识点："><a href="#已经掌握的知识点：" class="headerlink" title="已经掌握的知识点："></a>已经掌握的知识点：</h3><ol>
+<li><p>color的四种表示方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">em &#123; color: <span class="comment">#f00 &#125;              /* #rgb */</span></span><br><span class="line">em &#123; color: <span class="comment">#ff0000 &#125;           /* #rrggbb */</span></span><br><span class="line">em &#123; color: rgb(255,0,0) &#125;      </span><br><span class="line">em &#123; color: rgb(100%, 0%, 0%)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串的用法<br>字符串可以用单引号或者双引号括起来，双引号中不可以含有双引号，除非有反转义字符，例如单引号可以用\’或者\27来表示，双引号可以用\”或\22来表示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"this is a 'string'"</span></span><br><span class="line"><span class="string">"this is a \"string\""</span></span><br><span class="line"><span class="string">'this is a "string"'</span></span><br><span class="line"><span class="string">'this is a \'</span>string\<span class="string">''</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="基本掌握，但还有一点需要深入的知识点如下：-2"><a href="#基本掌握，但还有一点需要深入的知识点如下：-2" class="headerlink" title="基本掌握，但还有一点需要深入的知识点如下："></a>基本掌握，但还有一点需要深入的知识点如下：</h3><ol>
+<li>counter的用法<br>CSS计数（css counter）主要依靠两个属性来实现计数的操作，counter-reset将指定计数器复位；counter-increment，设定计数器的变化（增加的值）；<br>counter-reset可以只指定计数器（计数器的默认复位值为0），也可以同时指定计数器和复位值，也可以同时指定若干计数器，。<br>代码如下：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">someSelector&#123;  </span><br><span class="line">                counter-reset: counterA;  /*计数器counterA 复位，复位值为0*/     </span><br><span class="line">                counter-reset: counterA 6;  /*计数器counterA 复位，复位值为6*/      </span><br><span class="line">                counter-reset: counterA 4 counterB;  /*计数器counterA 复位，复位值为4，计数器counterB复位，复位值为0*/      </span><br><span class="line">                counter-reset: counterA 4 counterB 2;  /*计数器counterA 复位，复位值为4，计数器counterB复位，复位值为2*/ </span><br><span class="line">            &#125;  </span><br><span class="line">counter-increment</span><br><span class="line">[css]  语法：counter-increment: [&lt;user-ident&gt; &lt;<span class="built_in">integer</span>&gt;?]+ | none    </span><br><span class="line">其中，user-ident 为需要改变的计数器名称，<span class="built_in">integer</span> 为计数器改变值，可以为正值也可以为负值，可以同时改变多个计数器。none 阻止计数器增加。</span><br><span class="line">代码如下：</span><br><span class="line">someSelector&#123;  </span><br><span class="line">                 counter-increment: counterA;  /* 增加CounterA，每次加1 */ </span><br><span class="line">                 counter-increment: counterA 2;  /* 计数器counterA，每次加2 */ </span><br><span class="line">                 counter-increment: counterA 2 counterB -1;  /* counterA，每次加2，同时counterB每次减1*/</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="还需要深入的问题："><a href="#还需要深入的问题：" class="headerlink" title="还需要深入的问题："></a>还需要深入的问题：</h3><p>通过::before,::after等伪对象配合content属性来呈现计数。content跟计数相关的属性值。</p>
+<h3 id="leetcode"><a href="#leetcode" class="headerlink" title="leetcode"></a>leetcode</h3><p>leetcode完成的任务编号为：461 HAMMING DISTANCE</p>
+<p>遇到的问题：</p>
+<ol>
+<li>对Javascript replace()方法以及JavaScript RegExp对象掌握不够</li>
+<li>.replce(/0/g,””)可以将所有的0替换掉。<br>补充:<a href="http://www.w3school.com.cn/jsref/jsref_replace.asp" target="_blank" rel="external">replace()方法</a></li>
+</ol>
+<h1 id="2017年6月10日学习笔记"><a href="#2017年6月10日学习笔记" class="headerlink" title="2017年6月10日学习笔记"></a>2017年6月10日学习笔记</h1><h3 id="已经深刻掌握的知识点如下："><a href="#已经深刻掌握的知识点如下：" class="headerlink" title="已经深刻掌握的知识点如下："></a>已经深刻掌握的知识点如下：</h3><ol>
+<li><p>属性名选择符</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> 属性值选择符   语法: E[att]  E -- 元素    att -- 属性</span><br><span class="line"> E[att=val] -- 匹配文档中具有att属性且其值为val的E元素</span><br><span class="line"> E[att~=val] -- 匹配文档中具有att属性且其中一个值（多个值使用空格分隔）为val(val不能包含空格)的E元素</span><br><span class="line"> E[att|=val] -- 匹配文档中具有att属性且其中一个值为val，或者以val开头紧随其后的是连字符-的E元素（主要用来允许语言编码的匹配，例如               HTML中的hreflang属性。关于lang（或 xml:lang）语言码的比配，可查看:lang伪类）</span><br><span class="line">属性值子串选择符</span><br><span class="line">E[att^=val] -- 匹配文档中具有att属性且其值的前缀为val的E元素</span><br><span class="line">E[att$=val] -- 匹配文档中具有att属性且其值的后缀为val的E元素</span><br><span class="line">E[att*=val] -- 匹配文档中具有att属性且其包含val的E元素</span><br><span class="line">E[att] -- CSS属性名选择符，匹配文档中具有att属性的E元素</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>伪类、伪元素<br>：before  ：after<br>a:link    a:visited   a:hover  a:active   a:focus<br>:lang<br>:first-letter   :first-line </p>
+</li>
+<li>精确数值 计算数值 继承数值</li>
+<li><p>media type 可以在link里声明，也可以通过@import来声明</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> &lt;LINK REL=<span class="string">"stylesheet"</span> TYPE=<span class="string">"text/css"</span> </span><br><span class="line">	 MEDIA=<span class="string">"print, handheld"</span> HREF=<span class="string">"foo.css"</span>&gt;</span><br><span class="line">@import url(<span class="string">"fancyfonts.css"</span>) screen;</span><br><span class="line">@media <span class="built_in">print</span> &#123;</span><br><span class="line">  /* style sheet <span class="keyword">for</span> <span class="built_in">print</span> goes here */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>盒模型<br><a href="https://tcs.teambition.net/storage/110t6053d810345463d91a8557ea4fb2cb3e?download=boxdim.png&amp;Signature=eyJhbGciOiJIUzI1NiJ9.eyJyZXNvdXJjZSI6Ii9zdG9yYWdlLzExMHQ2MDUzZDgxMDM0NTQ2M2Q5MWE4NTU3ZWE0ZmIyY2IzZSIsImV4cCI6MTUxNTAyNDAwMH0.Jo-XgCB1Rr8oyaIcrSeRby3E0lZ-_WQ-XZHtF_MB0jI" target="_blank" rel="external">盒模型</a><br>按照上、右、下、左来排列。宽度和高度指的是内容的尺寸。盒子的宽度和高度取决于以下几个方面：盒子是否包含内容或者其它盒子以及盒子是否是一个表格。</p>
+</li>
+</ol>
+<h3 id="基本掌握，但还有一些需要深入的知识点如下："><a href="#基本掌握，但还有一些需要深入的知识点如下：" class="headerlink" title="基本掌握，但还有一些需要深入的知识点如下："></a>基本掌握，但还有一些需要深入的知识点如下：</h3><p>1.！important rules<br>2.选择器精确值 优先顺序<br>3.折叠边距<br>4.双向上下文内联元素的框模型<br>5.media types和media groups</p>
+<h1 id="2017年6月13日学习笔记"><a href="#2017年6月13日学习笔记" class="headerlink" title="2017年6月13日学习笔记"></a>2017年6月13日学习笔记</h1><h3 id="知识点1：Margin-属性"><a href="#知识点1：Margin-属性" class="headerlink" title="知识点1：Margin 属性"></a>知识点1：Margin 属性</h3><p>当margin以比分比来表示时，百分比是根据产生盒子的内部包含块的宽度来确定，<br>元素类型为table，table caption或inline-table不具有margin属性，其余元素都有。</p>
+<h3 id="知识点2：border-属性"><a href="#知识点2：border-属性" class="headerlink" title="知识点2：border 属性"></a>知识点2：border 属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">border-top-width border-right-width( thin medium thick &lt;length&gt;)</span><br><span class="line">border-top-style(none hidden dotted dashed solid double groove ridge inset outset),可以有1到4个值。</span><br><span class="line">例如：</span><br><span class="line">  <span class="comment">#xy34 &#123; border-style: solid dotted &#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="知识点3-不太懂：direction-rtl-和ltr-unicode-bidi属性值必须为embed-或者”override”"><a href="#知识点3-不太懂：direction-rtl-和ltr-unicode-bidi属性值必须为embed-或者”override”" class="headerlink" title="知识点3:  不太懂：direction:rtl 和ltr    unicode-bidi属性值必须为embed 或者”override”"></a>知识点3:  不太懂：direction:rtl 和ltr    unicode-bidi属性值必须为embed 或者”override”</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;HEBREW&gt;</span><br><span class="line">  &lt;PAR&gt;HEBREW1 HEBREW2 english3 HEBREW4 HEBREW5&lt;/PAR&gt;</span><br><span class="line">  &lt;PAR&gt;HEBREW6 &lt;EMPH&gt;HEBREW7&lt;/EMPH&gt; HEBREW8&lt;/PAR&gt;</span><br><span class="line">&lt;/HEBREW&gt;</span><br><span class="line">&lt;ENGLISH&gt;</span><br><span class="line">  &lt;PAR&gt;english9 english10 english11 HEBREW12 HEBREW13&lt;/PAR&gt;</span><br><span class="line">  &lt;PAR&gt;english14 english15 english16&lt;/PAR&gt;</span><br><span class="line">  &lt;PAR&gt;english17 &lt;HE-QUO&gt;HEBREW18 english19 HEBREW20&lt;/HE-QUO&gt;&lt;/PAR&gt;</span><br><span class="line">&lt;/ENGLISH&gt;</span><br><span class="line">/* Rules <span class="keyword">for</span> bidi */</span><br><span class="line">HEBREW, HE-QUO  &#123;direction: rtl; unicode-bidi: embed&#125;</span><br><span class="line">ENGLISH         &#123;direction: ltr; unicode-bidi: embed&#125; </span><br><span class="line"></span><br><span class="line">/* Rules <span class="keyword">for</span> presentation */</span><br><span class="line">HEBREW, ENGLISH, PAR  &#123;display: block&#125;</span><br><span class="line">EMPH                  &#123;font-weight: bold&#125;</span><br><span class="line">结果               5WERBEH 4WERBEH english3 2WERBEH 1WERBEH</span><br><span class="line"></span><br><span class="line">                                8WERBEH 7WERBEH 6WERBEH</span><br><span class="line"></span><br><span class="line">english9 english10 english11 13WERBEH 12WERBEH</span><br><span class="line"></span><br><span class="line">english14 english15 english16</span><br><span class="line"></span><br><span class="line">english17 20WERBEH english19 18WERBEH</span><br></pre></td></tr></table></figure>
+<h3 id="知识点4：定位主要有nomal-flow-float-absolute-positioning"><a href="#知识点4：定位主要有nomal-flow-float-absolute-positioning" class="headerlink" title="知识点4：定位主要有nomal flow, float ,absolute positioning"></a>知识点4：定位主要有nomal flow, float ,absolute positioning</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">display:inline inline-table inline-block  block    table-caption   list-item（类似于ul li )       table-row-group     table-header-group     table-footer-group     table-row      table-colum-group       table-cell   （不太懂）。</span><br><span class="line">list(list-style-type:dis|circle|lower-latin|lower-roman。。。</span><br><span class="line">list-style-image   list-style-position)</span><br><span class="line">ul &#123; list-style: url(<span class="string">"http://png.com/ellipse.png"</span>) disc &#125;//当图片不可用时，disc生效</span><br><span class="line">p   &#123; display: block &#125;</span><br><span class="line">em  &#123; display: inline &#125;</span><br><span class="line">li  &#123; display: list-item &#125; </span><br><span class="line">img &#123; display: none &#125;      /* Do not display images */</span><br></pre></td></tr></table></figure>
+<h1 id="2017年6月15日学习笔记"><a href="#2017年6月15日学习笔记" class="headerlink" title="2017年6月15日学习笔记"></a>2017年6月15日学习笔记</h1><h3 id="盒模型Demo"><a href="#盒模型Demo" class="headerlink" title="盒模型Demo"></a>盒模型Demo</h3><p>[源代码地址]:( <a href="https://github.com/gxfmqfzkzdgzwj/task" target="_blank" rel="external">https://github.com/gxfmqfzkzdgzwj/task</a> )<br>[codePen源码]（ <a href="https://codepen.io/mengmengfan/pen/NgrLqv" target="_blank" rel="external">https://codepen.io/mengmengfan/pen/NgrLqv</a> ）<br>问题：1. 所有的问题均采用div盒子模型，模型单一，对table的了解较少</p>
+<ol>
+<li>对于position 定位、自适应以及几等分掌握不够</li>
+</ol>
+<h1 id="2017年6月17日学习笔记"><a href="#2017年6月17日学习笔记" class="headerlink" title="2017年6月17日学习笔记"></a>2017年6月17日学习笔记</h1><h3 id="问题1："><a href="#问题1：" class="headerlink" title="问题1："></a>问题1：</h3><p>每一行设置一个大盒子 包含很多小盒子 为每一个小盒子均设置浮动（麻烦）<br>可以为大盒子设置浮动，然后在下一行盒子来清除浮动~~<br>相关知识点 clear属性：<br>值    描述<br>left    在左侧不允许浮动元素。<br>right    在右侧不允许浮动元素。<br>both    在左右两侧均不允许浮动元素。<br>none    默认值。允许浮动元素出现在两侧。<br>inherit    规定应该从父元素继承 clear 属性的值。</p>
+<h3 id="问题2：三列布局可以用flex-将外部盒子设置为flex属性-可伸缩-并设置伸缩方向"><a href="#问题2：三列布局可以用flex-将外部盒子设置为flex属性-可伸缩-并设置伸缩方向" class="headerlink" title="问题2：三列布局可以用flex  将外部盒子设置为flex属性 可伸缩 并设置伸缩方向"></a>问题2：三列布局可以用flex  将外部盒子设置为flex属性 可伸缩 并设置伸缩方向</h3><pre><code>display: flex;（多行 多列布局）
+flex-direction:row; 
+</code></pre><h3 id="问题3：等分特性"><a href="#问题3：等分特性" class="headerlink" title="问题3：等分特性"></a>问题3：等分特性</h3><p>二等分、三等分、四等分可以通过设置其宽度为1/2,1/3,1/4来设置</p>
+<h3 id="问题4：overflow属性-word-wrap-break-word"><a href="#问题4：overflow属性-word-wrap-break-word" class="headerlink" title="问题4：overflow属性 word-wrap:break-word;"></a>问题4：overflow属性 word-wrap:break-word;</h3><p>知识点<br>值    描述<br>visible    默认值。内容不会被修剪，会呈现在元素框之外。<br>hidden    内容会被修剪，并且其余内容是不可见的。<br>scroll    内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。<br>auto    如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。<br>inherit    规定应该从父元素继承 overflow 属性的值。</p>
+<h1 id="2017年6月20日学习笔记"><a href="#2017年6月20日学习笔记" class="headerlink" title="2017年6月20日学习笔记"></a>2017年6月20日学习笔记</h1><p>阅读别人代码：display:-moz-box;  display:-webkit-box;  display:box;<br>优点：盒子模型解决二等分、三等分的问题更为简便<br>缺点：浏览器的兼容性不好，各浏览器的私有属性定义firefox(-moz)、opera(-0)、chrome/safari（-webkit)。<br>主要属性：</p>
+<h4 id="box-flex属性-主要让子容器针对父容器的宽度按一定规则进行划分"><a href="#box-flex属性-主要让子容器针对父容器的宽度按一定规则进行划分" class="headerlink" title="box-flex属性 主要让子容器针对父容器的宽度按一定规则进行划分"></a>box-flex属性 主要让子容器针对父容器的宽度按一定规则进行划分</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">举例</span><br><span class="line"> HTML 代码                                     </span><br><span class="line">&lt;article class=<span class="string">"wrap"</span>&gt;</span><br><span class="line">    &lt;section class=<span class="string">"sectionOne"</span>&gt;01&lt;/section&gt;</span><br><span class="line">    &lt;section class=<span class="string">"sectionTwo"</span>&gt;02&lt;/section&gt;                             </span><br><span class="line">    &lt;section class=<span class="string">"sectionThree"</span>&gt;03&lt;/section&gt;</span><br><span class="line">&lt;/article&gt;  </span><br><span class="line"></span><br><span class="line">CSS代码</span><br><span class="line">.wrap&#123;                                                                 </span><br><span class="line">    width:600px;</span><br><span class="line">    height:200px;</span><br><span class="line">    display:-moz-box;</span><br><span class="line">    display:-webkit-box;</span><br><span class="line">    display:box;</span><br><span class="line">&#125;</span><br><span class="line">.sectionOne&#123;</span><br><span class="line">    background:orange;</span><br><span class="line">    -moz-box-flex:3;</span><br><span class="line">    -webkit-box-flex:3;</span><br><span class="line">    box-flex:3;</span><br><span class="line">&#125;</span><br><span class="line">.sectionTwo&#123;</span><br><span class="line">    background:purple;</span><br><span class="line">    -moz-box-flex:2;</span><br><span class="line">    -webkit-box-flex:2;</span><br><span class="line">    box-flex:2;</span><br><span class="line">&#125;</span><br><span class="line">.sectionThree&#123;</span><br><span class="line">    -moz-box-flex:1;</span><br><span class="line">    -webkit-box-flex:1;</span><br><span class="line">    box-flex:1;</span><br><span class="line">    background:green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当父容器中的一个子容器有固定宽度值时候，该子容器则直接应用设置的宽度值，其它没有设置的则再父容器的宽度基础上减去子容器设置的固定宽度，在剩下的宽度基础上按一定比例进行划分分配。子容器中也可以利用mrgin属性来设置各子容器的间距。以上代码实现结果就是容器1,2,3在一行分布。如果设置子容器内容对齐方式，可以在父元素中设置text-align属性。</p>
+<h4 id="box-orient属性"><a href="#box-orient属性" class="headerlink" title="box-orient属性"></a>box-orient属性</h4><p>horizontal | vertical | inline-axis | block-axis | inherit（设置子容器的排列方式 垂直或者水平等等）<br>-moz-box-orient:horizontal;<br>-webkit-box-orient:horizontal;<br>box-orient:horizontal;//水平排列                                             </p>
+<h4 id="box-direction属性"><a href="#box-direction属性" class="headerlink" title="box-direction属性"></a>box-direction属性</h4><p>box-direction用来确定父容器里的子容器排列顺序，具体属性如下代码所示：<br>normal | reverse | inherit</p>
+<h4 id="box-align属性"><a href="#box-align属性" class="headerlink" title="box-align属性"></a>box-align属性</h4><p>box-align表示父容器里面子容器的垂直对齐方式，即矩形框的对齐方式。可选参数如下所示：<br>start | end | center | baseline | stretch<br>（居顶对齐|居底对齐|居中对齐|拉伸到与父容器等高）</p>
+<h4 id="box-pack属性"><a href="#box-pack属性" class="headerlink" title="box-pack属性"></a>box-pack属性</h4><p>box-pack表示父容器里面子容器的水平对齐方式，可选参数如下所示：<br>start | end | center | justify<br>（水平居左对齐|水平居右对齐|水平居右对齐|水平等分父容器宽度？？）</p>
+<h3 id="问题2："><a href="#问题2：" class="headerlink" title="问题2："></a>问题2：</h3><p>在实现三栏布局，且每一栏自适应高度时，可以对左右两栏分别设置float属性，中间栏设置margin来实现。<br>为了避免出现内容从左右两侧溢出，可以通过设置word-wrap:break-word来实现自动换行。</p>
+<h1 id="2017年7月12日学习笔记"><a href="#2017年7月12日学习笔记" class="headerlink" title="2017年7月12日学习笔记"></a>2017年7月12日学习笔记</h1><h3 id="问题1：nibStylus插件-import-‘nib’-报错。。。"><a href="#问题1：nibStylus插件-import-‘nib’-报错。。。" class="headerlink" title="问题1：nibStylus插件  @import ‘nib’ 报错。。。"></a>问题1：nibStylus插件  @import ‘nib’ 报错。。。</h3><h3 id="知识点1：Stylus的特征以及格式"><a href="#知识点1：Stylus的特征以及格式" class="headerlink" title="知识点1：Stylus的特征以及格式"></a>知识点1：Stylus的特征以及格式</h3><ul>
+<li>冒号可选</li>
+<li>分号可选</li>
+<li>逗号可选</li>
+<li>括号可选<br>Stylus就跟CSS一样，允许你使用逗号为多个选择器同时定义属性。使用新行是一样的效果：<br>Stylus蛮“玄幻”的(如基于缩进)，空格有重要的意义，所以，我们使用缩排和凹排代替花括号{以及}<br>textarea<br>input<br>border 1px solid #eee</li>
+</ul>
+<ol>
+<li><p>父级引用：字符&amp;指向父选择器。混合书写（有待加强理解）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">box-shadow()</span><br><span class="line">   -webkit-box-shadow arguments</span><br><span class="line">   -moz-box-shadow arguments</span><br><span class="line">   box-shadow arguments</span><br><span class="line">   html.ie8 &amp;,</span><br><span class="line">   html.ie7 &amp;,</span><br><span class="line">   html.ie6 &amp;</span><br><span class="line">     border 2px solid arguments[length(arguments) - 1]</span><br><span class="line"></span><br><span class="line"> body</span><br><span class="line">   <span class="comment">#login</span></span><br><span class="line">     box-shadow 1px 1px 3px <span class="comment">#eee</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>消除歧义<br>类似padding - n的表达式可能既被解释成减法运算，也可能被释义成一元负号属性。为了避免这种歧义，用括号包裹表达式：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pad(n)</span><br><span class="line">  padding (- n)</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  pad(5px)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>有Stylus无法处理的属性值？unquote()可以帮你：<br>filter unquote(‘progid:DXImageTransform.Microsoft.BasicImage(rotation=1)’)</p>
+<h3 id="知识点2-函数体（带参数和不带参数）"><a href="#知识点2-函数体（带参数和不带参数）" class="headerlink" title="知识点2.函数体（带参数和不带参数）"></a>知识点2.函数体（带参数和不带参数）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">通过内置unit()把单位都变成px, 因为赋值在每个参数上，因此，我们可以无视单位换算。</span><br><span class="line">    add(a, b = a)</span><br><span class="line">    a = unit(a, px)</span><br><span class="line">    b = unit(b, px)</span><br><span class="line">    a + b</span><br><span class="line"></span><br><span class="line">   add(15%, 10deg)</span><br><span class="line">// =&gt; 25</span><br><span class="line">变量 （直接对变量进行赋值）标识符（变量名，函数等），也可能包括$字符。</span><br><span class="line">font-size = 14px  或<span class="variable">$font</span>-size = 14px</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">    font font-size Arial, sans-seri 或font <span class="variable">$font</span>-size Arial, sans-seri</span><br><span class="line">（变量放在属性里）</span><br><span class="line"><span class="comment">#prompt</span></span><br><span class="line">    position: absolute</span><br><span class="line">    top: 150px</span><br><span class="line">    left: 50%</span><br><span class="line">    width: w = 200px</span><br><span class="line">    margin-left: -(w / 2)</span><br><span class="line">（块属性访问引用）</span><br><span class="line">我们不使用这里的变量w, 而是简单地前置@字符在属性名前来访问该属性名对应的值，属性会“向上冒泡”查找堆栈直到被发现。</span><br><span class="line"><span class="comment">#prompt</span></span><br><span class="line">    position: absolute</span><br><span class="line">    width: 200px</span><br><span class="line">    margin-left: -(@width / 2)</span><br><span class="line">(属性有条件地定义属性)</span><br><span class="line">position()</span><br><span class="line">  position: arguments</span><br><span class="line">  z-index: 1 unless @z-index</span><br><span class="line"></span><br><span class="line"><span class="comment">#logo</span></span><br><span class="line">  z-index: 20</span><br><span class="line">  position: absolute</span><br><span class="line"></span><br><span class="line"><span class="comment">#logo2</span></span><br><span class="line">  position: absolute</span><br></pre></td></tr></table></figure>
+<h3 id="知识点3-迭代"><a href="#知识点3-迭代" class="headerlink" title="知识点3.迭代"></a>知识点3.迭代</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">table</span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> 1 2 3 4 5</span><br><span class="line">        tr:nth-child(&#123;row&#125;)</span><br><span class="line">            height: 10px * row</span><br><span class="line">table tr:nth-child(1) &#123;</span><br><span class="line">  height: 10px;</span><br><span class="line">&#125;</span><br><span class="line">table tr:nth-child(2) &#123;</span><br><span class="line">  height: 20px;</span><br><span class="line">&#125;</span><br><span class="line">table tr:nth-child(3) &#123;</span><br><span class="line">  height: 30px;</span><br><span class="line">&#125;</span><br><span class="line">table tr:nth-child(4) &#123;</span><br><span class="line">  height: 40px;</span><br><span class="line">&#125;</span><br><span class="line">table tr:nth-child(5) &#123;</span><br><span class="line">  height: 50px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="知识点4-插值"><a href="#知识点4-插值" class="headerlink" title="知识点4.插值"></a>知识点4.插值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">vendors = webkit moz o ms official</span><br><span class="line">border-radius()</span><br><span class="line">    <span class="keyword">for</span> vendor <span class="keyword">in</span> vendors</span><br><span class="line">        <span class="keyword">if</span> vendor == official</span><br><span class="line">            border-radius: arguments</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            -&#123;vendor&#125;-border-radius: arguments</span><br><span class="line"><span class="comment">#content</span></span><br><span class="line">    border-radius: 5px</span><br><span class="line"><span class="comment">#content &#123;</span></span><br><span class="line">  -webkit-border-radius: 5px;</span><br><span class="line">  -moz-border-radius: 5px;</span><br><span class="line">  -o-border-radius: 5px;</span><br><span class="line">  -ms-border-radius: 5px;</span><br><span class="line">  border-radius: 5px;</span><br><span class="line">&#125;</span><br><span class="line">运算符</span><br><span class="line">逻辑运算符not的优先级较低，因此，下面这个例子可以替换：</span><br><span class="line">a = 0</span><br><span class="line">b = 1</span><br><span class="line">!a and !b</span><br><span class="line">// =&gt; <span class="literal">false</span></span><br><span class="line">// 解析为: (!a) and (!b)</span><br><span class="line">用：</span><br><span class="line">not a or b</span><br><span class="line">// =&gt; <span class="literal">false</span></span><br><span class="line">// 解析为: not (a or b)</span><br></pre></td></tr></table></figure>
+<h1 id="2017年7月17日学习笔记"><a href="#2017年7月17日学习笔记" class="headerlink" title="2017年7月17日学习笔记"></a>2017年7月17日学习笔记</h1><h3 id="完成任务："><a href="#完成任务：" class="headerlink" title="完成任务："></a>完成任务：</h3><ol>
+<li><a href="http://naotu.baidu.com/file/05fe1d4589a210cd26808ea10e689c57?token=0135d5be3ec9a305" target="_blank" rel="external">利用百度脑图梳理文章结构</a></li>
+<li>学习JSON</li>
+<li>下载并安装Less以及sass</li>
+</ol>
+<h1 id="2017年7月20日学习笔记"><a href="#2017年7月20日学习笔记" class="headerlink" title="2017年7月20日学习笔记"></a>2017年7月20日学习笔记</h1><h3 id="三个-CSS-预处理器（框架）：Sass、LESS-和-Stylus"><a href="#三个-CSS-预处理器（框架）：Sass、LESS-和-Stylus" class="headerlink" title="三个 CSS 预处理器（框架）：Sass、LESS 和 Stylus"></a>三个 CSS 预处理器（框架）：Sass、LESS 和 Stylus</h3><ul>
+<li>语法<br>首先 Sass 和 Less 都使用的是标准的 CSS 语法，因此如果你可以很方便的将已有的 CSS 代码转为预处理器代码，默认 Sass 使用 .sass 扩展名，而 Less 使用 .less 扩展名。 Stylus 支持的语法要更多样性一点，它默认使用 .styl 的文件扩展名，我们使用缩排和凹排代替花括号。</li>
+</ul>
+<p>引入方式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet/less"</span> <span class="built_in">type</span>=<span class="string">"text/css"</span> href=<span class="string">"styles.less"</span>&gt;</span><br><span class="line">@import “variables.less”;</span><br><span class="line">.less 文件也可以省略后缀名，像这样：</span><br><span class="line">@import “variables”;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>变量<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Sass 的变量必须是 $ 开始，然后变量名和值使用冒号隔开，跟 CSS 的属性一致。</span><br><span class="line"><span class="variable">$mainColor</span>: <span class="comment">#0982c1;</span></span><br><span class="line"><span class="variable">$siteWidth</span>: 1024px;</span><br><span class="line"><span class="variable">$borderStyle</span>: dotted;</span><br><span class="line"></span><br><span class="line">body &#123;</span><br><span class="line">  color: <span class="variable">$mainColor</span>;</span><br><span class="line">  border: 1px <span class="variable">$borderStyle</span> <span class="variable">$mainColor</span>;</span><br><span class="line">  max-width: <span class="variable">$siteWidth</span>;</span><br><span class="line">&#125;</span><br><span class="line">Less 的变量名使用 @ 符号开始：</span><br><span class="line">@mainColor: <span class="comment">#0982c1;</span></span><br><span class="line">@siteWidth: 1024px;</span><br><span class="line">@borderStyle: dotted;</span><br><span class="line"> </span><br><span class="line">body &#123;</span><br><span class="line">  color: @mainColor;</span><br><span class="line">  border: 1px @borderStyle @mainColor;</span><br><span class="line">  max-width: @siteWidth;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Stylus 对变量名没有任何限定，你可以是 $ 开始，也可以是任意的字符，而且与变量值之间可以用冒号、空格隔开，需要注意的是 Stylus (0.22.4) 将会编译 @ 开始的变量，但其对应的值并不会赋予该变量，换句话说，在 Stylus 的变量名不要用 @ 开头。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mainColor = <span class="comment">#0982c1</span></span><br><span class="line">siteWidth = 1024px</span><br><span class="line"><span class="variable">$borderStyle</span> = dotted</span><br><span class="line"> </span><br><span class="line">body</span><br><span class="line">  color mainColor</span><br><span class="line">  border 1px <span class="variable">$borderStyle</span> mainColor</span><br><span class="line">  max-width siteWidth</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>嵌套（sass、stylus引用父选择符：&amp;）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">section &#123;</span><br><span class="line">  margin: 10px;</span><br><span class="line"> </span><br><span class="line">  nav &#123;</span><br><span class="line">    height: 25px;</span><br><span class="line"> </span><br><span class="line">    a &#123;</span><br><span class="line">      color: <span class="comment">#0982C1;</span></span><br><span class="line"> </span><br><span class="line">      &amp;:hover &#123;</span><br><span class="line">        text-decoration: underline;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>混入<br>Sass 的混入语法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">/* Sass mixin error with (optional) argument <span class="variable">$borderWidth</span> <span class="built_in">which</span> defaults to 2px <span class="keyword">if</span> not specified */</span><br><span class="line">@mixin error(<span class="variable">$borderWidth</span>: 2px) &#123;</span><br><span class="line">  border: <span class="variable">$borderWidth</span> solid <span class="comment">#F00;</span></span><br><span class="line">  color: <span class="comment">#F00;</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">.generic-error &#123;</span><br><span class="line">  padding: 20px;</span><br><span class="line">  margin: 4px;</span><br><span class="line">  @ include error(); /* Applies styles from mixin error */</span><br><span class="line">&#125;</span><br><span class="line">.login-error &#123;</span><br><span class="line">  left: 12px;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 20px;</span><br><span class="line">  @ include error(5px); /* Applies styles from mixin error with argument <span class="variable">$borderWidth</span> equal to 5px*/</span><br><span class="line">&#125;</span><br><span class="line">Less CSS 的混入语法：</span><br><span class="line">/* LESS mixin error with (optional) argument @borderWidth <span class="built_in">which</span> defaults to 2px <span class="keyword">if</span> not specified */</span><br><span class="line">.error(@borderWidth: 2px) &#123;</span><br><span class="line">  border: @borderWidth solid <span class="comment">#F00;</span></span><br><span class="line">  color: <span class="comment">#F00;</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">.generic-error &#123;</span><br><span class="line">  padding: 20px;</span><br><span class="line">  margin: 4px;</span><br><span class="line">  .error(); /* Applies styles from mixin error */</span><br><span class="line">&#125;</span><br><span class="line">.login-error &#123;</span><br><span class="line">  left: 12px;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 20px;</span><br><span class="line">  .error(5px); /* Applies styles from mixin error with argument @borderWidth equal to 5px */</span><br><span class="line">&#125;</span><br><span class="line">Stylus 的混入语法：</span><br><span class="line">/* Stylus mixin error with (optional) argument borderWidth <span class="built_in">which</span> defaults to 2px <span class="keyword">if</span> not specified */</span><br><span class="line">error(borderWidth= 2px) &#123;</span><br><span class="line">  border: borderWidth solid <span class="comment">#F00;</span></span><br><span class="line">  color: <span class="comment">#F00;</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">.generic-error &#123;</span><br><span class="line">  padding: 20px;</span><br><span class="line">  margin: 4px;</span><br><span class="line">  error(); /* Applies styles from mixin error */</span><br><span class="line">&#125;</span><br><span class="line">.login-error &#123;</span><br><span class="line">  left: 12px;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 20px;</span><br><span class="line">  error(5px); /* Applies styles from mixin error with argument borderWidth equal to 5px */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>继承<br>在 Sass 和 Stylus 我们可以这样写：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">.block &#123;</span><br><span class="line">  margin: 10px 5px;</span><br><span class="line">  padding: 2px;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">p &#123;</span><br><span class="line">  @extend .block; /* Inherit styles from <span class="string">'.block'</span> */</span><br><span class="line">  border: 1px solid <span class="comment">#EEE;</span></span><br><span class="line">&#125;</span><br><span class="line">ul, ol &#123;</span><br><span class="line">  @extend .block; /* Inherit styles from <span class="string">'.block'</span> */</span><br><span class="line">  color: <span class="comment">#333;</span></span><br><span class="line">  text-transform: uppercase;</span><br><span class="line">&#125;</span><br><span class="line">在这方面 Less 表现的稍微弱一些，更像是混入写法：</span><br><span class="line">.block &#123;</span><br><span class="line">  margin: 10px 5px;</span><br><span class="line">  padding: 2px;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">p &#123;</span><br><span class="line">  .block; /* Inherit styles from <span class="string">'.block'</span> */</span><br><span class="line">  border: 1px solid <span class="comment">#EEE;</span></span><br><span class="line">&#125;</span><br><span class="line">ul, ol &#123;</span><br><span class="line">  .block; /* Inherit styles from <span class="string">'.block'</span> */</span><br><span class="line">  color: <span class="comment">#333;</span></span><br><span class="line">  text-transform: uppercase;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入<br>@import “reset.css”<br>@import reset</p>
+</li>
+<li>颜色函数<br>LESS 完整的颜色函数列表请看<a href="http://lesscss.org/#-color-functions" target="_blank" rel="external"> LESS Documentation.</a><br>stylus完整的颜色函数列表请阅读 <a href="http://stylus-lang.com/docs/bifs.html" target="_blank" rel="external">Stylus Documentation.</a><br>Sass 的一些基本颜色处理函数，完整的列表请看 <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html" target="_blank" rel="external">Sass Documentation.</a></li>
+</ul>
+<h1 id="2017年8月8日"><a href="#2017年8月8日" class="headerlink" title="2017年8月8日"></a>2017年8月8日</h1><h3 id="leetcode刷题总结"><a href="#leetcode刷题总结" class="headerlink" title="leetcode刷题总结"></a>leetcode刷题总结</h3><ol>
+<li><p>Big Countries</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">SQL语言的使用</span><br><span class="line">SELECT name, population, area FROM world WHERE area &gt; 3000000</span><br><span class="line">SELECT name, population, area FROM world WHERE population &gt; 25000000</span><br><span class="line">SELECT</span><br><span class="line">    name, population, area</span><br><span class="line">FROM</span><br><span class="line">    world</span><br><span class="line">WHERE</span><br><span class="line">    area &gt; 3000000 OR population &gt; 25000000</span><br><span class="line">;</span><br><span class="line">SELECT</span><br><span class="line">    name, population, area</span><br><span class="line">FROM</span><br><span class="line">    world</span><br><span class="line">WHERE</span><br><span class="line">    area &gt; 3000000</span><br><span class="line">UNION</span><br><span class="line">SELECT</span><br><span class="line">    name, population, area</span><br><span class="line">FROM</span><br><span class="line">    world</span><br><span class="line">WHERE</span><br><span class="line">    population &gt; 25000000</span><br><span class="line">;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Merge Two Binary Trees（合并两个数结构）<br>复习过程中要结合ife task22 任务地址<br>二叉树的遍历方法。<br>中间过程中采用迭代方法。层层迭代，像洋葱一样一层一层剥开我的心。</p>
+</li>
+<li><p>Judge Route Circle<br>解决问题的关键是设出该点的坐标，对于不同的变换，通过switch进行判断，看最后坐标是否在远点。</p>
+</li>
+<li><p>Array Partition I<br>个人理解是先利用sort方法对数组进行排序，当从小到大进行排序时，将第奇数个数相加，所求即为所得。</p>
+</li>
+<li><p>Swap Salary<br>利用UPDATE来进行更新<br>UPDATE salary set sex = CHAR(ASCII(‘f’)^ ASCII(‘m’)^ ASCII(sex))</p>
+</li>
+<li><p>Number Complement<br>主要用到的知识点：<br>parseInt(“11”，2);等于3；parseInt可以将一个数字字符串转换为对应的进制数。<br>split函数可以将一个字符串分成一个字符数组。join()方法可以将字符数组变成一个字符串<br>tostring()方法可以把数值型转换成相应的进制。例如3变成011.最后变成了一个字符串。</p>
+</li>
+</ol>
+<h1 id="2017年8月9日学习笔记"><a href="#2017年8月9日学习笔记" class="headerlink" title="2017年8月9日学习笔记"></a>2017年8月9日学习笔记</h1><h3 id="work2-demo实践总结"><a href="#work2-demo实践总结" class="headerlink" title="work2 demo实践总结"></a>work2 demo实践总结</h3><ol>
+<li>z-index属性<br>z-index属性在使用绝对定位（position:absolute）属性条件下才能使用，<br>从而让不同的对象盒子以不同的顺序重叠排列。<br>z-index的值越大 越靠上层。。。</li>
+<li><p>遮罩：<br>设置一个空div盒子标签作为遮罩，并为其设置背景颜色时，必须得有宽度。否则设置失效</p>
+</li>
+<li><p>body.style.overflow = ‘hidden’;<br>通过overflow属性可以使多余部分隐藏</p>
+</li>
+<li><blockquote>
+<p>var trNode = eTarget.parentNode.parentNode;</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>trNode.childNodes[0].innerText = editName.value || trNode.childNodes[0].innerText;</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>var e = e || window.event;获取事件   兼容Firefox和IE  或者var evt = window.event || arguments[0];<br>var eTarget = e.target || e.srcElement;获取事件发生源  返回事件的目标节点（触发该事件的节点），即引发该事件的节点.<br>在原生js中使用IE下,event对象有srcElement属性,但是没有target属性;Firefox下,event对象有target属性,但是没有srcElement属性.<br>但他们的作用是相当的，即： firefox 下的 event.target = IE 下的 event.srcElement<br>7.<br>editWindow.style.top = window.innerHeight / 2 - 150 + ‘px’;<br>editWindow.style.left = window.innerWidth / 2 - 250 + ‘px’;</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>aDeleteBtn[s].addEventListener(‘click’, popDel, false);</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>var windowHeight = window.innerHeight;<br>10.&gt; var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;<br>固定表头在浏览器顶部时，计算滚动距离</p>
+</blockquote>
+</li>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var atd = document.getElementsByClassName(<span class="string">'table-row'</span>)[0].getElementsByTagName(<span class="string">'td'</span>);</span><br><span class="line">var tdArray = Array.from(atd);</span><br><span class="line">thArray[i].style.width= window.getComputedStyle(atd[i]).width;//获取当前样式</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="2017年8月11日学习笔记"><a href="#2017年8月11日学习笔记" class="headerlink" title="2017年8月11日学习笔记"></a>2017年8月11日学习笔记</h1><p>1.针对于Date对象<br>var d=new Date()<br>dateObject.getMonth()</p>
+<p>返回值是0-11</p>
+<p>2.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var month=new Array(12);</span><br><span class="line">month[0]=<span class="string">"January"</span></span><br><span class="line">month[1]=<span class="string">"February"</span></span><br><span class="line">month[2]=<span class="string">"March"</span></span><br><span class="line">month[3]=<span class="string">"April"</span></span><br><span class="line">month[4]=<span class="string">"May"</span></span><br><span class="line">month[5]=<span class="string">"June"</span></span><br><span class="line">month[6]=<span class="string">"July"</span></span><br><span class="line">month[7]=<span class="string">"August"</span></span><br><span class="line">month[8]=<span class="string">"September"</span></span><br><span class="line">month[9]=<span class="string">"October"</span></span><br><span class="line">month[10]=<span class="string">"November"</span></span><br><span class="line">month[11]=<span class="string">"December"</span></span><br></pre></td></tr></table></figure></p>
+<p>3.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var d=new Date()</span><br><span class="line">var day=d.getDate()</span><br><span class="line">var month=d.getMonth() + 1</span><br><span class="line">var year=d.getFullYear()</span><br><span class="line">返回是当前日期。</span><br><span class="line">var d=new Date(<span class="string">"2017-8-01"</span>)</span><br><span class="line">var day=d.getDate()</span><br><span class="line">var month=d.getMonth() + 1</span><br><span class="line">var year=d.getFullYear()</span><br><span class="line"></span><br><span class="line">document.write(day + <span class="string">"."</span> + month + <span class="string">"."</span> + year)</span><br><span class="line">document.write(<span class="string">"&lt;br /&gt;&lt;br /&gt;"</span>)</span><br><span class="line">document.write(year + <span class="string">"/"</span> + month + <span class="string">"/"</span> + day)</span><br><span class="line">如果指定日期则返回是 按指定格式显示的指定日期。</span><br><span class="line">1.8.2017</span><br><span class="line"></span><br><span class="line">2017/8/1</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>return y + ‘-‘ + m + ‘-‘ + d;控制日期的格式</p>
+</li>
+<li><p>dat.setDate(dat.getDate() + 1);设定日期</p>
+</li>
+</ul>
+<h1 id="2017年8月13日学习笔记"><a href="#2017年8月13日学习笔记" class="headerlink" title="2017年8月13日学习笔记"></a>2017年8月13日学习笔记</h1><h3 id="js-task1"><a href="#js-task1" class="headerlink" title="js task1"></a>js task1</h3><ol>
+<li><p>document.getElementById()</p>
+</li>
+<li><p>对于输入框取值一般用.value。</p>
+</li>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).onclick=<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">			handler();</span><br><span class="line">			&#125;</span><br><span class="line">		$(<span class="string">"aqi-input"</span>).onkeyup=<span class="keyword">function</span>(e)&#123;</span><br><span class="line">			<span class="keyword">if</span>(e.keyCode==13)&#123;</span><br><span class="line">				handler();&#125;</span><br><span class="line">			&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>js 排序函数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> sortNumber(a,b)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">return</span> a - b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var arr = new Array(6)</span><br><span class="line">arr[0] = <span class="string">"10"</span></span><br><span class="line">arr[1] = <span class="string">"5"</span></span><br><span class="line">arr[2] = <span class="string">"40"</span></span><br><span class="line">arr[3] = <span class="string">"25"</span></span><br><span class="line">arr[4] = <span class="string">"1000"</span></span><br><span class="line">arr[5] = <span class="string">"1"</span></span><br><span class="line"></span><br><span class="line">document.write(arr + <span class="string">"&lt;br /&gt;"</span>)</span><br><span class="line">document.write(arr.sort(sortNumber))</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line">arr.sort()</span><br><span class="line">括号内部是排序函数 可以直接写函数名字 也可以直接arr.sort(<span class="keyword">function</span>(a,b)&#123;<span class="built_in">return</span> a-b;&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>var oLi = document.createElement(“li”);用来创建标签</p>
+</li>
+<li>olist.appendChild(oLi);用来添加子节点。</li>
+<li>children和childNodes<br>对于DOM元素，children是指DOM Object类型的子对象，不包括tag之间隐形存在的TextNode，而childNodes包括tag之间隐形存在的TextNode对象。<br>具体看一下针对children和childNodes在chrome环境下的测试：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">&lt;title&gt;Insert title here&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"> &lt;div id=<span class="string">"div1"</span> class=<span class="string">"div"</span>&gt;</span><br><span class="line"> &lt;span id=<span class="string">"s1"</span> class=<span class="string">"sp"</span> lang=<span class="string">"zh-cn"</span>&gt;</span><br><span class="line"> &lt;/span&gt;</span><br><span class="line"> &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">  </span><br><span class="line"> <span class="keyword">function</span> <span class="function"><span class="title">test</span></span>() &#123;</span><br><span class="line"> var o = document.getElementById(<span class="string">"div1"</span>);</span><br><span class="line"> var child = o.children;</span><br><span class="line"> console.log(<span class="string">"div1.children运行结果:"</span>);</span><br><span class="line"> <span class="keyword">for</span>(i = 0; i &lt; child.length; i++)&#123;</span><br><span class="line">   console.log(child[i].tagName);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line"> console.log(<span class="string">""</span>);</span><br><span class="line"> child = o.childNodes;</span><br><span class="line"> console.log(<span class="string">"div1.childNodes运行结果:"</span>);</span><br><span class="line"> <span class="keyword">for</span>(i = 0; i &lt; child.length; i++)&#123;</span><br><span class="line">   console.log(child[i].tagName);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line"> &#125;</span><br><span class="line">  </span><br><span class="line"> <span class="built_in">test</span>();</span><br><span class="line"> </span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>测试结果如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div1.children运行结果:</span><br><span class="line">SPAN</span><br><span class="line"> </span><br><span class="line">div1.childNodes运行结果:</span><br><span class="line">undefined</span><br><span class="line">SPAN</span><br><span class="line">undefined</span><br></pre></td></tr></table></figure></p>
+<p>上面childNodes集合的结果中有两个undefined节点，这连个就是nodeType=3的TextNode。</p>
+<p>如果把HTML代码写成如下样式，那么children和childNodes的结果就没有差别了。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line"> &lt;div id=<span class="string">"div1"</span> class=<span class="string">"div"</span>&gt;&lt;span id=<span class="string">"s1"</span> class=<span class="string">"sp"</span> lang=<span class="string">"zh-cn"</span>&gt;&lt;/span&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">children指的是html节点</span><br><span class="line">childNodes指的是html节点+文本节点</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li><blockquote>
+<p>var li = ul.children[i];<br>&lt;ul.childElementCount与ul.children.length相似</p>
+</blockquote>
+</li>
+<li><blockquote>
+<p>oLi.innerHTML = ‘第’+(i+1)+’名：’+data[i][0]+’,’+’<b>‘+data[i][1]+’</b>‘;</p>
+</blockquote>
+</li>
+<li><p>js对象</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">person=&#123;firstname:<span class="string">"Bill"</span>,lastname:<span class="string">"gates"</span>,age:56,eyecolor:<span class="string">"blue"</span>&#125;</span><br><span class="line"></span><br><span class="line">document.write(person.firstname + <span class="string">" is "</span> + person.age + <span class="string">" years old."</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">aqiData = &#123;</span><br><span class="line">     <span class="string">"北京"</span>: 90,</span><br><span class="line">     <span class="string">"上海"</span>: 40</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">aqiData[city]=Aqi;</span><br><span class="line">或者aqiData.北京=90;此时北京为变量 不需要加上引号</span><br><span class="line">也就是说aqiData[<span class="string">"北京"</span>]=90;注意变量要加上引号</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (对象中的变量)</span><br><span class="line">  &#123;</span><br><span class="line">  要执行的代码</span><br><span class="line">  &#125;</span><br><span class="line"> <span class="keyword">for</span>(var city <span class="keyword">in</span> aqiData)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>innerHTML中不可以出现空格，若要想加空格，采用+” “+形式</p>
+</li>
+<li>为表格中所有的删除按钮添加事件，可以用for循环为所有按钮一起添加<br>点击删除按钮 删除表格中的某一行数据 可以直接用trNode.parentNode.removeChild(trNode)  去掉该节点。<br>这种方法适用于单独删除表格中的某一行。。。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var e = e || window.event;</span><br><span class="line">var eTarget = e.target || e.srcElement;</span><br><span class="line">var delFill = document.getElementById(<span class="string">'del-fill'</span>);</span><br><span class="line"></span><br><span class="line">var trNode = eTarget.parentNode.parentNode;</span><br><span class="line">trNode.parentNode.removeChild(trNode);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>也可以通过删除按钮 获取表格数据 然后删除该组数据 之后进行数据刷新 该方法是以数据对象为中介。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var tr = e.parentNode.parentNode;找到父节点</span><br><span class="line">var strCity = tr.children[0].innerHTML;</span><br><span class="line">delete aqiData[strCity];删除其中的某一对象 然后进行数据的刷新</span><br></pre></td></tr></table></figure></p>
+<h1 id="2017年8月14日学习笔记"><a href="#2017年8月14日学习笔记" class="headerlink" title="2017年8月14日学习笔记"></a>2017年8月14日学习笔记</h1><h3 id="HTML-fieldset-标签"><a href="#HTML-fieldset-标签" class="headerlink" title="HTML fieldset 标签"></a>HTML fieldset 标签</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;form&gt;</span><br><span class="line">  &lt;fieldset&gt;</span><br><span class="line">    &lt;legend&gt;health information&lt;/legend&gt;</span><br><span class="line">    height: &lt;input <span class="built_in">type</span>=<span class="string">"text"</span> /&gt;</span><br><span class="line">    weight: &lt;input <span class="built_in">type</span>=<span class="string">"text"</span> /&gt;</span><br><span class="line">  &lt;/fieldset&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>fieldset 元素可将表单内的相关元素分组。</p>
+<p><fieldset> 标签将表单内容的一部分打包，生成一组相关表单的字段。<br>当一组表单元素放到 <fieldset> 标签内时，浏览器会以特殊方式来显示它们，它们可能有特殊的边界、3D 效果，或者甚至可创建一个子表单来处理这些元素。</fieldset></fieldset></p>
+<p><fieldset> 标签没有必需的或唯一的属性。</fieldset></p>
+<p><legend> 标签为 fieldset 元素定义标题。</legend></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">document.querySelector(CSS selectors)</span><br><span class="line">document.querySelector(<span class="string">"p.example"</span>);获取文档中 class=<span class="string">"example"</span> 的第一个 &lt;p&gt; 元素:</span><br><span class="line"></span><br><span class="line">document.querySelector(<span class="string">".example"</span>);获取文档中 class=<span class="string">"example"</span> 的第一个元素:</span><br><span class="line"></span><br><span class="line">document.querySelector(<span class="string">"a[target]"</span>);获取文档中有 <span class="string">"target"</span> 属性的第一个 &lt;a&gt; 元素：</span><br></pre></td></tr></table></figure>
+<h3 id="跨浏览器添加事件"><a href="#跨浏览器添加事件" class="headerlink" title="跨浏览器添加事件"></a>跨浏览器添加事件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> addEventHandler(ele, event, hanlder) &#123;</span><br><span class="line">　　　　<span class="keyword">if</span> (ele.addEventListener) &#123;</span><br><span class="line">　　　　　　ele.addEventListener(event, hanlder, <span class="literal">false</span>);</span><br><span class="line">　　　　&#125; <span class="keyword">else</span> <span class="keyword">if</span> (ele.attachEvent) &#123;</span><br><span class="line">　　　　　　ele.attachEvent(<span class="string">"on"</span>+event, hanlder);</span><br><span class="line">　　　　&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">　　　　　　ele[<span class="string">"on"</span> + event] = hanlder;</span><br><span class="line">　　　　&#125;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+<p>Crtl+Shift+T   撤销已经关闭的窗口</p>
+<h1 id="2017年8月15日学习笔记"><a href="#2017年8月15日学习笔记" class="headerlink" title="2017年8月15日学习笔记"></a>2017年8月15日学习笔记</h1><h3 id="js-task18"><a href="#js-task18" class="headerlink" title="js task18"></a>js task18</h3><p>实现队列<br>首先定义一个队列对象<br>对象里包含队列现存数据以及所有的方法</p>
+<p>JavaScript RegExp.test() 函数详解<br>regExpObject.test( str )<br>test()函数返回一个布尔值，用于指示在所搜索的字符串中是否存在正则表达式模式对应的匹配。</p>
+<p>该函数属于RegExp对象(实例)<br>test()方法的返回值为Boolean类型，如果字符串中存在该正则表达式模式的匹配，就返回true，否则false。</p>
+<p>值得注意的是，每次执行test()函数都只查找最多一个匹配，如果找到就立即返回true，否则返回false。</p>
+<ol>
+<li>shift()函数</li>
+</ol>
+<p>定义</p>
+<p>该函数从从数组中删除第一项，并返回该删除项。</p>
+<p>用法示例</p>
+<p>var fruits = [“Banana”, “Orange”, “Apple”, “Mango”];<br>fruits.shift()<br>console.log(fruits);<br>结果输出：</p>
+<p>Orange,Apple,Mango<br>注：该方法会改变数组的长度</p>
+<ol>
+<li>pop()函数</li>
+</ol>
+<p>定义</p>
+<p>该函数从从数组中删除最后项，并返回该删除项。</p>
+<p>用法示例</p>
+<p>var fruits = [“Banana”, “Orange”, “Apple”, “Mango”];<br>fruits.pop()<br>console.log(fruits);<br>结果输出：</p>
+<p>Banana, Orange, Apple</p>
+<ol>
+<li>unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度。<br>unshift() 方法将把它的参数插入 arrayObject 的头部，并将已经存在的元素顺次地移到较高的下标处，以便留出空间。该方法的第一个参数将成为数组的新元素 0，如果还有第二个参数，它将成为新的元素 1，以此类推。<br>请注意，unshift() 方法不创建新的创建，而是直接修改原有的数组。</li>
+</ol>
+<ol>
+<li>要把一个或多个元素添加到数组的尾部，请使用 push() 方法。</li>
+</ol>
+<p>找了好半天的问题 最后发现 竟然是一个函数名称大小写的问题  我也是服了 呵呵呵呵<br>一万匹草泥马从我面前经过 好想骂人啊  还是自己太蠢</p>
+<ol>
+<li><p>众所周知大家都应该知道delete的用法，用来删除对象或者删除数组等，如果是删除对象除数组以外可能可以删除的比较干净，“删除的比较干净”是什么意思就是说在Js数组中<br>，如果用delete来删除可能当前被删除的数组删除不掉，而是把他赋值为空或者null了，如下面的代码所示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">var array = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>,<span class="string">"e"</span>];</span><br><span class="line">delete array[2];  // 把 c 删除了。</span><br><span class="line">alert(array.length);  // 弹出一下看看显示几？答案是肯定的应该是5个。</span><br><span class="line">这里就会有个问题了，删除了一个应该还剩下下4个才对吗，为什么我也不知道，如果你想彻底删除其中一个数组的话就看看下面代码所示：</span><br><span class="line">var array = [<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>,<span class="string">"d"</span>,<span class="string">"e"</span>];  // 同样先声明一组数组，并且给他设置初始值。</span><br><span class="line">array.splice(2,1);  // 这里注意，最重要的代码就在这里哪。</span><br><span class="line">alert(array.length); // 弹出显示一下，哈哈 c 成功删除了。</span><br><span class="line">alert(array.join(<span class="string">","</span>)); // 为了进一步看得更清楚些，我们用 join函数合并了数组进行查看，结果为：a,b,d,e。</span><br><span class="line">上面只是删除已经知道某个数组，假如说其中有个数组是空的，我想删除其中为空的数组，那这个方法还能不能用了？我们先试试下面的代码：</span><br><span class="line">var array = [<span class="string">"a"</span>,<span class="string">""</span>,<span class="string">"c"</span>,<span class="string">""</span>,<span class="string">"e"</span>];</span><br><span class="line"><span class="keyword">for</span>(k <span class="keyword">in</span> array)</span><br><span class="line">    <span class="keyword">if</span>(array[k] == <span class="string">""</span>) array.splice(k,k+1);  // 这里注意了，第二个参数不是1了，而是k+1。</span><br><span class="line"></span><br><span class="line">splice 在Jscript.chm里的说明是：</span><br><span class="line">    从一个数组中移除一个或多个元素，如果必要，在所移除元素的位置上插入新元素，返回所移除的元素。</span><br><span class="line">参数</span><br><span class="line">arrayObj</span><br><span class="line">必选项。一个 Array 对象。</span><br><span class="line">start</span><br><span class="line">必选项。指定从数组中移除元素的开始位置，这个位置是从 0 开始计算的。</span><br><span class="line">deleteCount</span><br><span class="line">必选项。要移除的元素的个数。</span><br><span class="line">item1, item2,. . .,itemN</span><br><span class="line">必选项。要在所移除元素的位置上插入的新元素。</span><br><span class="line">说明</span><br><span class="line">splice 方法可以移除从 start 位置开始的指定个数的元素并插入新元素，从而修改 arrayObj。返回值是一个由所移除的元素组成的新 Array 对象。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>闭包函数<br>只要存在调用内部函数的可能，JavaScript就需要保留被引用的函数。而且JavaScript运行时需要跟踪引用这个内部函数的所有变量，直到最后一个变量废弃，JavaScript的垃圾收集器才能释放相应的内存空间（红色部分是理解闭包的关键）。</p>
+</li>
+</ol>
+<p>javascript闭包函数不太理解，有待进一步加强</p>
+<h1 id="2017年8月16日学习笔记"><a href="#2017年8月16日学习笔记" class="headerlink" title="2017年8月16日学习笔记"></a>2017年8月16日学习笔记</h1><ol>
+<li>设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。<br>align-items</li>
+<li>如果想设置某一标签的高度<br>var .style.height = temp+’px’;<br>此时temp是个变量，可以改变的</li>
+</ol>
+<h1 id="2017年8月17日学习笔记"><a href="#2017年8月17日学习笔记" class="headerlink" title="2017年8月17日学习笔记"></a>2017年8月17日学习笔记</h1><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>假如一数列为10 2 4 9 11 36 28<br>冒泡排序的方法就是：</p>
+<ul>
+<li><p>第一趟循环<br>1.10与2比较，10大于2，所以10和2交换位置<br>2.10与4比较，10大于4，所以10与4交换位置<br>3.10与9比较，10大于9，所以10与9交换位置<br>4.10与11比较，10小于11，所以10与11位置不变<br>5.11与36比较，11小于36，所以11与36位置不变<br>6.36与28比较，36大于28，所以36与28变换位置。</p>
+</li>
+<li><p>第二趟循环同上<br>。。。。<br>总共有length-1趟循环，<br>每一都是第一位(j=0)开始，与后面一位相比较 j与j+1，比较到第length-1-i位</p>
+</li>
+</ul>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>假如一数列为10 2 4 9 11 36 28<br>思想：</p>
+<ul>
+<li>第一趟选出最小的数与第一位交换。</li>
+<li>第二趟，选择第二小的数与第二位交换<br>。。。。</li>
+</ul>
+<p>外循环i=0;i&lt;length-1;i++<br>令index=i;存取最小值的下标<br>内循环 j=i+1;j&lt;length;j++<br>比较[index]位和j位，如果j位小，令index=j，从而记录下最小位的index<br>内循环完毕后，判断index是否等于i,不等于则交换两者。<br>想要设置文本框的原始内容，可以用placeholder属性</p>
+<h1 id="2017年8月21日学习笔记"><a href="#2017年8月21日学习笔记" class="headerlink" title="2017年8月21日学习笔记"></a>2017年8月21日学习笔记</h1><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><pre><code>d = d.replace(new RegExp(ss, &quot;g&quot;), &quot;&lt;span class=&apos;select&apos;&gt;&quot; + ss + &quot;&lt;/span&gt;&quot;);//这里也是正则表达式 我不会哎
+</code></pre><h3 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h3><blockquote>
+<p>str = text.split(/[^0-9a-zA-Z\u4e00-\u9fa5]+/).filter(function(e){})</p>
+<h3 id="正则表达式学习"><a href="#正则表达式学习" class="headerlink" title="正则表达式学习"></a>正则表达式学习</h3><p>正则表达式是用来文本匹配的工具，比起通配符，它更能精确地描述你的需求<br>\b是正则表达式规定的一个特殊代码，可以称为元字符，代表着单词的开头或结果，也就是单词的分界处<br>虽然通常英文的单词是由空格，标点符号或者换行来分隔的，但是\b并不匹配这些单词分隔字符中的任何一个，它只匹配一个位置。<br>\b匹配这样的位置：它的前一个字符和后一个字符不全是(一个是,一个不是或不存在)\w。</p>
+</blockquote>
+<p>.元字符，匹配除了换行符以外的任意字符<br><em>元字符，它代表的不是字符，也不是位置，而是数量——它指定</em>前边的内容可以连续重复使用任意次以使整个表达式得到匹配。</p>
+<p>.*连在一起就意味着任意数量的不包含换行的字符</p>
+<p>0\d\d-\d\d\d\d\d\d\d\d匹配这样的字符串：以0开头，然后是两个数字，然后是一个连字号“-”，最后是8个数字</p>
+<p>你要找的是hi后面不远处跟着一个Lucy，你应该用\bhi\b.*\bLucy\b</p>
+<p>\d元字符，匹配一位数字（0或1.。。）-不是元字符，只匹配它本身，连字符</p>
+<p>也可以写为0\d{2}-\d{8}。 这里\d后面的{2}({8})的意思是前面\d必须连续重复匹配2次(8次)。</p>
+<p>\s匹配任意的空白符，包括空格，制表符(Tab)，换行符，中文全角空格等。\w匹配字母或数字或下划线或汉字等。</p>
+<p>\ba\w<em>\b匹配以字母a开头的单词——先是某个单词开始处(\b)，然后是字母a,然后是任意数量的字母或数字(\w</em>)，最后是单词结束处(\b)。</p>
+<p>\d+匹配1个或更多连续的数字。这里的+是和<em>类似的元字符，不同的是</em>匹配重复任意次(可能是0次)，而+则匹配重复1次或更多次。</p>
+<p>^ 匹配字符串的开始<br>$ 匹配字符串的结束</p>
+<p>你填写的QQ号必须为5位到12位数字时，可以使用：^\d{5,12}$。</p>
+<p>前面字符出现<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* 重复零次或更多次</span><br><span class="line">+ 重复一次或更多次</span><br><span class="line">? 重复零次或一次  </span><br><span class="line">&#123;n&#125; 重复n次</span><br><span class="line">&#123;n,&#125;  重复n次或更多次</span><br><span class="line">&#123;n,m&#125; 重复n到m次</span><br></pre></td></tr></table></figure></p>
+<p>[aeiou]就匹配任何一个英文元音字母，[.?!]匹配标点符号(.或?或!)。</p>
+<p>[0-9]代表的含意与\d就是完全一致的：一位数字；同理[a-z0-9A-Z_]也完全等同于\w（如果只考虑英文的话）。</p>
+<p>(?0\d{2}[) -]?\d{8}</p>
+<p>首先是一个转义字符(,它能出现0次或1次(?),然后是一个0，后面跟着2个数字(\d{2})，然后是)或-或空格中的一个，它出现1次或不出现(?)，最后是8个数字(\d{8})。</p>
+<h3 id="问题-2"><a href="#问题-2" class="headerlink" title="问题"></a>问题</h3><p>雪碧图是什么鬼 怎么使用<br>jquery怎么用<br>CSS3中的动画<br>border-radius:;/<em>四个圆角值都设置为宽度或高度值的一半</em>/<br>四个半径值分别是左上角、右上角、右下角和左下角，顺时针<br>如何查找元素的第一代子节点<br>&lt; <a href="http://htmlpreview.github.com/?https://github.com/gxfmqfzkzdgzwj/qixi/blob/master/page/index.html" target="_blank" rel="external">http://htmlpreview.github.com/?https://github.com/gxfmqfzkzdgzwj/qixi/blob/master/page/index.html</a> &gt;</p>
+<h1 id="2017年8月25日学习笔记"><a href="#2017年8月25日学习笔记" class="headerlink" title="2017年8月25日学习笔记"></a>2017年8月25日学习笔记</h1><p>用本地特定的顺序来比较两个字符串。<br>stringObject.localeCompare(target)</p>
+<p>说明比较结果的数字。如果 stringObject 小于 target，则 localeCompare() 返回小于 0 的数。如果 stringObject 大于 target，则该方法返回大于 0 的数。如果两个字符串相等，或根据本地排序规则没有区别，该方法返回 0。</p>
+<p>完整的 key press 过程分为两个部分，按键被按下，然后按键被松开并复位。<br>当按钮被松开时，发生 keyup 事件。它发生在当前获得焦点的元素上。<br>keyup() 方法触发 keyup 事件，或规定当发生 keyup 事件时运行的函数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"input"</span>).keydown(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    $(<span class="string">"input"</span>).css(<span class="string">"background-color"</span>,<span class="string">"#FFFFCC"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">  $(<span class="string">"input"</span>).keyup(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    $(<span class="string">"input"</span>).css(<span class="string">"background-color"</span>,<span class="string">"#D6D6FF"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">which</span> 属性指示按了哪个键或按钮</span><br><span class="line"></span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"input"</span>).keydown(<span class="keyword">function</span>(event)&#123; </span><br><span class="line">    $(<span class="string">"div"</span>).html(<span class="string">"Key: "</span> + event.which);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://www.365mini.com/page/javascript-regexp-test.htm" target="_blank" rel="external">http://www.365mini.com/page/javascript-regexp-test.htm</a><br>test函数js<br>test()方法的返回值为Boolean类型，如果字符串中存在该正则表达式模式的匹配，就返回true，否则false。</p>
+<p>值得注意的是，每次执行test()函数都只查找最多一个匹配，如果找到就立即返回true，否则返回false。</p>
+<p>如果为正则表达式设置了全局标志(g)，test()函数仍然只查找最多一个匹配，不过我们再次调用该对象的test()函数就可以查找下一个匹配。</p>
+<p>其原因是：如果regExpObject带有全局标志g，test()函数不是从字符串的开头开始查找，而是从属性regExpObject.lastIndex所指定的索引处开始查找。该属性值默认为0，所以第一次仍然是从字符串的开头查找。当找到一个匹配时，test()函数会将regExpObject.lastIndex的值改为字符串中本次匹配内容的最后一个字符的下一个索引位置。当再次执行test()函数时，将会从该索引位置处开始查找，从而找到下一个匹配。</p>
+<p>因此，当我们使用test()函数执行了一次匹配之后，如果想要重新使用test()函数从头开始查找，则需要手动将regExpObject.lastIndex的值重置为 0。如果test()函数再也找不到可以匹配的文本时，该函数会自动把regExpObject.lastIndex属性重置为 0。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">"abc12456def45646ghi"</span>;</span><br><span class="line">var regExp = /\d+/;</span><br><span class="line">document.writeln( regExp.test( str ) ); // <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 带全局标志g</span><br><span class="line">regExp = /[a-z]+/g;</span><br><span class="line">// 第一次查找前，regExp.lastIndex默认为0</span><br><span class="line">document.writeln( <span class="string">"lastIndex="</span> + regExp.lastIndex + <span class="string">"&lt;br&gt;"</span> ); // lastIndex=0</span><br><span class="line">// 使用<span class="built_in">test</span>()进行循环查找匹配</span><br><span class="line">var value = null;</span><br><span class="line"><span class="keyword">while</span>( value = regExp.test(str) )&#123;</span><br><span class="line">    document.writeln( <span class="string">"lastIndex="</span> + regExp.lastIndex + <span class="string">"&lt;br&gt;"</span> );</span><br><span class="line">&#125;</span><br><span class="line">/*</span><br><span class="line">lastIndex=3</span><br><span class="line">lastIndex=11</span><br><span class="line">lastIndex=19</span><br><span class="line"></span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+<h1 id="2017年8月29日学习笔记"><a href="#2017年8月29日学习笔记" class="headerlink" title="2017年8月29日学习笔记"></a>2017年8月29日学习笔记</h1><p>Jquery的学习<br>jQuery 是一个 JavaScript 函数库。<br>jQuery 库包含以下特性：<br>HTML 元素选取<br>HTML 元素操作<br>CSS 操作<br>HTML 事件函数<br>JavaScript 特效和动画<br>HTML DOM 遍历和修改<br>AJAX<br>Utilities<br>W3C SCHOOL</p>
+<h3 id="jquery的安装-库"><a href="#jquery的安装-库" class="headerlink" title="jquery的安装 库"></a>jquery的安装 库</h3><p>直接下载最新版本的 jQuery 3.2.1<br>可以通过npm安装<br>也可以通过git上克隆源码</p>
+<p>之后通过script标签来进行引用</p>
+<p>也可以使用谷歌或微软的 jQuery，有一个很大的优势：<br>许多用户在访问其他站点时，已经从谷歌或微软加载过 jQuery。所有结果是，当他们访问您的站点时，会从缓存中加载 jQuery，这样可以减少加载时间。<br>同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>基本语法$(selector).action()<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(this).hide()</span><br><span class="line">演示 jQuery hide() 函数，隐藏当前的 HTML 元素。</span><br><span class="line">$(<span class="string">"#test"</span>).hide()  同样的可以隐藏类元素 和标签元素</span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line"></span><br><span class="line">--- jQuery <span class="built_in">functions</span> go here ----</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="jquery元素选择器"><a href="#jquery元素选择器" class="headerlink" title="jquery元素选择器"></a>jquery元素选择器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"p"</span>) 选取 &lt;p&gt; 元素。</span><br><span class="line">$(<span class="string">"p.intro"</span>) 选取所有 class=<span class="string">"intro"</span> 的 &lt;p&gt; 元素。</span><br><span class="line">$(<span class="string">"p#demo"</span>) 选取所有 id=<span class="string">"demo"</span> 的 &lt;p&gt; 元素。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$(<span class="string">"[href]"</span>) 选取所有带有 href 属性的元素。</span><br><span class="line">$(<span class="string">"[href='#']"</span>) 选取所有带有 href 值等于 <span class="string">"#"</span> 的元素。</span><br><span class="line">$(<span class="string">"[href!='#']"</span>) 选取所有带有 href 值不等于 <span class="string">"#"</span> 的元素。</span><br><span class="line">$(<span class="string">"[href$='.jpg']"</span>) 选取所有 href 值以 <span class="string">".jpg"</span> 结尾的元素。 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">jQuery CSS 选择器可用于改变 HTML 元素的 CSS 属性。</span><br><span class="line"></span><br><span class="line">$(<span class="string">"p"</span>).css(<span class="string">"background-color"</span>,<span class="string">"red"</span>); 属性用引号包围，中间用逗号隔开</span><br><span class="line">设置多个属性时，$(selector).css(&#123;property:value, property:value, ...&#125;)</span><br><span class="line">$(<span class="string">".aa"</span>).css(&#123;<span class="string">"background-color"</span>:<span class="string">"blue"</span>,<span class="string">"width"</span>:<span class="string">"300px"</span>&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="jquery事件"><a href="#jquery事件" class="headerlink" title="jquery事件"></a>jquery事件</h3><p>事件处理程序指的是当 HTML 中发生某些事件时所调用的方法。术语由事件“触发”（或“激发”）经常会被使用。<br>通常会把 jQuery 代码放到 <head>部分的事件处理方法中：</head></p>
+<p>jQuery 名称冲突：<br>jQuery 使用 $ 符号作为 jQuery 的简介方式。<br>我们也可以使用其他来代替美元符号<br>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var jq1=jQuery.noConflict()</span><br><span class="line">jq1(document).ready(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  jq1(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    jq1(<span class="string">"p"</span>).text(<span class="string">"jQuery 仍在运行！"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);//此处可行</span><br></pre></td></tr></table></figure></p>
+<p>Event 函数  绑定函数至<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="keyword">function</span>) 将函数绑定到文档的就绪事件（当文档完成加载时）</span><br><span class="line">$(selector).click(<span class="keyword">function</span>) 触发或将函数绑定到被选元素的点击事件</span><br><span class="line">$(selector).dblclick(<span class="keyword">function</span>)  触发或将函数绑定到被选元素的双击事件</span><br><span class="line">$(selector).focus(<span class="keyword">function</span>) 触发或将函数绑定到被选元素的获得焦点事件</span><br><span class="line">$(selector).mouseover(<span class="keyword">function</span>) 触发或将函数绑定到被选元素的鼠标悬停事件</span><br></pre></td></tr></table></figure></p>
+<p>效果函数<br>与hide相对应的是show,<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">$(selector).hide(speed,callback);</span><br><span class="line">$(selector).show(speed,callback);</span><br><span class="line">speed 代表速度 直接输入数字 代表毫秒。callback是指隐藏后所执行的函数名称</span><br><span class="line">通过 jQuery，您可以使用 toggle() 方法来切换 hide() 和 show() 方法。</span><br><span class="line">通过 jQuery，您可以实现元素的淡入淡出效果。</span><br><span class="line">jQuery 拥有下面四种 fade 方法：</span><br><span class="line">fadeIn()</span><br><span class="line">fadeOut()</span><br><span class="line">fadeToggle()</span><br><span class="line">fadeTo()</span><br><span class="line">$(selector).fadeIn(speed,callback);</span><br><span class="line">可选的 speed 参数规定效果的时长。它可以取以下值：<span class="string">"slow"</span>、<span class="string">"fast"</span> 或毫秒。</span><br><span class="line">可选的 callback 参数是 fading 完成后所执行的函数名称。</span><br><span class="line">淡入可以设置原来的display属性为“none”</span><br><span class="line">fadeTo() 方法中必需的 opacity 参数将淡入淡出效果设置为给定的不透明度（值介于 0 与 1 之间）。</span><br><span class="line">可选的 callback 参数是该函数完成后所执行的函数名称。</span><br><span class="line">$(selector).fadeTo(speed,opacity,callback);</span><br></pre></td></tr></table></figure></p>
+<p>滑动<br>jQuery slideDown()<br>演示 jQuery slideDown() 方法。<br>jQuery slideUp()<br>演示 jQuery slideUp() 方法。<br>jQuery slideToggle()<br>演示 jQuery slideToggle() 方法。<br>jQuery animate() 方法允许您创建自定义的动画。</p>
+<p>语法：<br>$(selector).animate({params},speed,callback);<br>必需的 params 参数定义形成动画的 CSS 属性。<br>可选的 speed 参数规定效果的时长。它可以取以下值：”slow”、”fast” 或毫秒。<br>可选的 callback 参数是动画完成后所执行的函数名称。<br>下面的例子演示 animate() 方法的简单应用；它把 <div> 元素移动到左边，直到 left 属性等于 250 像素为止：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  $(<span class="string">".box"</span>).animate(&#123;left:<span class="string">'250px'</span>&#125;);CSS属性后面不能有 分号；</span><br><span class="line"></span><br><span class="line">        $(<span class="string">".box"</span>).animate(&#123;left:<span class="string">'250px'</span>,</span><br><span class="line">      opacity:<span class="string">'0.5'</span>,</span><br><span class="line">      height:<span class="string">'150px'</span>,</span><br><span class="line">      width:<span class="string">'150px'</span>&#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">  $(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">   $(<span class="string">"div"</span>).animate(&#123;</span><br><span class="line">    left:<span class="string">'250px'</span>,</span><br><span class="line">    height:<span class="string">'+=150px'</span>,</span><br><span class="line">    width:<span class="string">'+=150px'</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div></p>
+<p>您甚至可以把属性的动画值设置为 “show”、”hide” 或 “toggle”：<br>例如：height:’toggle’<br>也可以定义相对值（该值相对于元素的当前值）。需要在值的前面加上 += 或 -=：<br>默认情况下，所有HTML元素的位置都是静态的，并且无法易懂。如需对位置进行操作，记得首先把元素的CSS的position属性设置为relative,fixed或absolute<br>jQuery 提供针对动画的队列功能。<br>这意味着如果您在彼此之后编写多个 animate() 调用，jQuery 会创建包含这些方法调用的“内部”队列。然后逐一运行这些 animate 调用。<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div.animate(&#123;height:<span class="string">'300px'</span>,opacity:<span class="string">'0.4'</span>&#125;,<span class="string">"slow"</span>);</span><br><span class="line">div.animate(&#123;width:<span class="string">'300px'</span>,opacity:<span class="string">'0.8'</span>&#125;,<span class="string">"slow"</span>);</span><br><span class="line">div.animate(&#123;height:<span class="string">'100px'</span>,opacity:<span class="string">'0.4'</span>&#125;,<span class="string">"slow"</span>);</span><br><span class="line">div.animate(&#123;width:<span class="string">'100px'</span>,opacity:<span class="string">'0.8'</span>&#125;,<span class="string">"slow"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>每一个动画都是在上一个动画的基础上进行。。<br>jQuery stop() 方法用于停止动画或效果，在它们完成之前。<br>stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。<br>$(selector).stop(stopAll,goToEnd);<br>jQuery方法链接<br>如需链接一个动作，您只需简单地把该动作追加到之前的动作上。<br>例子 1<br>下面的例子把 css(), slideUp(), and slideDown() 链接在一起。”p1” 元素首先会变为红色，然后向上滑动，然后向下滑动：<br>$(“#p1”).css(“color”,”red”).slideUp(2000).slideDown(2000);<br>jQuery获取<br>DOM = Document Object Model（文档对象模型）<br>text() - 设置或返回所选元素的文本内容<br>html() - 设置或返回所选元素的内容（包括 HTML 标记）<br>val() - 设置或返回表单字段的值 例如输入框内部的值<br>下面的例子演示如何通过 jQuery text() 和 html() 方法来获得内容：<br>jQuery attr() 方法用于获取属性值。<br>href 可以换成 id class等属性值<br>下面的例子演示如何获得链接中 href 属性的值：<br>实例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  alert($(<span class="string">"#w3s"</span>).attr(<span class="string">"href"</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>设置内容 - text()、html() 以及 val()<br>我们将使用前一章中的三个相同的方法来设置内容：<br>text() - 设置或返回所选元素的文本内容<br>html() - 设置或返回所选元素的内容（包括 HTML 标记）<br>val() - 设置或返回表单字段的值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#btn1"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#test1"</span>).text(<span class="string">"Hello world!"</span>);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"#btn2"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#test2"</span>).html(<span class="string">"&lt;b&gt;Hello world!&lt;/b&gt;"</span>);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"#btn3"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#test3"</span>).val(<span class="string">"Dolly Duck"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>text()、html() 以及 val()，同样拥有回调函数。回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。<br>设置属性<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#w3s"</span>).attr(&#123;</span><br><span class="line">    <span class="string">"href"</span> : <span class="string">"http://www.w3school.com.cn/jquery"</span>,</span><br><span class="line">    <span class="string">"title"</span> : <span class="string">"W3School jQuery Tutorial"</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>添加新的 HTML 内容<br>我们将学习用于添加新内容的四个 jQuery 方法：<br>append() - 在被选元素的结尾插入内容<br>prepend() - 在被选元素的开头插入内容<br>after() - 在被选元素之后插入内容<br>before() - 在被选元素之前插入内容</p>
+<p>创建和追加元素的不同方式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var txt1=<span class="string">"&lt;p&gt;Text.&lt;/p&gt;"</span>;              // 以 HTML 创建新元素</span><br><span class="line">var txt2=$(<span class="string">"&lt;p&gt;&lt;/p&gt;"</span>).text(<span class="string">"Text."</span>);  // 以 jQuery 创建新元素</span><br><span class="line">var txt3=document.createElement(<span class="string">"p"</span>);</span><br><span class="line">txt3.innerHTML=<span class="string">"Text."</span>;               // 通过 DOM 来创建文本</span><br><span class="line">$(<span class="string">"body"</span>).append(txt1,txt2,txt3);        // 追加新元素</span><br></pre></td></tr></table></figure></p>
+<p>删除元素/内容<br>如需删除元素和内容，一般可使用以下两个 jQuery 方法：<br>remove() - 删除被选元素（及其子元素）<br>empty() - 从被选元素中删除子元素<br>jQuery remove() 方法也可接受一个参数，允许您对被删元素进行过滤。<br>该参数可以是任何 jQuery 选择器的语法。<br>下面的例子删除 class=”italic” 的所有 </p><p> 元素：</p>
+<blockquote>
+<p>$(“p”).remove(“.italic”);</p>
+</blockquote>
+<p>jQuery 拥有若干进行 CSS 操作的方法。我们将学习下面这些：<br>addClass() - 向被选元素添加一个或多个类   参数为类名<br>removeClass() - 从被选元素删除一个或多个类<br>toggleClass() - 对被选元素进行添加/删除类的切换操作<br>css() - 设置或返回样式属性<br>jQuery尺寸<br>width() 方法设置或返回元素的宽度（不包括内边距、边框或外边距）。<br>height() 方法设置或返回元素的高度（不包括内边距、边框或外边距）。<br>注意：$(“”).click(function(){})<br>onclick=function(){}<br>两者格式不同<br>innerWidth() 方法返回元素的宽度（包括内边距）。<br>innerHeight() 方法返回元素的高度（包括内边距）。<br>outerWidth() 方法返回元素的宽度（包括内边距和边框）。<br>outerHeight() 方法返回元素的高度（包括内边距和边框）。<br>$(document).height() 返回文档的高度<br> $(window).height() 返回浏览器的高度<br>此外下面的例子设置指定的 <div> 元素的宽度和高度：<br>实例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#div1"</span>).width(500).height(500);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div></p>
+<h1 id="2017年8月30日学习笔记"><a href="#2017年8月30日学习笔记" class="headerlink" title="2017年8月30日学习笔记"></a>2017年8月30日学习笔记</h1><p>jQuery遍历</p>
+<p>意为移动</p>
+<p>通过 jQuery 遍历，您能够从被选（当前的）元素开始，轻松地在家族树中向上移动（祖先），向下移动（子孙），水平移动（同胞）。这种移动被称为对 DOM 进行遍历。</p>
+<p>向上遍历 DOM 树<br>这些 jQuery 方法很有用，它们用于向上遍历 DOM 树：<br>parent()<br>parents()<br>parentsUntil()</p>
+<p>parent() 方法返回被选元素的直接父元素。<br>该方法只会向上一级对 DOM 树进行遍历。</p>
+<p>  $(“span”).parent();查找到的直接父元素,可以对其进行css效果等</p>
+<p>例如：  $(“span”).parent().css({“color”:”red”,”border”:”2px solid red”});</p>
+<p>  $(“span”).parents(“ul”);可以查找到标签为ul父元素</p>
+<p>parentsUntil() 方法返回介于两个给定元素之间的所有祖先元素。<br>下面的例子返回介于 <span> 与 <div> 元素之间的所有祖先元素：不包括两边 开区间</div></span></p>
+<p>下面是两个用于向下遍历 DOM 树的 jQuery 方法：<br>children()<br>find(）<br>children() 方法返回被选元素的所有直接子元素。可能有多个<br>该方法只会向下一级对 DOM 树进行遍历。<br>您也可以使用可选参数来过滤对子元素的搜索。</p>
+<p>$(“div”).children(“p.1”);返回所有直接子元素中类名为1的p元素</p>
+<p>find() 方法返回被选元素的后代元素，一路向下直到最后一个后代。<br>下面的例子返回属于 <div> 后代的所有 <span> 元素：<br>  $(“div”).find(“span”);</span></div></p>
+<p>find(“*”)查找所有的子元素</p>
+<p>同胞<br>在 DOM 树中水平遍历<br>有许多有用的方法让我们在 DOM 树进行水平遍历：<br>siblings()<br>next()<br>nextAll()<br>nextUntil()<br>prev()<br>prevAll()<br>prevUntil()<br>siblings() 方法返回被选元素的所有同胞元素。</p>
+<p>  $(“h2”).siblings(“p”);可以增加参数进行查找<br>next() 方法返回被选元素的下一个同胞元素。<br>nextAll() 方法返回被选元素的所有跟随的同胞元素。<br>nextUntil() 方法返回介于两个给定参数之间的所有跟随的同胞元素。<br>prev(), prevAll() 以及 prevUntil() 方法的工作方式与上面的方法类似，只不过方向相反而已：它们返回的是前面的同胞元素（在 DOM 树中沿着同胞元素向后遍历，而不是向前）。</p>
+<p>过滤<br>三个最基本的过滤方法是：first(), last() 和 eq()，它们允许您基于其在一组元素中的位置来选择一个特定的元素。<br>其他过滤方法，比如 filter() 和 not() 允许您选取匹配或不匹配某项指定标准的元素。<br>first() 方法返回被选元素的首个元素。 first和last都是返回的一个元素<br> $(“div p”).first();取首个 <div> 元素内部的第一个 <p> 元素<br>eq() 方法返回被选元素中带有指定索引号的元素。<br>索引号从 0 开始，因此首个元素的索引号是 0 而不是 1。下面的例子选取第二个 </p><p> 元素（索引号 1）：<br>  $(“p”).eq(1);<br>filter() 方法允许您规定一个标准。不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回。<br>  $(“p”).filter(“.intro”);返回带有类名 “intro” 的所有 </p><p> 元素：<br>not() 方法返回不匹配标准的所有元素。not() 方法与 filter() 相反。</p>
+<h3 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h3><p>AJAX 是与服务器交换数据的艺术，它在不重载全部页面的情况下，实现了对部分网页的更新。在不重载整个网页的情况下，AJAX 通过后台加载数据，并在网页上进行显示<br>AJAX= 异步 JavaScript 和 XML（Asynchronous JavaScript and XML）<br>通过 jQuery AJAX 方法，您能够使用 HTTP Get 和 HTTP Post 从远程服务器上请求文本、HTML、XML 或 JSON - 同时您能够把这些外部数据直接载入网页的被选元素中。<br>load() 方法从服务器加载数据，并把返回的数据放入被选元素中。<br>attr(属性，属性值)</p>
+<h1 id="2017年8月30日学习笔记-1"><a href="#2017年8月30日学习笔记-1" class="headerlink" title="2017年8月30日学习笔记"></a>2017年8月30日学习笔记</h1><p>学习each语句<br>以及ajax load 和HTTP请求<br>开始学着用jquery做一个小东西</p>
+<ul>
+<li><p>add方法<br>传递选择器<br>$(‘li’).add(‘p’)<br>意思就是把p标签加入到li的合集中，然后对合集进行操作<br>传递dom元素<br>$(‘li’).add(document.getElementsByTagName(‘p’)[0])<br>动态创建p标签加入到合集，然后插入到指定位置，但是这样就改变元素的本身的排列了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'li'</span>).add(<span class="string">'&lt;p&gt;新的p元素&lt;/p&gt;'</span>).appendTo(目标位置)</span><br><span class="line">$(<span class="string">'li'</span>).add(<span class="string">'&lt;p&gt;新的p元素&lt;/p&gt;'</span>).appendTo($(<span class="string">'.right'</span>))</span><br><span class="line">$(<span class="string">"button:first"</span>)第一个子节点</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>each方法<br>Query是一个合集对象，通过$()方法找到指定的元素合集后可以进行一系列的操作。比如我们操作$(“li”).css(‘’) 给所有的li设置style值，因为jQuery是一个合集对象，所以css方法内部就必须封装一个遍历的方法，被称为隐式迭代的过程。要一个一个给合集中每一个li设置颜色，这里方法就是each<br>.each() 方法就是一个for循环的迭代器，它会迭代jQuery对象合集中的每一个DOM元素。每次回调函数执行时，会传递当前循环次数作为参数(从0开始计数）<br>e.which显示触发了哪个键<br>index(),返回值是jQuery对象中第一个元素相对于它同辈元素的位置<br>.index( selector )<br>.index( element )</p>
+</li>
+<li><p>get方法</p>
+<p>$(a).get(1)<br>正索引从0开始<br>负索引 从-1开始</p>
+</li>
+<li><p>bind方法<br>bind() 方法为被选元素添加一个或多个事件处理程序，并规定事件发生时运行的函数。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).<span class="built_in">bind</span>(<span class="string">"click"</span>,<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line"></span><br><span class="line">load(url,[data],[callback])</span><br><span class="line"></span><br><span class="line"> $(<span class="string">"ul"</span>).load(<span class="string">"http://www.imooc.com/data/fruit_part.html"</span>,<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line"> <span class="variable">$this</span>.attr(<span class="string">"disabled"</span>, <span class="string">"true"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><a href="http://pdf-file.ic37.com/pdf4/SEMTECH/SX123_datasheet_783718/127781/SX123_datasheet.pdf" target="_blank" rel="external">http://pdf-file.ic37.com/pdf4/SEMTECH/SX123_datasheet_783718/127781/SX123_datasheet.pdf</a></p>
+<h1 id="2017年8月31日学习笔记"><a href="#2017年8月31日学习笔记" class="headerlink" title="2017年8月31日学习笔记"></a>2017年8月31日学习笔记</h1><p>使用load()方法通过Ajax请求加载服务器中的数据，并把返回的数据放置到指定的元素中，它的调用格式为：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">load(url,[data],[callback])</span><br><span class="line"></span><br><span class="line">                    $(<span class="string">"ul"</span>).load(<span class="string">"http://www.imooc.com/data/fruit_part.html"</span>,<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">                        <span class="variable">$this</span>.attr(<span class="string">"disabled"</span>, <span class="string">"true"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>$.getJSON()</p>
+<p>使用getJSON()方法可以通过Ajax异步请求的方式，获取服务器中的数据，并对获取的数据进行解析，显示在页面中，它的调用格式为：<br>jQuery.getJSON(url,[data],[callback])或$.getJSON(url,[data],[callback])<br>使用getScript()方法异步加载并执行js文件<br>jQuery.getScript(url,[callback])或$.getScript(url,[callback])<br>使用get()方法以GET方式从服务器获取数据<br>$.get(url,[callback])<br>$.get(“<a href="http://www.imooc.com/data/info_f.php&quot;,function(data){}" target="_blank" rel="external">http://www.imooc.com/data/info_f.php&quot;,function(data){}</a><br>data作为参数传进去，不可落掉<br>与get()方法相比，post()方法多用于以POST方式向服务器发送数据，服务器接收到数据之后，进行处理，并将处理结果返回页面，调用格式如下：<br>$.post(url,[data],[callback])<br>参数url为服务器请求地址，可选项data为向服务器请求时发送的数据，可选项callback参数为请求成功后执行的回调函数。<br>获取值，将值传送给服务器，服务器接收该值后进行处理（后台操作），最后返回处理结果。<br>对于后台的源代码 有时我们在浏览器上看不到。传递值时要传递名称和数值，就像jSON对象一样。<br>使用serialize()方法可以将表单中有name属性的元素值进行序列化，生成标准URL编码文本字符串，直接可用于ajax请求，它的调用格式如下：<br>$(selector).serialize()   给想要序列化的元素增加name属性<br>其中selector参数是一个或多个表单中的元素或表单元素本身。<br>使用ajax()方法加载服务器数据<br>使用ajax()方法是最底层、功能最强大的请求服务器数据的方法，它不仅可以获取服务器返回的数据，还能向服务器发送请求并传递数值，它的调用格式如下：<br>jQuery.ajax([settings])或$.ajax([settings])<br>其中参数settings为发送ajax请求时的配置对象，在该对象中，url表示服务器请求的路径，data为请求时传递的数据，dataType为服务器返回的数据类型，success为请求成功的执行的回调函数，type为发送数据请求的方式，默认为get。<br>参数settings为发送ajax请求时的配置对象，在该对象中，url表示服务器请求的路径，data为请求时传递的数据，dataType为服务器返回的数据类型，success为请求成功的执行的回调函数，type为发送数据请求的方式，默认为get。<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">                    url:<span class="string">"http://www.imooc.com/data/check.php"</span>,</span><br><span class="line">                    data: &#123; num: $(<span class="string">"#txtNumber"</span>).val() &#125;,</span><br><span class="line">                    dataType:<span class="string">"text"</span>,</span><br><span class="line">                    success: <span class="keyword">function</span> (data) &#123;</span><br><span class="line">                        $(<span class="string">"ul"</span>).append(<span class="string">"&lt;li&gt;你输入的&lt;b&gt;  "</span></span><br><span class="line">                        + $(<span class="string">"#txtNumber"</span>).val() + <span class="string">" &lt;/b&gt;是&lt;b&gt; "</span></span><br><span class="line">                        + data + <span class="string">" &lt;/b&gt;&lt;/li&gt;"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br></pre></td></tr></table></figure></p>
+<p>使用ajaxSetup()方法设置全局Ajax默认选项 设置完成后，后面的Ajax请求将不需要再添加这些选项值，它的调用格式为：<br>jQuery.ajaxSetup([options])或$.ajaxSetup([options])<br>相当于取出ajax设置的交集部分，为了避免重复。</p>
+<p>使用ajaxStart()和ajaxStop()方法</p>
+<p>$(selector).ajaxStart(function())和$(selector).ajaxStop(function())</p>
+<h1 id="2017年9月1日学习笔记"><a href="#2017年9月1日学习笔记" class="headerlink" title="2017年9月1日学习笔记"></a>2017年9月1日学习笔记</h1><p>jQuery插件</p>
+<p>1.表单验证插件<br>该插件自带包含必填、数字、URL在内容的验证规则，即时显示异常信息，此外，还允许自定义验证规则，插件调用方法如下：<br>$(form).validate({options})<br>其中form参数表示表单元素名称，options参数表示调用方法时的配置对象，所有的验证规则和异常信息显示的位置都在该对象中进行设置。<br>图片灯箱插件——lightBox  这个功能很好玩哎。增加了图片加载条 图片切换按钮（前后） 以及图片自动播放和暂停的按钮（完美）功能真的很强大。。<br>图片放大插件（准备两个图片，一大一小，当点击小图片时，显示大图片对应的位置）<br>$(linkimage).jqzoom({options})<br>cookie插件 主要是用来保存数据<br>搜索插件 就是当在文本框中搜索时，会自动匹配相应内容。<br>搜索插件——autocomplete<br>右键菜单插件 点击右键出现保存或者修改按钮</p>
+<p>lifocuscolor插件 当获得鼠标焦点时候，改变背景颜色<br>$.addNum(p1,p2) 和 $.subNum(p1,p2)</p>
+<p>$.subNum(+$(“#Text1”).val(),+$(“#Text2”).val())  他默认是字符串 所以比较大小的时候有问题 是按第一个字符的码值比较的  转化一下就正常了</p>
+<p>拖曳插件draggable的功能是拖动被绑定的元素，当这个jQuery UI插件与元素绑定后，可以通过调用draggable()方法，实现各种拖曳元素的效果，调用格式如下</p>
+<p>微调按钮插件<br>问题：服务器接收后的数据存储在哪儿（php）</p>
+<h1 id="2017年9月2日学习笔记"><a href="#2017年9月2日学习笔记" class="headerlink" title="2017年9月2日学习笔记"></a>2017年9月2日学习笔记</h1><p>1.正则表达式去逗号<br>   text = text.replace(/,/g,””);<br>当输入空格 逗号 或者enter键时，将元素显示在下面<br>可以通过按键值来判断<br>同样的用法：replace(/删除：/,’’);</p>
+<ol>
+<li>js的常见去重的方法</li>
+</ol>
+<p>一般是建立一个临时数组，如果数组中没有该数据，则将数据存入该数组<br>主要是利用indexOf 来判断<br>此外也可以用hash表，这个还不理解。</p>
+<ol>
+<li>js数据结构和算法 二叉树<br>二叉树（Binary Tree）是n（n&gt;=0）个结点的有限集合，该集合或者为空集（空二叉树），或者由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树的二叉树组成。<br>每个结点最多有两棵子树，所以二叉树中不存在度大于2的结点。二叉树中每一个节点都是一个对象，每一个数据节点都有三个指针，分别是指向父母、左孩子和右孩子的指针。每一个节点都是通过指针相互连接的。相连指针的关系都是父子关系。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">struct BinaryTreeNode</span><br><span class="line">&#123;</span><br><span class="line">    int m_nValue;</span><br><span class="line">    BinaryTreeNode* m_pLeft;</span><br><span class="line">    BinaryTreeNode* m_pRight;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>空二叉树<br>只有一个根结点<br>根结点只有左子树<br>根结点只有右子树<br>根结点既有左子树又有右子树</p>
+<p>满二叉树</p>
+<p>在一棵二叉树中，如果所有分支结点都存在左子树和右子树，并且所有叶子都在同一层上，这样的二叉树称为满二叉树。<br>满二叉树：指的是深度为k且含有2的k次方-1 个结点的二叉树。<br>深度为3，节点数=7.深度为4，节点数为15.<br>完全二叉树是指最后一层左边是满的，右边可能满也可能不满，然后其余层都是满的。<br>满二叉树一定是完全二叉树，但完全二叉树不一定是满二叉树。<br>二叉树的性质一：在二叉树的第i层上至多有2^(i-1)个结点(i&gt;=1)<br>二叉树的性质二：深度为k的二叉树至多有2^k-1个结点(k&gt;=1)<br>二叉树的顺序存储结构就是用一维数组存储二叉树中的各个结点，并且结点的存储位置能体现结点之间的逻辑关系。<br>二叉树每个结点最多有两个孩子，所以为它设计一个数据域和两个指针域是比较自然的想法，我们称这样的链表叫做二叉链表。<br>（1）前序遍历（DLR），首先访问根结点，然后遍历左子树，最后遍历右子树。简记根-左-右。</p>
+<p>（2）中序遍历（LDR），首先遍历左子树，然后访问根结点，最后遍历右子树。简记左-根-右。</p>
+<p>（3）后序遍历（LRD），首先遍历左子树，然后遍历右子树，最后访问根结点。简记左-右-根。<br>二叉树特点：<br> any values that are part of a node’s left subtree are always less than the node’s value<br> and any values in the right subtree are always greater than the node’s value.<br> In this way, finding a value in a binary search tree becomes quite simple,<br> go left whenever the value you’re looking for is less than the node you’re processing or go right if the value is greater.<br> Binary search trees naturally end up in a sorted order and are therefore useful for quickly<br> looking up data because you immediately eliminate possibilities with each step.<br> The basic interface is similar to other data structures, with methods for adding and removing values<br> go left if the value to find is less than the current node, go right if the value is greater. </p>
+<p>详情请参考&lt; <a href="https://www.nczonline.net/blog/2009/06/09/computer-science-in-javascript-binary-search-tree-part-1/" target="_blank" rel="external">https://www.nczonline.net/blog/2009/06/09/computer-science-in-javascript-binary-search-tree-part-1/</a> &gt;  有一个问题 就是遍历的问题</p>
+<h1 id="2017年9月3日学习笔记"><a href="#2017年9月3日学习笔记" class="headerlink" title="2017年9月3日学习笔记"></a>2017年9月3日学习笔记</h1><p>指针变量同普通变量一样，使用之前不仅要定义说明， 而且必须赋予具体的值。未经赋值的指针变量不能使用， 否则将造成系统混乱，甚至死机。指针变量的赋值只能赋予地址， 决不能赋予任何其它数据，否则将引起错误。在Ｃ语言中， 变量的地址是由编译系统分配的，对用户完全透明，用户不知道变量的具体地址。 Ｃ语言中提供了地址运算符&amp;来表示变量的地址。其一般形式为： &amp; 变量名； 如&amp;a变示变量a的地址，&amp;b表示变量b的地址。 变量本身必须预先说明。设有指向整型变量的指针变量p，如要把整型变量a 的地址赋予p可以有以下两种方式：<br>(1)指针变量初始化的方法 int a;<br>int *p=&a;<br>(2)赋值语句的方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int a; </span><br><span class="line">int *p; </span><br><span class="line">p=&amp;a;</span><br><span class="line">char a[6]=<span class="string">"6Hipig!"</span>;</span><br><span class="line">char c,d,e;</span><br><span class="line">char bb =strlen(p);</span><br><span class="line">  </span><br><span class="line">char *am;</span><br><span class="line">am=a;</span><br></pre></td></tr></table></figure></p>
+<p> 最终版本：<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">char a[]=<span class="string">"6Hipig!"</span>;</span><br><span class="line">char c,d,e;</span><br><span class="line">char bb =strlen(a);</span><br><span class="line">char *am;</span><br><span class="line">am=a;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://community.nxp.com/message/466239" target="_blank" rel="external">https://community.nxp.com/message/466239</a></p>
+<h1 id="2017年9月5日学习笔记"><a href="#2017年9月5日学习笔记" class="headerlink" title="2017年9月5日学习笔记"></a>2017年9月5日学习笔记</h1><p>javascript设计模式<br>要学的东西，太多了，不要总想着去把所有的东西都学会，慢慢来。调整好自己的心态。<br>可以适当的先去学点，然后用到什么学什么。<br><a href="http://www.alloyteam.com/" target="_blank" rel="external">http://www.alloyteam.com/</a> 这里有一些开源项目。<br><a href="http://www.fefork.com/fetool/" target="_blank" rel="external">http://www.fefork.com/fetool/</a> 前端常用工具 参考<br>canvas标记和 SVG 以及 VML 之间的一个重要的不同是，canvas 有一个基于 JavaScript 的绘图 API，而 SVG 和 VML 使用一个 XML 文档来描述绘图。<br>大多数 Canvas 绘图 API 都没有定义在 canvas 元素本身上，而是定义在通过画布的 getContext() 方法获得的一个“绘图环境”对象上。<br>基本用法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas id=<span class="string">"tutorial"</span> width=<span class="string">"150"</span> height=<span class="string">"150"</span>&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure></p>
+<p>canvas 看起来和 img 元素很相像，唯一的不同就是它并没有 src 和 alt 属性<br>我们需要了解一下画布栅格（canvas grid）以及坐标空间<br>stroke() 方法会实际地绘制出通过 moveTo() 和 lineTo() 方法定义的路径。默认颜色是黑色。<br>学习笔记见博客园。canvas篇</p>
+</div></p>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/01/IFEtask/" rel="next" title="IFEtask">
+                <i class="fa fa-chevron-left"></i>Prev Option
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/02/2017年6月6日/" rel="prev" title="2017年6月6日">
+                Next Option <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="FANCY" />
+          <p class="site-author-name" itemprop="name">FANCY</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/gxfmqfzkzdgzwj" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="597785713@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-email"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年6月6日学习笔记"><span class="nav-number">1.</span> <span class="nav-text">2017年6月6日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#已经深刻掌握的知识点："><span class="nav-number">1.0.1.</span> <span class="nav-text">已经深刻掌握的知识点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本掌握，但还有一点需要深入的知识点如下："><span class="nav-number">1.0.2.</span> <span class="nav-text">基本掌握，但还有一点需要深入的知识点如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#需要深入的问题是："><span class="nav-number">1.0.3.</span> <span class="nav-text">需要深入的问题是：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初步掌握，还需要再次学习的知识点如下："><span class="nav-number">1.0.4.</span> <span class="nav-text">初步掌握，还需要再次学习的知识点如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LeetCode"><span class="nav-number">1.0.5.</span> <span class="nav-text">LeetCode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数值型和字符串类型的相互转换"><span class="nav-number">1.0.6.</span> <span class="nav-text">数值型和字符串类型的相互转换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年6月7日学习笔记"><span class="nav-number">2.</span> <span class="nav-text">2017年6月7日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#已经深刻掌握的知识点：-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">已经深刻掌握的知识点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本掌握，但还有一点需要深入的知识点如下：-1"><span class="nav-number">2.0.2.</span> <span class="nav-text">基本掌握，但还有一点需要深入的知识点如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初步掌握，还需要再次学习的知识点如下：-1"><span class="nav-number">2.0.3.</span> <span class="nav-text">初步掌握，还需要再次学习的知识点如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LeetCode-1"><span class="nav-number">2.0.4.</span> <span class="nav-text">LeetCode</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年6月8日学习笔记"><span class="nav-number">3.</span> <span class="nav-text">2017年6月8日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#已经掌握的知识点："><span class="nav-number">3.0.1.</span> <span class="nav-text">已经掌握的知识点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本掌握，但还有一点需要深入的知识点如下：-2"><span class="nav-number">3.0.2.</span> <span class="nav-text">基本掌握，但还有一点需要深入的知识点如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#还需要深入的问题："><span class="nav-number">3.0.3.</span> <span class="nav-text">还需要深入的问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#leetcode"><span class="nav-number">3.0.4.</span> <span class="nav-text">leetcode</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年6月10日学习笔记"><span class="nav-number">4.</span> <span class="nav-text">2017年6月10日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#已经深刻掌握的知识点如下："><span class="nav-number">4.0.1.</span> <span class="nav-text">已经深刻掌握的知识点如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本掌握，但还有一些需要深入的知识点如下："><span class="nav-number">4.0.2.</span> <span class="nav-text">基本掌握，但还有一些需要深入的知识点如下：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年6月13日学习笔记"><span class="nav-number">5.</span> <span class="nav-text">2017年6月13日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点1：Margin-属性"><span class="nav-number">5.0.1.</span> <span class="nav-text">知识点1：Margin 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点2：border-属性"><span class="nav-number">5.0.2.</span> <span class="nav-text">知识点2：border 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点3-不太懂：direction-rtl-和ltr-unicode-bidi属性值必须为embed-或者”override”"><span class="nav-number">5.0.3.</span> <span class="nav-text">知识点3:  不太懂：direction:rtl 和ltr    unicode-bidi属性值必须为embed 或者”override”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点4：定位主要有nomal-flow-float-absolute-positioning"><span class="nav-number">5.0.4.</span> <span class="nav-text">知识点4：定位主要有nomal flow, float ,absolute positioning</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年6月15日学习笔记"><span class="nav-number">6.</span> <span class="nav-text">2017年6月15日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#盒模型Demo"><span class="nav-number">6.0.1.</span> <span class="nav-text">盒模型Demo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年6月17日学习笔记"><span class="nav-number">7.</span> <span class="nav-text">2017年6月17日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题1："><span class="nav-number">7.0.1.</span> <span class="nav-text">问题1：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题2：三列布局可以用flex-将外部盒子设置为flex属性-可伸缩-并设置伸缩方向"><span class="nav-number">7.0.2.</span> <span class="nav-text">问题2：三列布局可以用flex  将外部盒子设置为flex属性 可伸缩 并设置伸缩方向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题3：等分特性"><span class="nav-number">7.0.3.</span> <span class="nav-text">问题3：等分特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题4：overflow属性-word-wrap-break-word"><span class="nav-number">7.0.4.</span> <span class="nav-text">问题4：overflow属性 word-wrap:break-word;</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年6月20日学习笔记"><span class="nav-number">8.</span> <span class="nav-text">2017年6月20日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#box-flex属性-主要让子容器针对父容器的宽度按一定规则进行划分"><span class="nav-number">8.0.0.1.</span> <span class="nav-text">box-flex属性 主要让子容器针对父容器的宽度按一定规则进行划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#box-orient属性"><span class="nav-number">8.0.0.2.</span> <span class="nav-text">box-orient属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#box-direction属性"><span class="nav-number">8.0.0.3.</span> <span class="nav-text">box-direction属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#box-align属性"><span class="nav-number">8.0.0.4.</span> <span class="nav-text">box-align属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#box-pack属性"><span class="nav-number">8.0.0.5.</span> <span class="nav-text">box-pack属性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题2："><span class="nav-number">8.0.1.</span> <span class="nav-text">问题2：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年7月12日学习笔记"><span class="nav-number">9.</span> <span class="nav-text">2017年7月12日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题1：nibStylus插件-import-‘nib’-报错。。。"><span class="nav-number">9.0.1.</span> <span class="nav-text">问题1：nibStylus插件  @import ‘nib’ 报错。。。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点1：Stylus的特征以及格式"><span class="nav-number">9.0.2.</span> <span class="nav-text">知识点1：Stylus的特征以及格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点2-函数体（带参数和不带参数）"><span class="nav-number">9.0.3.</span> <span class="nav-text">知识点2.函数体（带参数和不带参数）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点3-迭代"><span class="nav-number">9.0.4.</span> <span class="nav-text">知识点3.迭代</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点4-插值"><span class="nav-number">9.0.5.</span> <span class="nav-text">知识点4.插值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年7月17日学习笔记"><span class="nav-number">10.</span> <span class="nav-text">2017年7月17日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#完成任务："><span class="nav-number">10.0.1.</span> <span class="nav-text">完成任务：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年7月20日学习笔记"><span class="nav-number">11.</span> <span class="nav-text">2017年7月20日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三个-CSS-预处理器（框架）：Sass、LESS-和-Stylus"><span class="nav-number">11.0.1.</span> <span class="nav-text">三个 CSS 预处理器（框架）：Sass、LESS 和 Stylus</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月8日"><span class="nav-number">12.</span> <span class="nav-text">2017年8月8日</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#leetcode刷题总结"><span class="nav-number">12.0.1.</span> <span class="nav-text">leetcode刷题总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月9日学习笔记"><span class="nav-number">13.</span> <span class="nav-text">2017年8月9日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#work2-demo实践总结"><span class="nav-number">13.0.1.</span> <span class="nav-text">work2 demo实践总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月11日学习笔记"><span class="nav-number">14.</span> <span class="nav-text">2017年8月11日学习笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月13日学习笔记"><span class="nav-number">15.</span> <span class="nav-text">2017年8月13日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#js-task1"><span class="nav-number">15.0.1.</span> <span class="nav-text">js task1</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月14日学习笔记"><span class="nav-number">16.</span> <span class="nav-text">2017年8月14日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-fieldset-标签"><span class="nav-number">16.0.1.</span> <span class="nav-text">HTML fieldset 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跨浏览器添加事件"><span class="nav-number">16.0.2.</span> <span class="nav-text">跨浏览器添加事件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月15日学习笔记"><span class="nav-number">17.</span> <span class="nav-text">2017年8月15日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#js-task18"><span class="nav-number">17.0.1.</span> <span class="nav-text">js task18</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月16日学习笔记"><span class="nav-number">18.</span> <span class="nav-text">2017年8月16日学习笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月17日学习笔记"><span class="nav-number">19.</span> <span class="nav-text">2017年8月17日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序"><span class="nav-number">19.0.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择排序"><span class="nav-number">19.0.2.</span> <span class="nav-text">选择排序</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月21日学习笔记"><span class="nav-number">20.</span> <span class="nav-text">2017年8月21日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">20.0.1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题-1"><span class="nav-number">20.0.2.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式学习"><span class="nav-number">20.0.3.</span> <span class="nav-text">正则表达式学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题-2"><span class="nav-number">20.0.4.</span> <span class="nav-text">问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月25日学习笔记"><span class="nav-number">21.</span> <span class="nav-text">2017年8月25日学习笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月29日学习笔记"><span class="nav-number">22.</span> <span class="nav-text">2017年8月29日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery的安装-库"><span class="nav-number">22.0.1.</span> <span class="nav-text">jquery的安装 库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">22.0.2.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery元素选择器"><span class="nav-number">22.0.3.</span> <span class="nav-text">jquery元素选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery事件"><span class="nav-number">22.0.4.</span> <span class="nav-text">jquery事件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月30日学习笔记"><span class="nav-number">23.</span> <span class="nav-text">2017年8月30日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AJAX"><span class="nav-number">23.0.1.</span> <span class="nav-text">AJAX</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月30日学习笔记-1"><span class="nav-number">24.</span> <span class="nav-text">2017年8月30日学习笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月31日学习笔记"><span class="nav-number">25.</span> <span class="nav-text">2017年8月31日学习笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年9月1日学习笔记"><span class="nav-number">26.</span> <span class="nav-text">2017年9月1日学习笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年9月2日学习笔记"><span class="nav-number">27.</span> <span class="nav-text">2017年9月2日学习笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年9月3日学习笔记"><span class="nav-number">28.</span> <span class="nav-text">2017年9月3日学习笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年9月5日学习笔记"><span class="nav-number">29.</span> <span class="nav-text">2017年9月5日学习笔记</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FANCY</span>
+  <br/>
+  <span>Just &nbsp;&nbsp;&nbsp; Do &nbsp;&nbsp;&nbsp; It !</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

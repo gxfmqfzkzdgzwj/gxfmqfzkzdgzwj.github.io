@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="学习笔记," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="2017年8月29日学习笔记Jquery的学习jQuery 是一个 JavaScript 函数库。jQuery 库包含以下特性：HTML 元素选取HTML 元素操作CSS 操作HTML 事件函数JavaScript 特效和动画HTML DOM 遍历和修改AJAXUtilitiesW3C SCHOOL">
+<meta name="keywords" content="学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jquery">
+<meta property="og:url" content="http://yoursite.com/2018/01/03/Jquery/index.html">
+<meta property="og:site_name" content="Fancy&#39;s Blog">
+<meta property="og:description" content="2017年8月29日学习笔记Jquery的学习jQuery 是一个 JavaScript 函数库。jQuery 库包含以下特性：HTML 元素选取HTML 元素操作CSS 操作HTML 事件函数JavaScript 特效和动画HTML DOM 遍历和修改AJAXUtilitiesW3C SCHOOL">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-01-03T05:53:59.724Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jquery">
+<meta name="twitter:description" content="2017年8月29日学习笔记Jquery的学习jQuery 是一个 JavaScript 函数库。jQuery 库包含以下特性：HTML 元素选取HTML 元素操作CSS 操作HTML 事件函数JavaScript 特效和动画HTML DOM 遍历和修改AJAXUtilitiesW3C SCHOOL">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/03/Jquery/"/>
+
+
+
+
+
+  <title>Jquery | Fancy's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Fancy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/03/Jquery/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FANCY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fancy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Jquery</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-03T13:44:53+08:00">
+                2018-01-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Jquery/" itemprop="url" rel="index">
+                    <span itemprop="name">Jquery</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="2017年8月29日学习笔记"><a href="#2017年8月29日学习笔记" class="headerlink" title="2017年8月29日学习笔记"></a>2017年8月29日学习笔记</h1><p>Jquery的学习<br>jQuery 是一个 JavaScript 函数库。<br>jQuery 库包含以下特性：<br>HTML 元素选取<br>HTML 元素操作<br>CSS 操作<br>HTML 事件函数<br>JavaScript 特效和动画<br>HTML DOM 遍历和修改<br>AJAX<br>Utilities<br>W3C SCHOOL<br><a id="more"></a></p>
+<h3 id="jquery的安装-库"><a href="#jquery的安装-库" class="headerlink" title="jquery的安装 库"></a>jquery的安装 库</h3><p>直接下载最新版本的 jQuery 3.2.1<br>可以通过npm安装<br>也可以通过git上克隆源码</p>
+<p>之后通过script标签来进行引用</p>
+<p>也可以使用谷歌或微软的 jQuery，有一个很大的优势：<br>许多用户在访问其他站点时，已经从谷歌或微软加载过 jQuery。所有结果是，当他们访问您的站点时，会从缓存中加载 jQuery，这样可以减少加载时间。<br>同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>基本语法$(selector).action()<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(this).hide()</span><br><span class="line">演示 jQuery hide() 函数，隐藏当前的 HTML 元素。</span><br><span class="line">$(<span class="string">"#test"</span>).hide()  同样的可以隐藏类元素 和标签元素</span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line"></span><br><span class="line">--- jQuery <span class="built_in">functions</span> go here ----</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="jquery元素选择器"><a href="#jquery元素选择器" class="headerlink" title="jquery元素选择器"></a>jquery元素选择器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"p"</span>) 选取 &lt;p&gt; 元素。</span><br><span class="line">$(<span class="string">"p.intro"</span>) 选取所有 class=<span class="string">"intro"</span> 的 &lt;p&gt; 元素。</span><br><span class="line">$(<span class="string">"p#demo"</span>) 选取所有 id=<span class="string">"demo"</span> 的 &lt;p&gt; 元素。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$(<span class="string">"[href]"</span>) 选取所有带有 href 属性的元素。</span><br><span class="line">$(<span class="string">"[href='#']"</span>) 选取所有带有 href 值等于 <span class="string">"#"</span> 的元素。</span><br><span class="line">$(<span class="string">"[href!='#']"</span>) 选取所有带有 href 值不等于 <span class="string">"#"</span> 的元素。</span><br><span class="line">$(<span class="string">"[href$='.jpg']"</span>) 选取所有 href 值以 <span class="string">".jpg"</span> 结尾的元素。 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">jQuery CSS 选择器可用于改变 HTML 元素的 CSS 属性。</span><br><span class="line"></span><br><span class="line">$(<span class="string">"p"</span>).css(<span class="string">"background-color"</span>,<span class="string">"red"</span>); 属性用引号包围，中间用逗号隔开</span><br><span class="line">设置多个属性时，$(selector).css(&#123;property:value, property:value, ...&#125;)</span><br><span class="line">$(<span class="string">".aa"</span>).css(&#123;<span class="string">"background-color"</span>:<span class="string">"blue"</span>,<span class="string">"width"</span>:<span class="string">"300px"</span>&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="jquery事件"><a href="#jquery事件" class="headerlink" title="jquery事件"></a>jquery事件</h3><p>事件处理程序指的是当 HTML 中发生某些事件时所调用的方法。术语由事件“触发”（或“激发”）经常会被使用。<br>通常会把 jQuery 代码放到 <head>部分的事件处理方法中：</head></p>
+<p>jQuery 名称冲突：<br>jQuery 使用 $ 符号作为 jQuery 的简介方式。<br>我们也可以使用其他来代替美元符号<br>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var jq1=jQuery.noConflict()</span><br><span class="line">jq1(document).ready(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  jq1(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    jq1(<span class="string">"p"</span>).text(<span class="string">"jQuery 仍在运行！"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);//此处可行</span><br></pre></td></tr></table></figure></p>
+<p>Event 函数  绑定函数至<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="keyword">function</span>) 将函数绑定到文档的就绪事件（当文档完成加载时）</span><br><span class="line">$(selector).click(<span class="keyword">function</span>) 触发或将函数绑定到被选元素的点击事件</span><br><span class="line">$(selector).dblclick(<span class="keyword">function</span>)  触发或将函数绑定到被选元素的双击事件</span><br><span class="line">$(selector).focus(<span class="keyword">function</span>) 触发或将函数绑定到被选元素的获得焦点事件</span><br><span class="line">$(selector).mouseover(<span class="keyword">function</span>) 触发或将函数绑定到被选元素的鼠标悬停事件</span><br></pre></td></tr></table></figure></p>
+<p>效果函数<br>与hide相对应的是show,<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">$(selector).hide(speed,callback);</span><br><span class="line">$(selector).show(speed,callback);</span><br><span class="line">speed 代表速度 直接输入数字 代表毫秒。callback是指隐藏后所执行的函数名称</span><br><span class="line">通过 jQuery，您可以使用 toggle() 方法来切换 hide() 和 show() 方法。</span><br><span class="line">通过 jQuery，您可以实现元素的淡入淡出效果。</span><br><span class="line">jQuery 拥有下面四种 fade 方法：</span><br><span class="line">fadeIn()</span><br><span class="line">fadeOut()</span><br><span class="line">fadeToggle()</span><br><span class="line">fadeTo()</span><br><span class="line">$(selector).fadeIn(speed,callback);</span><br><span class="line">可选的 speed 参数规定效果的时长。它可以取以下值：<span class="string">"slow"</span>、<span class="string">"fast"</span> 或毫秒。</span><br><span class="line">可选的 callback 参数是 fading 完成后所执行的函数名称。</span><br><span class="line">淡入可以设置原来的display属性为“none”</span><br><span class="line">fadeTo() 方法中必需的 opacity 参数将淡入淡出效果设置为给定的不透明度（值介于 0 与 1 之间）。</span><br><span class="line">可选的 callback 参数是该函数完成后所执行的函数名称。</span><br><span class="line">$(selector).fadeTo(speed,opacity,callback);</span><br></pre></td></tr></table></figure></p>
+<p>滑动<br>jQuery slideDown()<br>演示 jQuery slideDown() 方法。<br>jQuery slideUp()<br>演示 jQuery slideUp() 方法。<br>jQuery slideToggle()<br>演示 jQuery slideToggle() 方法。<br>jQuery animate() 方法允许您创建自定义的动画。</p>
+<p>语法：<br>$(selector).animate({params},speed,callback);<br>必需的 params 参数定义形成动画的 CSS 属性。<br>可选的 speed 参数规定效果的时长。它可以取以下值：”slow”、”fast” 或毫秒。<br>可选的 callback 参数是动画完成后所执行的函数名称。<br>下面的例子演示 animate() 方法的简单应用；它把 <div> 元素移动到左边，直到 left 属性等于 250 像素为止：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  $(<span class="string">".box"</span>).animate(&#123;left:<span class="string">'250px'</span>&#125;);CSS属性后面不能有 分号；</span><br><span class="line"></span><br><span class="line">        $(<span class="string">".box"</span>).animate(&#123;left:<span class="string">'250px'</span>,</span><br><span class="line">      opacity:<span class="string">'0.5'</span>,</span><br><span class="line">      height:<span class="string">'150px'</span>,</span><br><span class="line">      width:<span class="string">'150px'</span>&#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">  $(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">   $(<span class="string">"div"</span>).animate(&#123;</span><br><span class="line">    left:<span class="string">'250px'</span>,</span><br><span class="line">    height:<span class="string">'+=150px'</span>,</span><br><span class="line">    width:<span class="string">'+=150px'</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div></p>
+<p>您甚至可以把属性的动画值设置为 “show”、”hide” 或 “toggle”：<br>例如：height:’toggle’<br>也可以定义相对值（该值相对于元素的当前值）。需要在值的前面加上 += 或 -=：<br>默认情况下，所有HTML元素的位置都是静态的，并且无法易懂。如需对位置进行操作，记得首先把元素的CSS的position属性设置为relative,fixed或absolute<br>jQuery 提供针对动画的队列功能。<br>这意味着如果您在彼此之后编写多个 animate() 调用，jQuery 会创建包含这些方法调用的“内部”队列。然后逐一运行这些 animate 调用。<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div.animate(&#123;height:<span class="string">'300px'</span>,opacity:<span class="string">'0.4'</span>&#125;,<span class="string">"slow"</span>);</span><br><span class="line">div.animate(&#123;width:<span class="string">'300px'</span>,opacity:<span class="string">'0.8'</span>&#125;,<span class="string">"slow"</span>);</span><br><span class="line">div.animate(&#123;height:<span class="string">'100px'</span>,opacity:<span class="string">'0.4'</span>&#125;,<span class="string">"slow"</span>);</span><br><span class="line">div.animate(&#123;width:<span class="string">'100px'</span>,opacity:<span class="string">'0.8'</span>&#125;,<span class="string">"slow"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>每一个动画都是在上一个动画的基础上进行。。<br>jQuery stop() 方法用于停止动画或效果，在它们完成之前。<br>stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。<br>$(selector).stop(stopAll,goToEnd);<br>jQuery方法链接<br>如需链接一个动作，您只需简单地把该动作追加到之前的动作上。<br>例子 1<br>下面的例子把 css(), slideUp(), and slideDown() 链接在一起。”p1” 元素首先会变为红色，然后向上滑动，然后向下滑动：<br>$(“#p1”).css(“color”,”red”).slideUp(2000).slideDown(2000);<br>jQuery获取<br>DOM = Document Object Model（文档对象模型）<br>text() - 设置或返回所选元素的文本内容<br>html() - 设置或返回所选元素的内容（包括 HTML 标记）<br>val() - 设置或返回表单字段的值 例如输入框内部的值<br>下面的例子演示如何通过 jQuery text() 和 html() 方法来获得内容：<br>jQuery attr() 方法用于获取属性值。<br>href 可以换成 id class等属性值<br>下面的例子演示如何获得链接中 href 属性的值：<br>实例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  alert($(<span class="string">"#w3s"</span>).attr(<span class="string">"href"</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>设置内容 - text()、html() 以及 val()<br>我们将使用前一章中的三个相同的方法来设置内容：<br>text() - 设置或返回所选元素的文本内容<br>html() - 设置或返回所选元素的内容（包括 HTML 标记）<br>val() - 设置或返回表单字段的值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#btn1"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#test1"</span>).text(<span class="string">"Hello world!"</span>);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"#btn2"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#test2"</span>).html(<span class="string">"&lt;b&gt;Hello world!&lt;/b&gt;"</span>);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"#btn3"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#test3"</span>).val(<span class="string">"Dolly Duck"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>text()、html() 以及 val()，同样拥有回调函数。回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。<br>设置属性<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#w3s"</span>).attr(&#123;</span><br><span class="line">    <span class="string">"href"</span> : <span class="string">"http://www.w3school.com.cn/jquery"</span>,</span><br><span class="line">    <span class="string">"title"</span> : <span class="string">"W3School jQuery Tutorial"</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>添加新的 HTML 内容<br>我们将学习用于添加新内容的四个 jQuery 方法：<br>append() - 在被选元素的结尾插入内容<br>prepend() - 在被选元素的开头插入内容<br>after() - 在被选元素之后插入内容<br>before() - 在被选元素之前插入内容</p>
+<p>创建和追加元素的不同方式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var txt1=<span class="string">"&lt;p&gt;Text.&lt;/p&gt;"</span>;              // 以 HTML 创建新元素</span><br><span class="line">var txt2=$(<span class="string">"&lt;p&gt;&lt;/p&gt;"</span>).text(<span class="string">"Text."</span>);  // 以 jQuery 创建新元素</span><br><span class="line">var txt3=document.createElement(<span class="string">"p"</span>);</span><br><span class="line">txt3.innerHTML=<span class="string">"Text."</span>;               // 通过 DOM 来创建文本</span><br><span class="line">$(<span class="string">"body"</span>).append(txt1,txt2,txt3);        // 追加新元素</span><br></pre></td></tr></table></figure></p>
+<p>删除元素/内容<br>如需删除元素和内容，一般可使用以下两个 jQuery 方法：<br>remove() - 删除被选元素（及其子元素）<br>empty() - 从被选元素中删除子元素<br>jQuery remove() 方法也可接受一个参数，允许您对被删元素进行过滤。<br>该参数可以是任何 jQuery 选择器的语法。<br>下面的例子删除 class=”italic” 的所有 </p><p> 元素：</p>
+<blockquote>
+<p>$(“p”).remove(“.italic”);</p>
+</blockquote>
+<p>jQuery 拥有若干进行 CSS 操作的方法。我们将学习下面这些：<br>addClass() - 向被选元素添加一个或多个类   参数为类名<br>removeClass() - 从被选元素删除一个或多个类<br>toggleClass() - 对被选元素进行添加/删除类的切换操作<br>css() - 设置或返回样式属性<br>jQuery尺寸<br>width() 方法设置或返回元素的宽度（不包括内边距、边框或外边距）。<br>height() 方法设置或返回元素的高度（不包括内边距、边框或外边距）。<br>注意：$(“”).click(function(){})<br>onclick=function(){}<br>两者格式不同<br>innerWidth() 方法返回元素的宽度（包括内边距）。<br>innerHeight() 方法返回元素的高度（包括内边距）。<br>outerWidth() 方法返回元素的宽度（包括内边距和边框）。<br>outerHeight() 方法返回元素的高度（包括内边距和边框）。<br>$(document).height() 返回文档的高度<br> $(window).height() 返回浏览器的高度<br>此外下面的例子设置指定的 <div> 元素的宽度和高度：<br>实例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#div1"</span>).width(500).height(500);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div></p>
+<h1 id="2017年8月30日学习笔记"><a href="#2017年8月30日学习笔记" class="headerlink" title="2017年8月30日学习笔记"></a>2017年8月30日学习笔记</h1><p>jQuery遍历</p>
+<p>意为移动</p>
+<p>通过 jQuery 遍历，您能够从被选（当前的）元素开始，轻松地在家族树中向上移动（祖先），向下移动（子孙），水平移动（同胞）。这种移动被称为对 DOM 进行遍历。</p>
+<p>向上遍历 DOM 树<br>这些 jQuery 方法很有用，它们用于向上遍历 DOM 树：<br>parent()<br>parents()<br>parentsUntil()</p>
+<p>parent() 方法返回被选元素的直接父元素。<br>该方法只会向上一级对 DOM 树进行遍历。</p>
+<p>  $(“span”).parent();查找到的直接父元素,可以对其进行css效果等</p>
+<p>例如：  $(“span”).parent().css({“color”:”red”,”border”:”2px solid red”});</p>
+<p>  $(“span”).parents(“ul”);可以查找到标签为ul父元素</p>
+<p>parentsUntil() 方法返回介于两个给定元素之间的所有祖先元素。<br>下面的例子返回介于 <span> 与 <div> 元素之间的所有祖先元素：不包括两边 开区间</div></span></p>
+<p>下面是两个用于向下遍历 DOM 树的 jQuery 方法：<br>children()<br>find(）<br>children() 方法返回被选元素的所有直接子元素。可能有多个<br>该方法只会向下一级对 DOM 树进行遍历。<br>您也可以使用可选参数来过滤对子元素的搜索。</p>
+<p>$(“div”).children(“p.1”);返回所有直接子元素中类名为1的p元素</p>
+<p>find() 方法返回被选元素的后代元素，一路向下直到最后一个后代。<br>下面的例子返回属于 <div> 后代的所有 <span> 元素：<br>  $(“div”).find(“span”);</span></div></p>
+<p>find(“*”)查找所有的子元素</p>
+<p>同胞<br>在 DOM 树中水平遍历<br>有许多有用的方法让我们在 DOM 树进行水平遍历：<br>siblings()<br>next()<br>nextAll()<br>nextUntil()<br>prev()<br>prevAll()<br>prevUntil()<br>siblings() 方法返回被选元素的所有同胞元素。</p>
+<p>  $(“h2”).siblings(“p”);可以增加参数进行查找<br>next() 方法返回被选元素的下一个同胞元素。<br>nextAll() 方法返回被选元素的所有跟随的同胞元素。<br>nextUntil() 方法返回介于两个给定参数之间的所有跟随的同胞元素。<br>prev(), prevAll() 以及 prevUntil() 方法的工作方式与上面的方法类似，只不过方向相反而已：它们返回的是前面的同胞元素（在 DOM 树中沿着同胞元素向后遍历，而不是向前）。</p>
+<p>过滤<br>三个最基本的过滤方法是：first(), last() 和 eq()，它们允许您基于其在一组元素中的位置来选择一个特定的元素。<br>其他过滤方法，比如 filter() 和 not() 允许您选取匹配或不匹配某项指定标准的元素。<br>first() 方法返回被选元素的首个元素。 first和last都是返回的一个元素<br> $(“div p”).first();取首个 <div> 元素内部的第一个 <p> 元素<br>eq() 方法返回被选元素中带有指定索引号的元素。<br>索引号从 0 开始，因此首个元素的索引号是 0 而不是 1。下面的例子选取第二个 </p><p> 元素（索引号 1）：<br>  $(“p”).eq(1);<br>filter() 方法允许您规定一个标准。不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回。<br>  $(“p”).filter(“.intro”);返回带有类名 “intro” 的所有 </p><p> 元素：<br>not() 方法返回不匹配标准的所有元素。not() 方法与 filter() 相反。</p>
+<h3 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h3><p>AJAX 是与服务器交换数据的艺术，它在不重载全部页面的情况下，实现了对部分网页的更新。在不重载整个网页的情况下，AJAX 通过后台加载数据，并在网页上进行显示<br>AJAX= 异步 JavaScript 和 XML（Asynchronous JavaScript and XML）<br>通过 jQuery AJAX 方法，您能够使用 HTTP Get 和 HTTP Post 从远程服务器上请求文本、HTML、XML 或 JSON - 同时您能够把这些外部数据直接载入网页的被选元素中。<br>load() 方法从服务器加载数据，并把返回的数据放入被选元素中。<br>attr(属性，属性值)用本地特定的顺序来比较两个字符串。<br>stringObject.localeCompare(target)</p>
+<p>说明比较结果的数字。如果 stringObject 小于 target，则 localeCompare() 返回小于 0 的数。如果 stringObject 大于 target，则该方法返回大于 0 的数。如果两个字符串相等，或根据本地排序规则没有区别，该方法返回 0。</p>
+<p>完整的 key press 过程分为两个部分，按键被按下，然后按键被松开并复位。<br>当按钮被松开时，发生 keyup 事件。它发生在当前获得焦点的元素上。<br>keyup() 方法触发 keyup 事件，或规定当发生 keyup 事件时运行的函数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"input"</span>).keydown(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    $(<span class="string">"input"</span>).css(<span class="string">"background-color"</span>,<span class="string">"#FFFFCC"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">  $(<span class="string">"input"</span>).keyup(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    $(<span class="string">"input"</span>).css(<span class="string">"background-color"</span>,<span class="string">"#D6D6FF"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">which</span> 属性指示按了哪个键或按钮</span><br><span class="line"></span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"input"</span>).keydown(<span class="keyword">function</span>(event)&#123; </span><br><span class="line">    $(<span class="string">"div"</span>).html(<span class="string">"Key: "</span> + event.which);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://www.365mini.com/page/javascript-regexp-test.htm" target="_blank" rel="external">http://www.365mini.com/page/javascript-regexp-test.htm</a><br>test函数js<br>test()方法的返回值为Boolean类型，如果字符串中存在该正则表达式模式的匹配，就返回true，否则false。</p>
+<p>值得注意的是，每次执行test()函数都只查找最多一个匹配，如果找到就立即返回true，否则返回false。</p>
+<p>如果为正则表达式设置了全局标志(g)，test()函数仍然只查找最多一个匹配，不过我们再次调用该对象的test()函数就可以查找下一个匹配。</p>
+<p>其原因是：如果regExpObject带有全局标志g，test()函数不是从字符串的开头开始查找，而是从属性regExpObject.lastIndex所指定的索引处开始查找。该属性值默认为0，所以第一次仍然是从字符串的开头查找。当找到一个匹配时，test()函数会将regExpObject.lastIndex的值改为字符串中本次匹配内容的最后一个字符的下一个索引位置。当再次执行test()函数时，将会从该索引位置处开始查找，从而找到下一个匹配。</p>
+<p>因此，当我们使用test()函数执行了一次匹配之后，如果想要重新使用test()函数从头开始查找，则需要手动将regExpObject.lastIndex的值重置为 0。如果test()函数再也找不到可以匹配的文本时，该函数会自动把regExpObject.lastIndex属性重置为 0。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">"abc12456def45646ghi"</span>;</span><br><span class="line">var regExp = /\d+/;</span><br><span class="line">document.writeln( regExp.test( str ) ); // <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 带全局标志g</span><br><span class="line">regExp = /[a-z]+/g;</span><br><span class="line">// 第一次查找前，regExp.lastIndex默认为0</span><br><span class="line">document.writeln( <span class="string">"lastIndex="</span> + regExp.lastIndex + <span class="string">"&lt;br&gt;"</span> ); // lastIndex=0</span><br><span class="line">// 使用<span class="built_in">test</span>()进行循环查找匹配</span><br><span class="line">var value = null;</span><br><span class="line"><span class="keyword">while</span>( value = regExp.test(str) )&#123;</span><br><span class="line">    document.writeln( <span class="string">"lastIndex="</span> + regExp.lastIndex + <span class="string">"&lt;br&gt;"</span> );</span><br><span class="line">&#125;</span><br><span class="line">/*</span><br><span class="line">lastIndex=3</span><br><span class="line">lastIndex=11</span><br><span class="line">lastIndex=19</span><br><span class="line"></span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+<h1 id="2017年8月29日学习笔记-1"><a href="#2017年8月29日学习笔记-1" class="headerlink" title="2017年8月29日学习笔记"></a>2017年8月29日学习笔记</h1><p>Jquery的学习<br>jQuery 是一个 JavaScript 函数库。<br>jQuery 库包含以下特性：<br>HTML 元素选取<br>HTML 元素操作<br>CSS 操作<br>HTML 事件函数<br>JavaScript 特效和动画<br>HTML DOM 遍历和修改<br>AJAX<br>Utilities<br>W3C SCHOOL</p>
+<h3 id="jquery的安装-库-1"><a href="#jquery的安装-库-1" class="headerlink" title="jquery的安装 库"></a>jquery的安装 库</h3><p>直接下载最新版本的 jQuery 3.2.1<br>可以通过npm安装<br>也可以通过git上克隆源码</p>
+<p>之后通过script标签来进行引用</p>
+<p>也可以使用谷歌或微软的 jQuery，有一个很大的优势：<br>许多用户在访问其他站点时，已经从谷歌或微软加载过 jQuery。所有结果是，当他们访问您的站点时，会从缓存中加载 jQuery，这样可以减少加载时间。<br>同时，大多数 CDN 都可以确保当用户向其请求文件时，会从离用户最近的服务器上返回响应，这样也可以提高加载速度。</p>
+<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><p>基本语法$(selector).action()<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(this).hide()</span><br><span class="line">演示 jQuery hide() 函数，隐藏当前的 HTML 元素。</span><br><span class="line">$(<span class="string">"#test"</span>).hide()  同样的可以隐藏类元素 和标签元素</span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line"></span><br><span class="line">--- jQuery <span class="built_in">functions</span> go here ----</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="jquery元素选择器-1"><a href="#jquery元素选择器-1" class="headerlink" title="jquery元素选择器"></a>jquery元素选择器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"p"</span>) 选取 &lt;p&gt; 元素。</span><br><span class="line">$(<span class="string">"p.intro"</span>) 选取所有 class=<span class="string">"intro"</span> 的 &lt;p&gt; 元素。</span><br><span class="line">$(<span class="string">"p#demo"</span>) 选取所有 id=<span class="string">"demo"</span> 的 &lt;p&gt; 元素。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$(<span class="string">"[href]"</span>) 选取所有带有 href 属性的元素。</span><br><span class="line">$(<span class="string">"[href='#']"</span>) 选取所有带有 href 值等于 <span class="string">"#"</span> 的元素。</span><br><span class="line">$(<span class="string">"[href!='#']"</span>) 选取所有带有 href 值不等于 <span class="string">"#"</span> 的元素。</span><br><span class="line">$(<span class="string">"[href$='.jpg']"</span>) 选取所有 href 值以 <span class="string">".jpg"</span> 结尾的元素。 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">jQuery CSS 选择器可用于改变 HTML 元素的 CSS 属性。</span><br><span class="line"></span><br><span class="line">$(<span class="string">"p"</span>).css(<span class="string">"background-color"</span>,<span class="string">"red"</span>); 属性用引号包围，中间用逗号隔开</span><br><span class="line">设置多个属性时，$(selector).css(&#123;property:value, property:value, ...&#125;)</span><br><span class="line">$(<span class="string">".aa"</span>).css(&#123;<span class="string">"background-color"</span>:<span class="string">"blue"</span>,<span class="string">"width"</span>:<span class="string">"300px"</span>&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="jquery事件-1"><a href="#jquery事件-1" class="headerlink" title="jquery事件"></a>jquery事件</h3><p>事件处理程序指的是当 HTML 中发生某些事件时所调用的方法。术语由事件“触发”（或“激发”）经常会被使用。<br>通常会把 jQuery 代码放到 <head>部分的事件处理方法中：</head></p>
+<p>jQuery 名称冲突：<br>jQuery 使用 $ 符号作为 jQuery 的简介方式。<br>我们也可以使用其他来代替美元符号<br>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var jq1=jQuery.noConflict()</span><br><span class="line">jq1(document).ready(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  jq1(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    jq1(<span class="string">"p"</span>).text(<span class="string">"jQuery 仍在运行！"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);//此处可行</span><br></pre></td></tr></table></figure></p>
+<p>Event 函数  绑定函数至<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="keyword">function</span>) 将函数绑定到文档的就绪事件（当文档完成加载时）</span><br><span class="line">$(selector).click(<span class="keyword">function</span>) 触发或将函数绑定到被选元素的点击事件</span><br><span class="line">$(selector).dblclick(<span class="keyword">function</span>)  触发或将函数绑定到被选元素的双击事件</span><br><span class="line">$(selector).focus(<span class="keyword">function</span>) 触发或将函数绑定到被选元素的获得焦点事件</span><br><span class="line">$(selector).mouseover(<span class="keyword">function</span>) 触发或将函数绑定到被选元素的鼠标悬停事件</span><br></pre></td></tr></table></figure></p>
+<p>效果函数<br>与hide相对应的是show,<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">$(selector).hide(speed,callback);</span><br><span class="line">$(selector).show(speed,callback);</span><br><span class="line">speed 代表速度 直接输入数字 代表毫秒。callback是指隐藏后所执行的函数名称</span><br><span class="line">通过 jQuery，您可以使用 toggle() 方法来切换 hide() 和 show() 方法。</span><br><span class="line">通过 jQuery，您可以实现元素的淡入淡出效果。</span><br><span class="line">jQuery 拥有下面四种 fade 方法：</span><br><span class="line">fadeIn()</span><br><span class="line">fadeOut()</span><br><span class="line">fadeToggle()</span><br><span class="line">fadeTo()</span><br><span class="line">$(selector).fadeIn(speed,callback);</span><br><span class="line">可选的 speed 参数规定效果的时长。它可以取以下值：<span class="string">"slow"</span>、<span class="string">"fast"</span> 或毫秒。</span><br><span class="line">可选的 callback 参数是 fading 完成后所执行的函数名称。</span><br><span class="line">淡入可以设置原来的display属性为“none”</span><br><span class="line">fadeTo() 方法中必需的 opacity 参数将淡入淡出效果设置为给定的不透明度（值介于 0 与 1 之间）。</span><br><span class="line">可选的 callback 参数是该函数完成后所执行的函数名称。</span><br><span class="line">$(selector).fadeTo(speed,opacity,callback);</span><br></pre></td></tr></table></figure></p>
+<p>滑动<br>jQuery slideDown()<br>演示 jQuery slideDown() 方法。<br>jQuery slideUp()<br>演示 jQuery slideUp() 方法。<br>jQuery slideToggle()<br>演示 jQuery slideToggle() 方法。<br>jQuery animate() 方法允许您创建自定义的动画。</p>
+<p>语法：<br>$(selector).animate({params},speed,callback);<br>必需的 params 参数定义形成动画的 CSS 属性。<br>可选的 speed 参数规定效果的时长。它可以取以下值：”slow”、”fast” 或毫秒。<br>可选的 callback 参数是动画完成后所执行的函数名称。<br>下面的例子演示 animate() 方法的简单应用；它把 <div> 元素移动到左边，直到 left 属性等于 250 像素为止：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  $(<span class="string">".box"</span>).animate(&#123;left:<span class="string">'250px'</span>&#125;);CSS属性后面不能有 分号；</span><br><span class="line"></span><br><span class="line">        $(<span class="string">".box"</span>).animate(&#123;left:<span class="string">'250px'</span>,</span><br><span class="line">      opacity:<span class="string">'0.5'</span>,</span><br><span class="line">      height:<span class="string">'150px'</span>,</span><br><span class="line">      width:<span class="string">'150px'</span>&#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">  $(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">   $(<span class="string">"div"</span>).animate(&#123;</span><br><span class="line">    left:<span class="string">'250px'</span>,</span><br><span class="line">    height:<span class="string">'+=150px'</span>,</span><br><span class="line">    width:<span class="string">'+=150px'</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div></p>
+<p>您甚至可以把属性的动画值设置为 “show”、”hide” 或 “toggle”：<br>例如：height:’toggle’<br>也可以定义相对值（该值相对于元素的当前值）。需要在值的前面加上 += 或 -=：<br>默认情况下，所有HTML元素的位置都是静态的，并且无法易懂。如需对位置进行操作，记得首先把元素的CSS的position属性设置为relative,fixed或absolute<br>jQuery 提供针对动画的队列功能。<br>这意味着如果您在彼此之后编写多个 animate() 调用，jQuery 会创建包含这些方法调用的“内部”队列。然后逐一运行这些 animate 调用。<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div.animate(&#123;height:<span class="string">'300px'</span>,opacity:<span class="string">'0.4'</span>&#125;,<span class="string">"slow"</span>);</span><br><span class="line">div.animate(&#123;width:<span class="string">'300px'</span>,opacity:<span class="string">'0.8'</span>&#125;,<span class="string">"slow"</span>);</span><br><span class="line">div.animate(&#123;height:<span class="string">'100px'</span>,opacity:<span class="string">'0.4'</span>&#125;,<span class="string">"slow"</span>);</span><br><span class="line">div.animate(&#123;width:<span class="string">'100px'</span>,opacity:<span class="string">'0.8'</span>&#125;,<span class="string">"slow"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>每一个动画都是在上一个动画的基础上进行。。<br>jQuery stop() 方法用于停止动画或效果，在它们完成之前。<br>stop() 方法适用于所有 jQuery 效果函数，包括滑动、淡入淡出和自定义动画。<br>$(selector).stop(stopAll,goToEnd);<br>jQuery方法链接<br>如需链接一个动作，您只需简单地把该动作追加到之前的动作上。<br>例子 1<br>下面的例子把 css(), slideUp(), and slideDown() 链接在一起。”p1” 元素首先会变为红色，然后向上滑动，然后向下滑动：<br>$(“#p1”).css(“color”,”red”).slideUp(2000).slideDown(2000);<br>jQuery获取<br>DOM = Document Object Model（文档对象模型）<br>text() - 设置或返回所选元素的文本内容<br>html() - 设置或返回所选元素的内容（包括 HTML 标记）<br>val() - 设置或返回表单字段的值 例如输入框内部的值<br>下面的例子演示如何通过 jQuery text() 和 html() 方法来获得内容：<br>jQuery attr() 方法用于获取属性值。<br>href 可以换成 id class等属性值<br>下面的例子演示如何获得链接中 href 属性的值：<br>实例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  alert($(<span class="string">"#w3s"</span>).attr(<span class="string">"href"</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>设置内容 - text()、html() 以及 val()<br>我们将使用前一章中的三个相同的方法来设置内容：<br>text() - 设置或返回所选元素的文本内容<br>html() - 设置或返回所选元素的内容（包括 HTML 标记）<br>val() - 设置或返回表单字段的值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#btn1"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#test1"</span>).text(<span class="string">"Hello world!"</span>);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"#btn2"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#test2"</span>).html(<span class="string">"&lt;b&gt;Hello world!&lt;/b&gt;"</span>);</span><br><span class="line">&#125;);</span><br><span class="line">$(<span class="string">"#btn3"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#test3"</span>).val(<span class="string">"Dolly Duck"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>text()、html() 以及 val()，同样拥有回调函数。回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。<br>设置属性<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#w3s"</span>).attr(&#123;</span><br><span class="line">    <span class="string">"href"</span> : <span class="string">"http://www.w3school.com.cn/jquery"</span>,</span><br><span class="line">    <span class="string">"title"</span> : <span class="string">"W3School jQuery Tutorial"</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>添加新的 HTML 内容<br>我们将学习用于添加新内容的四个 jQuery 方法：<br>append() - 在被选元素的结尾插入内容<br>prepend() - 在被选元素的开头插入内容<br>after() - 在被选元素之后插入内容<br>before() - 在被选元素之前插入内容</p>
+<p>创建和追加元素的不同方式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var txt1=<span class="string">"&lt;p&gt;Text.&lt;/p&gt;"</span>;              // 以 HTML 创建新元素</span><br><span class="line">var txt2=$(<span class="string">"&lt;p&gt;&lt;/p&gt;"</span>).text(<span class="string">"Text."</span>);  // 以 jQuery 创建新元素</span><br><span class="line">var txt3=document.createElement(<span class="string">"p"</span>);</span><br><span class="line">txt3.innerHTML=<span class="string">"Text."</span>;               // 通过 DOM 来创建文本</span><br><span class="line">$(<span class="string">"body"</span>).append(txt1,txt2,txt3);        // 追加新元素</span><br></pre></td></tr></table></figure></p>
+<p>删除元素/内容<br>如需删除元素和内容，一般可使用以下两个 jQuery 方法：<br>remove() - 删除被选元素（及其子元素）<br>empty() - 从被选元素中删除子元素<br>jQuery remove() 方法也可接受一个参数，允许您对被删元素进行过滤。<br>该参数可以是任何 jQuery 选择器的语法。<br>下面的例子删除 class=”italic” 的所有 </p><p> 元素：</p>
+<blockquote>
+<p>$(“p”).remove(“.italic”);</p>
+</blockquote>
+<p>jQuery 拥有若干进行 CSS 操作的方法。我们将学习下面这些：<br>addClass() - 向被选元素添加一个或多个类   参数为类名<br>removeClass() - 从被选元素删除一个或多个类<br>toggleClass() - 对被选元素进行添加/删除类的切换操作<br>css() - 设置或返回样式属性<br>jQuery尺寸<br>width() 方法设置或返回元素的宽度（不包括内边距、边框或外边距）。<br>height() 方法设置或返回元素的高度（不包括内边距、边框或外边距）。<br>注意：$(“”).click(function(){})<br>onclick=function(){}<br>两者格式不同<br>innerWidth() 方法返回元素的宽度（包括内边距）。<br>innerHeight() 方法返回元素的高度（包括内边距）。<br>outerWidth() 方法返回元素的宽度（包括内边距和边框）。<br>outerHeight() 方法返回元素的高度（包括内边距和边框）。<br>$(document).height() 返回文档的高度<br> $(window).height() 返回浏览器的高度<br>此外下面的例子设置指定的 <div> 元素的宽度和高度：<br>实例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">  $(<span class="string">"#div1"</span>).width(500).height(500);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div></p>
+<h1 id="2017年8月30日学习笔记-1"><a href="#2017年8月30日学习笔记-1" class="headerlink" title="2017年8月30日学习笔记"></a>2017年8月30日学习笔记</h1><p>jQuery遍历</p>
+<p>意为移动</p>
+<p>通过 jQuery 遍历，您能够从被选（当前的）元素开始，轻松地在家族树中向上移动（祖先），向下移动（子孙），水平移动（同胞）。这种移动被称为对 DOM 进行遍历。</p>
+<p>向上遍历 DOM 树<br>这些 jQuery 方法很有用，它们用于向上遍历 DOM 树：<br>parent()<br>parents()<br>parentsUntil()</p>
+<p>parent() 方法返回被选元素的直接父元素。<br>该方法只会向上一级对 DOM 树进行遍历。</p>
+<p>  $(“span”).parent();查找到的直接父元素,可以对其进行css效果等</p>
+<p>例如：  $(“span”).parent().css({“color”:”red”,”border”:”2px solid red”});</p>
+<p>  $(“span”).parents(“ul”);可以查找到标签为ul父元素</p>
+<p>parentsUntil() 方法返回介于两个给定元素之间的所有祖先元素。<br>下面的例子返回介于 <span> 与 <div> 元素之间的所有祖先元素：不包括两边 开区间</div></span></p>
+<p>下面是两个用于向下遍历 DOM 树的 jQuery 方法：<br>children()<br>find(）<br>children() 方法返回被选元素的所有直接子元素。可能有多个<br>该方法只会向下一级对 DOM 树进行遍历。<br>您也可以使用可选参数来过滤对子元素的搜索。</p>
+<p>$(“div”).children(“p.1”);返回所有直接子元素中类名为1的p元素</p>
+<p>find() 方法返回被选元素的后代元素，一路向下直到最后一个后代。<br>下面的例子返回属于 <div> 后代的所有 <span> 元素：<br>  $(“div”).find(“span”);</span></div></p>
+<p>find(“*”)查找所有的子元素</p>
+<p>同胞<br>在 DOM 树中水平遍历<br>有许多有用的方法让我们在 DOM 树进行水平遍历：<br>siblings()<br>next()<br>nextAll()<br>nextUntil()<br>prev()<br>prevAll()<br>prevUntil()<br>siblings() 方法返回被选元素的所有同胞元素。</p>
+<p>  $(“h2”).siblings(“p”);可以增加参数进行查找<br>next() 方法返回被选元素的下一个同胞元素。<br>nextAll() 方法返回被选元素的所有跟随的同胞元素。<br>nextUntil() 方法返回介于两个给定参数之间的所有跟随的同胞元素。<br>prev(), prevAll() 以及 prevUntil() 方法的工作方式与上面的方法类似，只不过方向相反而已：它们返回的是前面的同胞元素（在 DOM 树中沿着同胞元素向后遍历，而不是向前）。</p>
+<p>过滤<br>三个最基本的过滤方法是：first(), last() 和 eq()，它们允许您基于其在一组元素中的位置来选择一个特定的元素。<br>其他过滤方法，比如 filter() 和 not() 允许您选取匹配或不匹配某项指定标准的元素。<br>first() 方法返回被选元素的首个元素。 first和last都是返回的一个元素<br> $(“div p”).first();取首个 <div> 元素内部的第一个 <p> 元素<br>eq() 方法返回被选元素中带有指定索引号的元素。<br>索引号从 0 开始，因此首个元素的索引号是 0 而不是 1。下面的例子选取第二个 </p><p> 元素（索引号 1）：<br>  $(“p”).eq(1);<br>filter() 方法允许您规定一个标准。不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回。<br>  $(“p”).filter(“.intro”);返回带有类名 “intro” 的所有 </p><p> 元素：<br>not() 方法返回不匹配标准的所有元素。not() 方法与 filter() 相反。</p>
+<h3 id="AJAX-1"><a href="#AJAX-1" class="headerlink" title="AJAX"></a>AJAX</h3><p>AJAX 是与服务器交换数据的艺术，它在不重载全部页面的情况下，实现了对部分网页的更新。在不重载整个网页的情况下，AJAX 通过后台加载数据，并在网页上进行显示<br>AJAX= 异步 JavaScript 和 XML（Asynchronous JavaScript and XML）<br>通过 jQuery AJAX 方法，您能够使用 HTTP Get 和 HTTP Post 从远程服务器上请求文本、HTML、XML 或 JSON - 同时您能够把这些外部数据直接载入网页的被选元素中。<br>load() 方法从服务器加载数据，并把返回的数据放入被选元素中。<br>attr(属性，属性值)</p>
+<h1 id="2017年8月30日学习笔记-2"><a href="#2017年8月30日学习笔记-2" class="headerlink" title="2017年8月30日学习笔记"></a>2017年8月30日学习笔记</h1><p>学习each语句<br>以及ajax load 和HTTP请求<br>开始学着用jquery做一个小东西</p>
+<ul>
+<li><p>add方法<br>传递选择器<br>$(‘li’).add(‘p’)<br>意思就是把p标签加入到li的合集中，然后对合集进行操作<br>传递dom元素<br>$(‘li’).add(document.getElementsByTagName(‘p’)[0])<br>动态创建p标签加入到合集，然后插入到指定位置，但是这样就改变元素的本身的排列了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'li'</span>).add(<span class="string">'&lt;p&gt;新的p元素&lt;/p&gt;'</span>).appendTo(目标位置)</span><br><span class="line">$(<span class="string">'li'</span>).add(<span class="string">'&lt;p&gt;新的p元素&lt;/p&gt;'</span>).appendTo($(<span class="string">'.right'</span>))</span><br><span class="line">$(<span class="string">"button:first"</span>)第一个子节点</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>each方法<br>Query是一个合集对象，通过$()方法找到指定的元素合集后可以进行一系列的操作。比如我们操作$(“li”).css(‘’) 给所有的li设置style值，因为jQuery是一个合集对象，所以css方法内部就必须封装一个遍历的方法，被称为隐式迭代的过程。要一个一个给合集中每一个li设置颜色，这里方法就是each<br>.each() 方法就是一个for循环的迭代器，它会迭代jQuery对象合集中的每一个DOM元素。每次回调函数执行时，会传递当前循环次数作为参数(从0开始计数）<br>e.which显示触发了哪个键<br>index(),返回值是jQuery对象中第一个元素相对于它同辈元素的位置<br>.index( selector )<br>.index( element )</p>
+</li>
+<li><p>get方法</p>
+<p>$(a).get(1)<br>正索引从0开始<br>负索引 从-1开始</p>
+</li>
+<li><p>bind方法<br>bind() 方法为被选元素添加一个或多个事件处理程序，并规定事件发生时运行的函数。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).<span class="built_in">bind</span>(<span class="string">"click"</span>,<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line"></span><br><span class="line">load(url,[data],[callback])</span><br><span class="line"></span><br><span class="line"> $(<span class="string">"ul"</span>).load(<span class="string">"http://www.imooc.com/data/fruit_part.html"</span>,<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line"> <span class="variable">$this</span>.attr(<span class="string">"disabled"</span>, <span class="string">"true"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><a href="http://pdf-file.ic37.com/pdf4/SEMTECH/SX123_datasheet_783718/127781/SX123_datasheet.pdf" target="_blank" rel="external">http://pdf-file.ic37.com/pdf4/SEMTECH/SX123_datasheet_783718/127781/SX123_datasheet.pdf</a></p>
+<h1 id="2017年8月31日学习笔记"><a href="#2017年8月31日学习笔记" class="headerlink" title="2017年8月31日学习笔记"></a>2017年8月31日学习笔记</h1><p>使用load()方法通过Ajax请求加载服务器中的数据，并把返回的数据放置到指定的元素中，它的调用格式为：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">load(url,[data],[callback])</span><br><span class="line"></span><br><span class="line">                    $(<span class="string">"ul"</span>).load(<span class="string">"http://www.imooc.com/data/fruit_part.html"</span>,<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">                        <span class="variable">$this</span>.attr(<span class="string">"disabled"</span>, <span class="string">"true"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>$.getJSON()</p>
+<p>使用getJSON()方法可以通过Ajax异步请求的方式，获取服务器中的数据，并对获取的数据进行解析，显示在页面中，它的调用格式为：<br>jQuery.getJSON(url,[data],[callback])或$.getJSON(url,[data],[callback])<br>使用getScript()方法异步加载并执行js文件<br>jQuery.getScript(url,[callback])或$.getScript(url,[callback])<br>使用get()方法以GET方式从服务器获取数据<br>$.get(url,[callback])<br>$.get(“<a href="http://www.imooc.com/data/info_f.php&quot;,function(data){}" target="_blank" rel="external">http://www.imooc.com/data/info_f.php&quot;,function(data){}</a><br>data作为参数传进去，不可落掉<br>与get()方法相比，post()方法多用于以POST方式向服务器发送数据，服务器接收到数据之后，进行处理，并将处理结果返回页面，调用格式如下：<br>$.post(url,[data],[callback])<br>参数url为服务器请求地址，可选项data为向服务器请求时发送的数据，可选项callback参数为请求成功后执行的回调函数。<br>获取值，将值传送给服务器，服务器接收该值后进行处理（后台操作），最后返回处理结果。<br>对于后台的源代码 有时我们在浏览器上看不到。传递值时要传递名称和数值，就像jSON对象一样。<br>使用serialize()方法可以将表单中有name属性的元素值进行序列化，生成标准URL编码文本字符串，直接可用于ajax请求，它的调用格式如下：<br>$(selector).serialize()   给想要序列化的元素增加name属性<br>其中selector参数是一个或多个表单中的元素或表单元素本身。<br>使用ajax()方法加载服务器数据<br>使用ajax()方法是最底层、功能最强大的请求服务器数据的方法，它不仅可以获取服务器返回的数据，还能向服务器发送请求并传递数值，它的调用格式如下：<br>jQuery.ajax([settings])或$.ajax([settings])<br>其中参数settings为发送ajax请求时的配置对象，在该对象中，url表示服务器请求的路径，data为请求时传递的数据，dataType为服务器返回的数据类型，success为请求成功的执行的回调函数，type为发送数据请求的方式，默认为get。<br>参数settings为发送ajax请求时的配置对象，在该对象中，url表示服务器请求的路径，data为请求时传递的数据，dataType为服务器返回的数据类型，success为请求成功的执行的回调函数，type为发送数据请求的方式，默认为get。<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">                    url:<span class="string">"http://www.imooc.com/data/check.php"</span>,</span><br><span class="line">                    data: &#123; num: $(<span class="string">"#txtNumber"</span>).val() &#125;,</span><br><span class="line">                    dataType:<span class="string">"text"</span>,</span><br><span class="line">                    success: <span class="keyword">function</span> (data) &#123;</span><br><span class="line">                        $(<span class="string">"ul"</span>).append(<span class="string">"&lt;li&gt;你输入的&lt;b&gt;  "</span></span><br><span class="line">                        + $(<span class="string">"#txtNumber"</span>).val() + <span class="string">" &lt;/b&gt;是&lt;b&gt; "</span></span><br><span class="line">                        + data + <span class="string">" &lt;/b&gt;&lt;/li&gt;"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br></pre></td></tr></table></figure></p>
+<p>使用ajaxSetup()方法设置全局Ajax默认选项 设置完成后，后面的Ajax请求将不需要再添加这些选项值，它的调用格式为：<br>jQuery.ajaxSetup([options])或$.ajaxSetup([options])<br>相当于取出ajax设置的交集部分，为了避免重复。</p>
+<p>使用ajaxStart()和ajaxStop()方法</p>
+<p>$(selector).ajaxStart(function())和$(selector).ajaxStop(function())</p>
+<h1 id="2017年9月1日学习笔记"><a href="#2017年9月1日学习笔记" class="headerlink" title="2017年9月1日学习笔记"></a>2017年9月1日学习笔记</h1><p>jQuery插件</p>
+<p>1.表单验证插件<br>该插件自带包含必填、数字、URL在内容的验证规则，即时显示异常信息，此外，还允许自定义验证规则，插件调用方法如下：<br>$(form).validate({options})<br>其中form参数表示表单元素名称，options参数表示调用方法时的配置对象，所有的验证规则和异常信息显示的位置都在该对象中进行设置。<br>图片灯箱插件——lightBox  这个功能很好玩哎。增加了图片加载条 图片切换按钮（前后） 以及图片自动播放和暂停的按钮（完美）功能真的很强大。。<br>图片放大插件（准备两个图片，一大一小，当点击小图片时，显示大图片对应的位置）<br>$(linkimage).jqzoom({options})<br>cookie插件 主要是用来保存数据<br>搜索插件 就是当在文本框中搜索时，会自动匹配相应内容。<br>搜索插件——autocomplete<br>右键菜单插件 点击右键出现保存或者修改按钮</p>
+<p>lifocuscolor插件 当获得鼠标焦点时候，改变背景颜色<br>$.addNum(p1,p2) 和 $.subNum(p1,p2)</p>
+<p>$.subNum(+$(“#Text1”).val(),+$(“#Text2”).val())  他默认是字符串 所以比较大小的时候有问题 是按第一个字符的码值比较的  转化一下就正常了</p>
+<p>拖曳插件draggable的功能是拖动被绑定的元素，当这个jQuery UI插件与元素绑定后，可以通过调用draggable()方法，实现各种拖曳元素的效果，调用格式如下</p>
+<p>微调按钮插件<br>问题：服务器接收后的数据存储在哪儿（php）</p>
+</div></p></div></p>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag"># 学习笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/03/队列/" rel="next" title="队列">
+                <i class="fa fa-chevron-left"></i>Prev Option
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="FANCY" />
+          <p class="site-author-name" itemprop="name">FANCY</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/gxfmqfzkzdgzwj" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="597785713@qq.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-email"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月29日学习笔记"><span class="nav-number">1.</span> <span class="nav-text">2017年8月29日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery的安装-库"><span class="nav-number">1.0.1.</span> <span class="nav-text">jquery的安装 库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">1.0.2.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery元素选择器"><span class="nav-number">1.0.3.</span> <span class="nav-text">jquery元素选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery事件"><span class="nav-number">1.0.4.</span> <span class="nav-text">jquery事件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月30日学习笔记"><span class="nav-number">2.</span> <span class="nav-text">2017年8月30日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AJAX"><span class="nav-number">2.0.1.</span> <span class="nav-text">AJAX</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月29日学习笔记-1"><span class="nav-number">3.</span> <span class="nav-text">2017年8月29日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery的安装-库-1"><span class="nav-number">3.0.1.</span> <span class="nav-text">jquery的安装 库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语法-1"><span class="nav-number">3.0.2.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery元素选择器-1"><span class="nav-number">3.0.3.</span> <span class="nav-text">jquery元素选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery事件-1"><span class="nav-number">3.0.4.</span> <span class="nav-text">jquery事件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月30日学习笔记-1"><span class="nav-number">4.</span> <span class="nav-text">2017年8月30日学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AJAX-1"><span class="nav-number">4.0.1.</span> <span class="nav-text">AJAX</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月30日学习笔记-2"><span class="nav-number">5.</span> <span class="nav-text">2017年8月30日学习笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年8月31日学习笔记"><span class="nav-number">6.</span> <span class="nav-text">2017年8月31日学习笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2017年9月1日学习笔记"><span class="nav-number">7.</span> <span class="nav-text">2017年9月1日学习笔记</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FANCY</span>
+  <br/>
+  <span>Just &nbsp;&nbsp;&nbsp; Do &nbsp;&nbsp;&nbsp; It !</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
